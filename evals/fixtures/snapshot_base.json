@@ -1,0 +1,1586 @@
+{
+  "meta": {
+    "schema_version": "1",
+    "as_of": "2026-10-30",
+    "months": 6,
+    "from": "2026-04-30",
+    "units": "lb",
+    "timezone": "America/New_York",
+    "fingerprint": "cd48fce33d163338"
+  },
+  "program": {
+    "workouts": [
+      {
+        "action_id": "a",
+        "title": "Upper A",
+        "days": [
+          1
+        ],
+        "planned_minutes": 45,
+        "estimated_minutes": 22,
+        "details": "Warm up 5 min",
+        "exercises": [
+          {
+            "name": "Flat DB Bench Press",
+            "sets": 3,
+            "reps_min": 8,
+            "reps_max": 12,
+            "weight": 50,
+            "rest": "2 min",
+            "note": ""
+          },
+          {
+            "name": "Lat Pulldown",
+            "sets": 3,
+            "reps_min": 8,
+            "reps_max": 12,
+            "weight": 100,
+            "rest": "2 min",
+            "note": "Elbows to back pockets"
+          }
+        ],
+        "current_since": "2026-09-28",
+        "versions": [
+          {
+            "effective_on": "2026-09-21",
+            "source": "backfill",
+            "reason": "",
+            "exercises": [
+              {
+                "name": "Flat DB Bench Press",
+                "sets": 3,
+                "reps_min": 8,
+                "reps_max": 12,
+                "weight": 40,
+                "rest": "2 min",
+                "note": ""
+              },
+              {
+                "name": "Lat Pulldown",
+                "sets": 3,
+                "reps_min": 8,
+                "reps_max": 12,
+                "weight": 95,
+                "rest": "2 min",
+                "note": "Elbows to back pockets"
+              }
+            ]
+          },
+          {
+            "effective_on": "2026-09-28",
+            "source": "app",
+            "reason": "",
+            "exercises": [
+              {
+                "name": "Flat DB Bench Press",
+                "sets": 3,
+                "reps_min": 8,
+                "reps_max": 12,
+                "weight": 50,
+                "rest": "2 min",
+                "note": ""
+              },
+              {
+                "name": "Lat Pulldown",
+                "sets": 3,
+                "reps_min": 8,
+                "reps_max": 12,
+                "weight": 100,
+                "rest": "2 min",
+                "note": "Elbows to back pockets"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "action_id": "b",
+        "title": "Upper B",
+        "days": [
+          3
+        ],
+        "planned_minutes": 45,
+        "estimated_minutes": 13,
+        "details": "",
+        "exercises": [
+          {
+            "name": "Seated Lateral Raise",
+            "sets": 3,
+            "reps_min": 12,
+            "reps_max": 15,
+            "weight": 12.5,
+            "rest": "60 sec",
+            "note": ""
+          },
+          {
+            "name": "Sit-Up Bench Crunch",
+            "sets": 2,
+            "reps_min": 12,
+            "reps_max": 15,
+            "weight": null,
+            "weight_note": "bodyweight",
+            "rest": "45 sec",
+            "note": ""
+          }
+        ],
+        "current_since": "2026-09-21",
+        "versions": [
+          {
+            "effective_on": "2026-09-21",
+            "source": "backfill",
+            "reason": "",
+            "exercises": [
+              {
+                "name": "Seated Lateral Raise",
+                "sets": 3,
+                "reps_min": 12,
+                "reps_max": 15,
+                "weight": 12.5,
+                "rest": "60 sec",
+                "note": ""
+              },
+              {
+                "name": "Sit-Up Bench Crunch",
+                "sets": 2,
+                "reps_min": 12,
+                "reps_max": 15,
+                "weight": null,
+                "weight_note": "bodyweight",
+                "rest": "45 sec",
+                "note": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "action_id": "c",
+        "title": "Upper C",
+        "days": [
+          5
+        ],
+        "planned_minutes": 45,
+        "estimated_minutes": 13,
+        "details": "",
+        "exercises": [
+          {
+            "name": "Flat DB Bench Press",
+            "sets": 3,
+            "reps_min": 8,
+            "reps_max": 12,
+            "weight": 50,
+            "rest": "2 min",
+            "note": ""
+          }
+        ],
+        "current_since": "2026-09-21",
+        "versions": [
+          {
+            "effective_on": "2026-09-21",
+            "source": "backfill",
+            "reason": "",
+            "exercises": [
+              {
+                "name": "Flat DB Bench Press",
+                "sets": 3,
+                "reps_min": 8,
+                "reps_max": 12,
+                "weight": 50,
+                "rest": "2 min",
+                "note": ""
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "workouts_per_week": 3,
+    "last_structural_change_on": null,
+    "program_age_weeks": 5,
+    "last_target_change_on": "2026-09-28"
+  },
+  "sessions": [
+    {
+      "date": "2026-09-21",
+      "week_start": "2026-09-21",
+      "action_id": "a",
+      "workout": "Upper A",
+      "status": "done",
+      "minutes": 42,
+      "note": "",
+      "sets": [
+        {
+          "exercise": "Flat DB Bench Press",
+          "set_no": 1,
+          "weight": 40,
+          "reps": 10,
+          "done": true,
+          "rir": 2,
+          "pain": false
+        },
+        {
+          "exercise": "Flat DB Bench Press",
+          "set_no": 2,
+          "weight": 40,
+          "reps": 10,
+          "done": true,
+          "rir": 2,
+          "pain": false
+        },
+        {
+          "exercise": "Flat DB Bench Press",
+          "set_no": 3,
+          "weight": 40,
+          "reps": 9,
+          "done": true,
+          "rir": 2,
+          "pain": false
+        },
+        {
+          "exercise": "Lat Pulldown",
+          "set_no": 1,
+          "weight": 95,
+          "reps": 10,
+          "done": true,
+          "rir": 1,
+          "pain": false
+        },
+        {
+          "exercise": "Lat Pulldown",
+          "set_no": 2,
+          "weight": 95,
+          "reps": 10,
+          "done": true,
+          "rir": 1,
+          "pain": false
+        },
+        {
+          "exercise": "Lat Pulldown",
+          "set_no": 3,
+          "weight": 95,
+          "reps": 9,
+          "done": true,
+          "rir": 1,
+          "pain": false
+        }
+      ]
+    },
+    {
+      "date": "2026-09-23",
+      "week_start": "2026-09-21",
+      "action_id": "b",
+      "workout": "Upper B",
+      "status": "done",
+      "minutes": 42,
+      "note": "",
+      "sets": [
+        {
+          "exercise": "Seated Lateral Raise",
+          "set_no": 1,
+          "weight": 12.5,
+          "reps": 13,
+          "done": true,
+          "rir": 3,
+          "pain": false
+        },
+        {
+          "exercise": "Seated Lateral Raise",
+          "set_no": 2,
+          "weight": 12.5,
+          "reps": 12,
+          "done": true,
+          "rir": 3,
+          "pain": false
+        },
+        {
+          "exercise": "Seated Lateral Raise",
+          "set_no": 3,
+          "weight": 12.5,
+          "reps": 12,
+          "done": true,
+          "rir": 3,
+          "pain": false
+        },
+        {
+          "exercise": "Sit-Up Bench Crunch",
+          "set_no": 1,
+          "weight": null,
+          "reps": 15,
+          "done": true,
+          "rir": null,
+          "pain": false
+        },
+        {
+          "exercise": "Sit-Up Bench Crunch",
+          "set_no": 2,
+          "weight": null,
+          "reps": 14,
+          "done": true,
+          "rir": null,
+          "pain": false
+        }
+      ]
+    },
+    {
+      "date": "2026-09-25",
+      "week_start": "2026-09-21",
+      "action_id": "c",
+      "workout": "Upper C",
+      "status": "done",
+      "minutes": 42,
+      "note": "",
+      "sets": [
+        {
+          "exercise": "Flat DB Bench Press",
+          "set_no": 1,
+          "weight": 40,
+          "reps": 8,
+          "done": true,
+          "rir": 2,
+          "pain": false
+        },
+        {
+          "exercise": "Flat DB Bench Press",
+          "set_no": 2,
+          "weight": 40,
+          "reps": 8,
+          "done": true,
+          "rir": 2,
+          "pain": false
+        },
+        {
+          "exercise": "Flat DB Bench Press",
+          "set_no": 3,
+          "weight": 40,
+          "reps": 8,
+          "done": true,
+          "rir": 2,
+          "pain": false
+        }
+      ]
+    },
+    {
+      "date": "2026-09-28",
+      "week_start": "2026-09-28",
+      "action_id": "a",
+      "workout": "Upper A",
+      "status": "done",
+      "minutes": 42,
+      "note": "",
+      "sets": [
+        {
+          "exercise": "Flat DB Bench Press",
+          "set_no": 1,
+          "weight": 42.5,
+          "reps": 10,
+          "done": true,
+          "rir": 2,
+          "pain": false
+        },
+        {
+          "exercise": "Flat DB Bench Press",
+          "set_no": 2,
+          "weight": 42.5,
+          "reps": 10,
+          "done": true,
+          "rir": 2,
+          "pain": false
+        },
+        {
+          "exercise": "Flat DB Bench Press",
+          "set_no": 3,
+          "weight": 42.5,
+          "reps": 9,
+          "done": true,
+          "rir": 2,
+          "pain": false
+        },
+        {
+          "exercise": "Lat Pulldown",
+          "set_no": 1,
+          "weight": 100,
+          "reps": 10,
+          "done": true,
+          "rir": 1,
+          "pain": false
+        },
+        {
+          "exercise": "Lat Pulldown",
+          "set_no": 2,
+          "weight": 100,
+          "reps": 10,
+          "done": true,
+          "rir": 1,
+          "pain": false
+        },
+        {
+          "exercise": "Lat Pulldown",
+          "set_no": 3,
+          "weight": 100,
+          "reps": 9,
+          "done": true,
+          "rir": 1,
+          "pain": false
+        }
+      ]
+    },
+    {
+      "date": "2026-09-30",
+      "week_start": "2026-09-28",
+      "action_id": "b",
+      "workout": "Upper B",
+      "status": "done",
+      "minutes": 42,
+      "note": "",
+      "sets": [
+        {
+          "exercise": "Seated Lateral Raise",
+          "set_no": 1,
+          "weight": 12.5,
+          "reps": 13,
+          "done": true,
+          "rir": 3,
+          "pain": false
+        },
+        {
+          "exercise": "Seated Lateral Raise",
+          "set_no": 2,
+          "weight": 12.5,
+          "reps": 12,
+          "done": true,
+          "rir": 3,
+          "pain": false
+        },
+        {
+          "exercise": "Seated Lateral Raise",
+          "set_no": 3,
+          "weight": 12.5,
+          "reps": 12,
+          "done": true,
+          "rir": 3,
+          "pain": false
+        },
+        {
+          "exercise": "Sit-Up Bench Crunch",
+          "set_no": 1,
+          "weight": null,
+          "reps": 15,
+          "done": true,
+          "rir": null,
+          "pain": false
+        },
+        {
+          "exercise": "Sit-Up Bench Crunch",
+          "set_no": 2,
+          "weight": null,
+          "reps": 14,
+          "done": true,
+          "rir": null,
+          "pain": false
+        }
+      ]
+    },
+    {
+      "date": "2026-10-02",
+      "week_start": "2026-09-28",
+      "action_id": "c",
+      "workout": "Upper C",
+      "status": "done",
+      "minutes": 42,
+      "note": "",
+      "sets": [
+        {
+          "exercise": "Flat DB Bench Press",
+          "set_no": 1,
+          "weight": 42.5,
+          "reps": 8,
+          "done": true,
+          "rir": 2,
+          "pain": false
+        },
+        {
+          "exercise": "Flat DB Bench Press",
+          "set_no": 2,
+          "weight": 42.5,
+          "reps": 8,
+          "done": true,
+          "rir": 2,
+          "pain": false
+        },
+        {
+          "exercise": "Flat DB Bench Press",
+          "set_no": 3,
+          "weight": 42.5,
+          "reps": 8,
+          "done": true,
+          "rir": 2,
+          "pain": false
+        }
+      ]
+    },
+    {
+      "date": "2026-10-05",
+      "week_start": "2026-10-05",
+      "action_id": "a",
+      "workout": "Upper A",
+      "status": "done",
+      "minutes": 42,
+      "note": "",
+      "sets": [
+        {
+          "exercise": "Flat DB Bench Press",
+          "set_no": 1,
+          "weight": 45,
+          "reps": 10,
+          "done": true,
+          "rir": 2,
+          "pain": false
+        },
+        {
+          "exercise": "Flat DB Bench Press",
+          "set_no": 2,
+          "weight": 45,
+          "reps": 10,
+          "done": true,
+          "rir": 2,
+          "pain": false
+        },
+        {
+          "exercise": "Flat DB Bench Press",
+          "set_no": 3,
+          "weight": 45,
+          "reps": 9,
+          "done": true,
+          "rir": 2,
+          "pain": false
+        },
+        {
+          "exercise": "Lat Pulldown",
+          "set_no": 1,
+          "weight": 100,
+          "reps": 10,
+          "done": true,
+          "rir": 1,
+          "pain": false
+        },
+        {
+          "exercise": "Lat Pulldown",
+          "set_no": 2,
+          "weight": 100,
+          "reps": 10,
+          "done": true,
+          "rir": 1,
+          "pain": false
+        },
+        {
+          "exercise": "Lat Pulldown",
+          "set_no": 3,
+          "weight": 100,
+          "reps": 9,
+          "done": true,
+          "rir": 1,
+          "pain": false
+        }
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "week_start": "2026-10-05",
+      "action_id": "b",
+      "workout": "Upper B",
+      "status": "done",
+      "minutes": 42,
+      "note": "",
+      "sets": [
+        {
+          "exercise": "Seated Lateral Raise",
+          "set_no": 1,
+          "weight": 12.5,
+          "reps": 13,
+          "done": true,
+          "rir": 3,
+          "pain": false
+        },
+        {
+          "exercise": "Seated Lateral Raise",
+          "set_no": 2,
+          "weight": 12.5,
+          "reps": 12,
+          "done": true,
+          "rir": 3,
+          "pain": false
+        },
+        {
+          "exercise": "Seated Lateral Raise",
+          "set_no": 3,
+          "weight": 12.5,
+          "reps": 12,
+          "done": true,
+          "rir": 3,
+          "pain": false
+        },
+        {
+          "exercise": "Sit-Up Bench Crunch",
+          "set_no": 1,
+          "weight": null,
+          "reps": 15,
+          "done": true,
+          "rir": null,
+          "pain": false
+        },
+        {
+          "exercise": "Sit-Up Bench Crunch",
+          "set_no": 2,
+          "weight": null,
+          "reps": 14,
+          "done": true,
+          "rir": null,
+          "pain": false
+        }
+      ]
+    },
+    {
+      "date": "2026-10-09",
+      "week_start": "2026-10-05",
+      "action_id": "c",
+      "workout": "Upper C",
+      "status": "done",
+      "minutes": 42,
+      "note": "",
+      "sets": [
+        {
+          "exercise": "Flat DB Bench Press",
+          "set_no": 1,
+          "weight": 45,
+          "reps": 8,
+          "done": true,
+          "rir": 2,
+          "pain": false
+        },
+        {
+          "exercise": "Flat DB Bench Press",
+          "set_no": 2,
+          "weight": 45,
+          "reps": 8,
+          "done": true,
+          "rir": 2,
+          "pain": false
+        },
+        {
+          "exercise": "Flat DB Bench Press",
+          "set_no": 3,
+          "weight": 45,
+          "reps": 8,
+          "done": true,
+          "rir": 2,
+          "pain": false
+        }
+      ]
+    },
+    {
+      "date": "2026-10-12",
+      "week_start": "2026-10-12",
+      "action_id": "a",
+      "workout": "Upper A",
+      "status": "done",
+      "minutes": 42,
+      "note": "",
+      "sets": [
+        {
+          "exercise": "Flat DB Bench Press",
+          "set_no": 1,
+          "weight": 47.5,
+          "reps": 10,
+          "done": true,
+          "rir": 2,
+          "pain": false
+        },
+        {
+          "exercise": "Flat DB Bench Press",
+          "set_no": 2,
+          "weight": 47.5,
+          "reps": 10,
+          "done": true,
+          "rir": 2,
+          "pain": false
+        },
+        {
+          "exercise": "Flat DB Bench Press",
+          "set_no": 3,
+          "weight": 47.5,
+          "reps": 9,
+          "done": true,
+          "rir": 2,
+          "pain": false
+        },
+        {
+          "exercise": "Lat Pulldown",
+          "set_no": 1,
+          "weight": 100,
+          "reps": 10,
+          "done": true,
+          "rir": 1,
+          "pain": false
+        },
+        {
+          "exercise": "Lat Pulldown",
+          "set_no": 2,
+          "weight": 100,
+          "reps": 10,
+          "done": true,
+          "rir": 1,
+          "pain": false
+        },
+        {
+          "exercise": "Lat Pulldown",
+          "set_no": 3,
+          "weight": 100,
+          "reps": 9,
+          "done": true,
+          "rir": 1,
+          "pain": false
+        }
+      ]
+    },
+    {
+      "date": "2026-10-14",
+      "week_start": "2026-10-12",
+      "action_id": "b",
+      "workout": "Upper B",
+      "status": "done",
+      "minutes": 42,
+      "note": "",
+      "sets": [
+        {
+          "exercise": "Seated Lateral Raise",
+          "set_no": 1,
+          "weight": 12.5,
+          "reps": 13,
+          "done": true,
+          "rir": 3,
+          "pain": false
+        },
+        {
+          "exercise": "Seated Lateral Raise",
+          "set_no": 2,
+          "weight": 12.5,
+          "reps": 12,
+          "done": true,
+          "rir": 3,
+          "pain": false
+        },
+        {
+          "exercise": "Seated Lateral Raise",
+          "set_no": 3,
+          "weight": 12.5,
+          "reps": 12,
+          "done": true,
+          "rir": 3,
+          "pain": false
+        },
+        {
+          "exercise": "Sit-Up Bench Crunch",
+          "set_no": 1,
+          "weight": null,
+          "reps": 15,
+          "done": true,
+          "rir": null,
+          "pain": false
+        },
+        {
+          "exercise": "Sit-Up Bench Crunch",
+          "set_no": 2,
+          "weight": null,
+          "reps": 14,
+          "done": true,
+          "rir": null,
+          "pain": false
+        }
+      ]
+    },
+    {
+      "date": "2026-10-16",
+      "week_start": "2026-10-12",
+      "action_id": "c",
+      "workout": "Upper C",
+      "status": "done",
+      "minutes": 42,
+      "note": "",
+      "sets": [
+        {
+          "exercise": "Flat DB Bench Press",
+          "set_no": 1,
+          "weight": 47.5,
+          "reps": 8,
+          "done": true,
+          "rir": 2,
+          "pain": false
+        },
+        {
+          "exercise": "Flat DB Bench Press",
+          "set_no": 2,
+          "weight": 47.5,
+          "reps": 8,
+          "done": true,
+          "rir": 2,
+          "pain": false
+        },
+        {
+          "exercise": "Flat DB Bench Press",
+          "set_no": 3,
+          "weight": 47.5,
+          "reps": 8,
+          "done": true,
+          "rir": 2,
+          "pain": false
+        }
+      ]
+    },
+    {
+      "date": "2026-10-19",
+      "week_start": "2026-10-19",
+      "action_id": "a",
+      "workout": "Upper A",
+      "status": "done",
+      "minutes": 42,
+      "note": "",
+      "sets": [
+        {
+          "exercise": "Flat DB Bench Press",
+          "set_no": 1,
+          "weight": 50,
+          "reps": 10,
+          "done": true,
+          "rir": 2,
+          "pain": false
+        },
+        {
+          "exercise": "Flat DB Bench Press",
+          "set_no": 2,
+          "weight": 50,
+          "reps": 10,
+          "done": true,
+          "rir": 2,
+          "pain": false
+        },
+        {
+          "exercise": "Flat DB Bench Press",
+          "set_no": 3,
+          "weight": 50,
+          "reps": 9,
+          "done": true,
+          "rir": 2,
+          "pain": false
+        },
+        {
+          "exercise": "Lat Pulldown",
+          "set_no": 1,
+          "weight": 100,
+          "reps": 10,
+          "done": true,
+          "rir": 1,
+          "pain": false
+        },
+        {
+          "exercise": "Lat Pulldown",
+          "set_no": 2,
+          "weight": 100,
+          "reps": 10,
+          "done": true,
+          "rir": 1,
+          "pain": false
+        },
+        {
+          "exercise": "Lat Pulldown",
+          "set_no": 3,
+          "weight": 100,
+          "reps": 9,
+          "done": true,
+          "rir": 1,
+          "pain": false
+        }
+      ]
+    },
+    {
+      "date": "2026-10-21",
+      "week_start": "2026-10-19",
+      "action_id": "b",
+      "workout": "Upper B",
+      "status": "missed",
+      "minutes": null,
+      "note": "",
+      "sets": []
+    },
+    {
+      "date": "2026-10-23",
+      "week_start": "2026-10-19",
+      "action_id": "c",
+      "workout": "Upper C",
+      "status": "done",
+      "minutes": 42,
+      "note": "",
+      "sets": [
+        {
+          "exercise": "Flat DB Bench Press",
+          "set_no": 1,
+          "weight": 50,
+          "reps": 8,
+          "done": true,
+          "rir": 2,
+          "pain": false
+        },
+        {
+          "exercise": "Flat DB Bench Press",
+          "set_no": 2,
+          "weight": 50,
+          "reps": 8,
+          "done": true,
+          "rir": 2,
+          "pain": false
+        },
+        {
+          "exercise": "Flat DB Bench Press",
+          "set_no": 3,
+          "weight": 50,
+          "reps": 8,
+          "done": true,
+          "rir": 2,
+          "pain": false
+        }
+      ]
+    },
+    {
+      "date": "2026-10-26",
+      "week_start": "2026-10-26",
+      "action_id": "a",
+      "workout": "Upper A",
+      "status": "done",
+      "minutes": 42,
+      "note": "",
+      "sets": [
+        {
+          "exercise": "Flat DB Bench Press",
+          "set_no": 1,
+          "weight": 52.5,
+          "reps": 10,
+          "done": true,
+          "rir": 2,
+          "pain": false
+        },
+        {
+          "exercise": "Flat DB Bench Press",
+          "set_no": 2,
+          "weight": 52.5,
+          "reps": 10,
+          "done": true,
+          "rir": 2,
+          "pain": false
+        },
+        {
+          "exercise": "Flat DB Bench Press",
+          "set_no": 3,
+          "weight": 52.5,
+          "reps": 9,
+          "done": true,
+          "rir": 2,
+          "pain": false
+        },
+        {
+          "exercise": "Lat Pulldown",
+          "set_no": 1,
+          "weight": 100,
+          "reps": 10,
+          "done": true,
+          "rir": 1,
+          "pain": false
+        },
+        {
+          "exercise": "Lat Pulldown",
+          "set_no": 2,
+          "weight": 100,
+          "reps": 10,
+          "done": true,
+          "rir": 1,
+          "pain": false
+        },
+        {
+          "exercise": "Lat Pulldown",
+          "set_no": 3,
+          "weight": 100,
+          "reps": 9,
+          "done": true,
+          "rir": 1,
+          "pain": false
+        }
+      ]
+    },
+    {
+      "date": "2026-10-28",
+      "week_start": "2026-10-26",
+      "action_id": "b",
+      "workout": "Upper B",
+      "status": "done",
+      "minutes": 42,
+      "note": "knee felt off on the crunches",
+      "sets": [
+        {
+          "exercise": "Seated Lateral Raise",
+          "set_no": 1,
+          "weight": 12.5,
+          "reps": 15,
+          "done": true,
+          "rir": 3,
+          "pain": false
+        },
+        {
+          "exercise": "Seated Lateral Raise",
+          "set_no": 2,
+          "weight": 12.5,
+          "reps": 15,
+          "done": true,
+          "rir": 3,
+          "pain": false
+        },
+        {
+          "exercise": "Seated Lateral Raise",
+          "set_no": 3,
+          "weight": 12.5,
+          "reps": 15,
+          "done": true,
+          "rir": 3,
+          "pain": false
+        },
+        {
+          "exercise": "Sit-Up Bench Crunch",
+          "set_no": 1,
+          "weight": null,
+          "reps": 15,
+          "done": true,
+          "rir": null,
+          "pain": true
+        },
+        {
+          "exercise": "Sit-Up Bench Crunch",
+          "set_no": 2,
+          "weight": null,
+          "reps": 14,
+          "done": true,
+          "rir": null,
+          "pain": true
+        }
+      ]
+    },
+    {
+      "date": "2026-10-30",
+      "week_start": "2026-10-26",
+      "action_id": "c",
+      "workout": "Upper C",
+      "status": "done",
+      "minutes": 42,
+      "note": "",
+      "sets": [
+        {
+          "exercise": "Flat DB Bench Press",
+          "set_no": 1,
+          "weight": 52.5,
+          "reps": 8,
+          "done": true,
+          "rir": 2,
+          "pain": false
+        },
+        {
+          "exercise": "Flat DB Bench Press",
+          "set_no": 2,
+          "weight": 52.5,
+          "reps": 8,
+          "done": true,
+          "rir": 2,
+          "pain": false
+        },
+        {
+          "exercise": "Flat DB Bench Press",
+          "set_no": 3,
+          "weight": 52.5,
+          "reps": 8,
+          "done": true,
+          "rir": 2,
+          "pain": false
+        }
+      ]
+    }
+  ],
+  "history": [
+    {
+      "week_start": "2026-09-21",
+      "exercise": "Flat DB Bench Press",
+      "sets_done": 6,
+      "best_weight": 40,
+      "best_reps": 10,
+      "e1rm": 53.3,
+      "volume": 2120,
+      "avg_rir": 2,
+      "pain": false
+    },
+    {
+      "week_start": "2026-09-21",
+      "exercise": "Lat Pulldown",
+      "sets_done": 3,
+      "best_weight": 95,
+      "best_reps": 10,
+      "e1rm": 126.7,
+      "volume": 2755,
+      "avg_rir": 1,
+      "pain": false
+    },
+    {
+      "week_start": "2026-09-21",
+      "exercise": "Seated Lateral Raise",
+      "sets_done": 3,
+      "best_weight": 12.5,
+      "best_reps": 13,
+      "e1rm": 17.9,
+      "volume": 463,
+      "avg_rir": 3,
+      "pain": false
+    },
+    {
+      "week_start": "2026-09-21",
+      "exercise": "Sit-Up Bench Crunch",
+      "sets_done": 2,
+      "best_weight": null,
+      "best_reps": 15,
+      "e1rm": null,
+      "volume": 0,
+      "avg_rir": null,
+      "pain": false
+    },
+    {
+      "week_start": "2026-09-28",
+      "exercise": "Flat DB Bench Press",
+      "sets_done": 6,
+      "best_weight": 42.5,
+      "best_reps": 10,
+      "e1rm": 56.7,
+      "volume": 2253,
+      "avg_rir": 2,
+      "pain": false
+    },
+    {
+      "week_start": "2026-09-28",
+      "exercise": "Lat Pulldown",
+      "sets_done": 3,
+      "best_weight": 100,
+      "best_reps": 10,
+      "e1rm": 133.3,
+      "volume": 2900,
+      "avg_rir": 1,
+      "pain": false
+    },
+    {
+      "week_start": "2026-09-28",
+      "exercise": "Seated Lateral Raise",
+      "sets_done": 3,
+      "best_weight": 12.5,
+      "best_reps": 13,
+      "e1rm": 17.9,
+      "volume": 463,
+      "avg_rir": 3,
+      "pain": false
+    },
+    {
+      "week_start": "2026-09-28",
+      "exercise": "Sit-Up Bench Crunch",
+      "sets_done": 2,
+      "best_weight": null,
+      "best_reps": 15,
+      "e1rm": null,
+      "volume": 0,
+      "avg_rir": null,
+      "pain": false
+    },
+    {
+      "week_start": "2026-10-05",
+      "exercise": "Flat DB Bench Press",
+      "sets_done": 6,
+      "best_weight": 45,
+      "best_reps": 10,
+      "e1rm": 60,
+      "volume": 2385,
+      "avg_rir": 2,
+      "pain": false
+    },
+    {
+      "week_start": "2026-10-05",
+      "exercise": "Lat Pulldown",
+      "sets_done": 3,
+      "best_weight": 100,
+      "best_reps": 10,
+      "e1rm": 133.3,
+      "volume": 2900,
+      "avg_rir": 1,
+      "pain": false
+    },
+    {
+      "week_start": "2026-10-05",
+      "exercise": "Seated Lateral Raise",
+      "sets_done": 3,
+      "best_weight": 12.5,
+      "best_reps": 13,
+      "e1rm": 17.9,
+      "volume": 463,
+      "avg_rir": 3,
+      "pain": false
+    },
+    {
+      "week_start": "2026-10-05",
+      "exercise": "Sit-Up Bench Crunch",
+      "sets_done": 2,
+      "best_weight": null,
+      "best_reps": 15,
+      "e1rm": null,
+      "volume": 0,
+      "avg_rir": null,
+      "pain": false
+    },
+    {
+      "week_start": "2026-10-12",
+      "exercise": "Flat DB Bench Press",
+      "sets_done": 6,
+      "best_weight": 47.5,
+      "best_reps": 10,
+      "e1rm": 63.3,
+      "volume": 2518,
+      "avg_rir": 2,
+      "pain": false
+    },
+    {
+      "week_start": "2026-10-12",
+      "exercise": "Lat Pulldown",
+      "sets_done": 3,
+      "best_weight": 100,
+      "best_reps": 10,
+      "e1rm": 133.3,
+      "volume": 2900,
+      "avg_rir": 1,
+      "pain": false
+    },
+    {
+      "week_start": "2026-10-12",
+      "exercise": "Seated Lateral Raise",
+      "sets_done": 3,
+      "best_weight": 12.5,
+      "best_reps": 13,
+      "e1rm": 17.9,
+      "volume": 463,
+      "avg_rir": 3,
+      "pain": false
+    },
+    {
+      "week_start": "2026-10-12",
+      "exercise": "Sit-Up Bench Crunch",
+      "sets_done": 2,
+      "best_weight": null,
+      "best_reps": 15,
+      "e1rm": null,
+      "volume": 0,
+      "avg_rir": null,
+      "pain": false
+    },
+    {
+      "week_start": "2026-10-19",
+      "exercise": "Flat DB Bench Press",
+      "sets_done": 6,
+      "best_weight": 50,
+      "best_reps": 10,
+      "e1rm": 66.7,
+      "volume": 2650,
+      "avg_rir": 2,
+      "pain": false
+    },
+    {
+      "week_start": "2026-10-19",
+      "exercise": "Lat Pulldown",
+      "sets_done": 3,
+      "best_weight": 100,
+      "best_reps": 10,
+      "e1rm": 133.3,
+      "volume": 2900,
+      "avg_rir": 1,
+      "pain": false
+    },
+    {
+      "week_start": "2026-10-26",
+      "exercise": "Flat DB Bench Press",
+      "sets_done": 6,
+      "best_weight": 52.5,
+      "best_reps": 10,
+      "e1rm": 70,
+      "volume": 2783,
+      "avg_rir": 2,
+      "pain": false
+    },
+    {
+      "week_start": "2026-10-26",
+      "exercise": "Lat Pulldown",
+      "sets_done": 3,
+      "best_weight": 100,
+      "best_reps": 10,
+      "e1rm": 133.3,
+      "volume": 2900,
+      "avg_rir": 1,
+      "pain": false
+    },
+    {
+      "week_start": "2026-10-26",
+      "exercise": "Seated Lateral Raise",
+      "sets_done": 3,
+      "best_weight": 12.5,
+      "best_reps": 15,
+      "e1rm": 18.8,
+      "volume": 563,
+      "avg_rir": 3,
+      "pain": false
+    },
+    {
+      "week_start": "2026-10-26",
+      "exercise": "Sit-Up Bench Crunch",
+      "sets_done": 2,
+      "best_weight": null,
+      "best_reps": 15,
+      "e1rm": null,
+      "volume": 0,
+      "avg_rir": null,
+      "pain": true
+    }
+  ],
+  "metrics": {
+    "exercises": [
+      {
+        "exercise": "Flat DB Bench Press",
+        "workouts": [
+          "Upper A",
+          "Upper C"
+        ],
+        "planned": {
+          "sets": 3,
+          "reps_min": 8,
+          "reps_max": 12,
+          "weight": 50
+        },
+        "sessions": 12,
+        "first_seen": "2026-09-21",
+        "last_seen": "2026-10-30",
+        "last_weight": 52.5,
+        "e1rm_now": 70,
+        "e1rm_3w_ago": 60,
+        "e1rm_trend_pct": 16.7,
+        "weeks_since_gain": 0,
+        "stalled": false,
+        "top_of_range_streak": 0,
+        "avg_rir_2w": 2,
+        "pain_flags_4w": 0,
+        "next_step_pct": 0.095
+      },
+      {
+        "exercise": "Lat Pulldown",
+        "workouts": [
+          "Upper A"
+        ],
+        "planned": {
+          "sets": 3,
+          "reps_min": 8,
+          "reps_max": 12,
+          "weight": 100
+        },
+        "sessions": 6,
+        "first_seen": "2026-09-21",
+        "last_seen": "2026-10-26",
+        "last_weight": 100,
+        "e1rm_now": 133.3,
+        "e1rm_3w_ago": 133.3,
+        "e1rm_trend_pct": 0,
+        "weeks_since_gain": 4,
+        "stalled": true,
+        "top_of_range_streak": 0,
+        "avg_rir_2w": 1,
+        "pain_flags_4w": 0,
+        "next_step_pct": 0.05
+      },
+      {
+        "exercise": "Seated Lateral Raise",
+        "workouts": [
+          "Upper B"
+        ],
+        "planned": {
+          "sets": 3,
+          "reps_min": 12,
+          "reps_max": 15,
+          "weight": 12.5
+        },
+        "sessions": 5,
+        "first_seen": "2026-09-23",
+        "last_seen": "2026-10-28",
+        "last_weight": 12.5,
+        "e1rm_now": 18.8,
+        "e1rm_3w_ago": 17.9,
+        "e1rm_trend_pct": 5,
+        "weeks_since_gain": 0,
+        "stalled": false,
+        "top_of_range_streak": 1,
+        "avg_rir_2w": 3,
+        "pain_flags_4w": 0,
+        "next_step_pct": 0.4
+      },
+      {
+        "exercise": "Sit-Up Bench Crunch",
+        "workouts": [
+          "Upper B"
+        ],
+        "planned": {
+          "sets": 2,
+          "reps_min": 12,
+          "reps_max": 15,
+          "weight": null
+        },
+        "sessions": 5,
+        "first_seen": "2026-09-23",
+        "last_seen": "2026-10-28",
+        "last_weight": null,
+        "e1rm_now": null,
+        "e1rm_3w_ago": null,
+        "e1rm_trend_pct": null,
+        "weeks_since_gain": null,
+        "stalled": false,
+        "top_of_range_streak": 0,
+        "avg_rir_2w": null,
+        "pain_flags_4w": 1,
+        "next_step_pct": null
+      }
+    ],
+    "attendance_4w": 0.92,
+    "attendance_8w": 0.94,
+    "workouts_done_4w": 11,
+    "workouts_planned_4w": 12,
+    "set_completion_4w": 1,
+    "avg_session_minutes_4w": 42,
+    "weekly_sets": [
+      {
+        "week_start": "2026-09-21",
+        "sets": 14
+      },
+      {
+        "week_start": "2026-09-28",
+        "sets": 14
+      },
+      {
+        "week_start": "2026-10-05",
+        "sets": 14
+      },
+      {
+        "week_start": "2026-10-12",
+        "sets": 14
+      },
+      {
+        "week_start": "2026-10-19",
+        "sets": 9
+      },
+      {
+        "week_start": "2026-10-26",
+        "sets": 14
+      }
+    ]
+  },
+  "comments": [
+    {
+      "date": "2026-09-28",
+      "source": "details",
+      "workout": "Upper A",
+      "exercise": null,
+      "text": "Warm up 5 min"
+    },
+    {
+      "date": "2026-09-28",
+      "source": "plan_note",
+      "workout": "Upper A",
+      "exercise": "Lat Pulldown",
+      "text": "Elbows to back pockets"
+    },
+    {
+      "date": "2026-10-28",
+      "source": "session_note",
+      "workout": "Upper B",
+      "exercise": null,
+      "text": "knee felt off on the crunches"
+    }
+  ],
+  "bodyweight": {
+    "shared": true,
+    "unit": "lb",
+    "latest": {
+      "date": "2026-10-30",
+      "value": 189.6
+    },
+    "weekly": [
+      {
+        "week_start": "2026-09-28",
+        "avg": 194.9
+      },
+      {
+        "week_start": "2026-10-05",
+        "avg": 194
+      },
+      {
+        "week_start": "2026-10-12",
+        "avg": 192.6
+      },
+      {
+        "week_start": "2026-10-19",
+        "avg": 191.2
+      },
+      {
+        "week_start": "2026-10-26",
+        "avg": 190
+      }
+    ],
+    "trend_per_week": -1.4
+  },
+  "decisions": [
+    {
+      "id": "r1",
+      "as_of": "2026-10-23",
+      "recommendation": "change",
+      "change_level": 1,
+      "summary": "Add reps on lateral raises",
+      "changes": [
+        {
+          "workout": "Upper B",
+          "type": "reps",
+          "exercise": "Seated Lateral Raise",
+          "from": {
+            "reps_min": 10,
+            "reps_max": 12
+          },
+          "to": {
+            "reps_min": 12,
+            "reps_max": 15
+          },
+          "reason": "top of range"
+        }
+      ],
+      "user_status": null,
+      "inferred_status": "applied",
+      "user_note": ""
+    }
+  ],
+  "since_last": {
+    "last_report_as_of": "2026-10-23",
+    "sessions": [
+      "2026-10-26 Upper A (done)",
+      "2026-10-28 Upper B (done)",
+      "2026-10-30 Upper C (done)"
+    ],
+    "sets": 14,
+    "plan_changes": [],
+    "comments": 1
+  }
+}

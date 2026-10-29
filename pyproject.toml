@@ -1,0 +1,32 @@
+[project]
+name = "workout-coach"
+version = "0.1.0"
+description = "A weekly AI review of one person's workouts: reads the workout history, recommends a change or no change, writes a report."
+requires-python = ">=3.11"
+dependencies = [
+  "pydantic>=2.7",
+  "pyyaml>=6.0",
+  "jinja2>=3.1",
+  "anthropic>=0.40",
+  "langgraph>=0.2",
+  "langsmith>=0.1.130",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+coach = "coach.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["coach*"]
+
+[tool.setuptools.package-data]
+coach = ["templates/*.j2"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

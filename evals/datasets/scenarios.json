@@ -1,0 +1,248 @@
+[
+  {
+    "name": "ready_to_progress",
+    "inputs": {
+      "scenario": "ready_to_progress"
+    },
+    "outputs": {
+      "levels": [
+        1,
+        2
+      ],
+      "recommendation": null,
+      "must_touch": {
+        "Flat DB Bench Press": [
+          "load",
+          "reps"
+        ]
+      },
+      "forbid_types_on": {},
+      "forbid_names": [],
+      "why": "Bench hit 12 on every set two sessions running: move it up."
+    }
+  },
+  {
+    "name": "missed_sessions",
+    "inputs": {
+      "scenario": "missed_sessions"
+    },
+    "outputs": {
+      "levels": [
+        0,
+        1
+      ],
+      "recommendation": null,
+      "must_touch": {},
+      "forbid_types_on": {},
+      "forbid_names": [],
+      "why": "Six of twenty workouts missed: keep it simple, don't add change."
+    }
+  },
+  {
+    "name": "pain_note",
+    "inputs": {
+      "scenario": "pain_note"
+    },
+    "outputs": {
+      "levels": [
+        4
+      ],
+      "recommendation": null,
+      "must_touch": {
+        "Sit-Up Bench Crunch (knee test)": [
+          "remove",
+          "swap"
+        ]
+      },
+      "forbid_types_on": {
+        "Sit-Up Bench Crunch (knee test)": [
+          "load",
+          "reps",
+          "sets"
+        ]
+      },
+      "forbid_names": [],
+      "why": "A knee-test exercise hurt twice: remove it."
+    }
+  },
+  {
+    "name": "stall",
+    "inputs": {
+      "scenario": "stall"
+    },
+    "outputs": {
+      "levels": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "recommendation": null,
+      "must_touch": {},
+      "forbid_types_on": {
+        "Lat Pulldown": [
+          "load"
+        ]
+      },
+      "forbid_names": [],
+      "why": "Lat pulldown flat for weeks after a weight increase: reps, a set or a swap; not more weight."
+    }
+  },
+  {
+    "name": "recent_program_change",
+    "inputs": {
+      "scenario": "recent_program_change"
+    },
+    "outputs": {
+      "levels": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "recommendation": null,
+      "must_touch": {},
+      "forbid_types_on": {},
+      "forbid_names": [],
+      "why": "The program changed two weeks ago: no new program now."
+    }
+  },
+  {
+    "name": "small_dumbbell",
+    "inputs": {
+      "scenario": "small_dumbbell"
+    },
+    "outputs": {
+      "levels": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "recommendation": null,
+      "must_touch": {},
+      "forbid_types_on": {
+        "Seated Lateral Raise": [
+          "load"
+        ]
+      },
+      "forbid_names": [],
+      "why": "12.5 \u2192 17.5 lb is a 40% jump: progress raises with reps or a set."
+    }
+  },
+  {
+    "name": "comment_conflict",
+    "inputs": {
+      "scenario": "comment_conflict"
+    },
+    "outputs": {
+      "levels": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "recommendation": null,
+      "must_touch": {},
+      "forbid_types_on": {},
+      "forbid_names": [
+        "squat",
+        "lunge",
+        "leg press",
+        "deadlift"
+      ],
+      "why": "A note asks for squats; the knee rule wins."
+    }
+  },
+  {
+    "name": "block_end_stalled",
+    "inputs": {
+      "scenario": "block_end_stalled"
+    },
+    "outputs": {
+      "levels": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "recommendation": null,
+      "must_touch": {},
+      "forbid_types_on": {},
+      "forbid_names": [],
+      "why": "Twelve weeks in, at a block's end, most lifts flat for weeks: a real change is due."
+    }
+  },
+  {
+    "name": "too_little_data",
+    "inputs": {
+      "scenario": "too_little_data"
+    },
+    "outputs": {
+      "levels": [
+        0
+      ],
+      "recommendation": "none",
+      "must_touch": {},
+      "forbid_types_on": {},
+      "forbid_names": [],
+      "why": "One week of data: too early to recommend anything."
+    }
+  },
+  {
+    "name": "cutting_holding",
+    "inputs": {
+      "scenario": "cutting_holding"
+    },
+    "outputs": {
+      "levels": [
+        0,
+        1,
+        2
+      ],
+      "recommendation": null,
+      "must_touch": {},
+      "forbid_types_on": {},
+      "forbid_names": [],
+      "why": "Losing 1.5 lb a week with lifts holding: that's a win; keep going."
+    }
+  },
+  {
+    "name": "all_progressing",
+    "inputs": {
+      "scenario": "all_progressing"
+    },
+    "outputs": {
+      "levels": [
+        0,
+        1,
+        2
+      ],
+      "recommendation": null,
+      "must_touch": {},
+      "forbid_types_on": {},
+      "forbid_names": [],
+      "why": "Everything moving mid-block: hold, or the smallest step."
+    }
+  },
+  {
+    "name": "last_not_applied",
+    "inputs": {
+      "scenario": "last_not_applied"
+    },
+    "outputs": {
+      "levels": [
+        0,
+        1,
+        2
+      ],
+      "recommendation": null,
+      "must_touch": {},
+      "forbid_types_on": {},
+      "forbid_names": [],
+      "why": "Last week's bench increase wasn't applied: don't escalate."
+    }
+  }
+]

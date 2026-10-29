@@ -1,0 +1,81 @@
+# Workout coach · week of {{ as_of_label }}
+
+**{{ headline }}**
+
+{{ decision.summary }}
+
+## Where you are
+
+| | |
+|---|---|
+{% for label, value in glance %}
+| {{ label }} | {{ value }} |
+{% endfor %}
+
+{% if exercises %}
+| Exercise | Last weight | Est. max now | Change (3 wks) | Wks since gain | Effort | Read |
+|---|---|---|---|---|---|---|
+{% for e in exercises %}
+| {{ e.exercise }} | {{ 'BW' if e.last_weight is none else num(e.last_weight) }} | {{ num(e.e1rm_now) }} | {{ signed(e.e1rm_trend_pct, '%') }} | {{ '–' if e.weeks_since_gain is none else e.weeks_since_gain }} | {{ '–' if e.avg_rir_2w is none else '@' ~ num(e.avg_rir_2w) }} | {{ e.read }} |
+{% endfor %}
+
+{% endif %}
+{% if assessment %}
+{{ assessment.attendance }} {{ assessment.recovery }} {{ assessment.program_fit }}
+
+{% endif %}
+## What to change
+
+{% if decision.changes %}
+| Workout | Exercise | Change | Now → next | Why |
+|---|---|---|---|---|
+{% for c in decision.changes %}
+| {{ c.workout }} | {{ c.exercise }} | {{ c.type }} | {{ target(c.from_) }} → {{ target(c.to) }} | {{ c.reason }} |
+{% endfor %}
+{% elif decision.recommendation == 'none' %}
+Nothing this week: the coach couldn't make a recommendation. Keep training as planned.
+{% else %}
+Nothing. Keep the plan exactly as it is next week.
+{% endif %}
+
+{% if decision.rationale %}
+## Why
+
+{% for r in decision.rationale %}
+- {{ r }}
+{% endfor %}
+
+{% endif %}
+{% if decision.would_change_mind %}
+## What would change this
+
+{% for r in decision.would_change_mind %}
+- {{ r }}
+{% endfor %}
+
+{% endif %}
+{% if option_lines %}
+## Options considered
+
+{% for line in option_lines %}
+- {{ line }}
+{% endfor %}
+
+{% endif %}
+{% if notes %}
+## Checks
+
+{% for n in notes %}
+- {{ n }}
+{% endfor %}
+
+{% endif %}
+## The change list
+
+Paste this into Claude to make the changes, or use it later from the app.
+
+```json
+{{ change_list }}
+```
+
+<sub>{{ footer }}</sub>

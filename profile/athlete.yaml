@@ -1,0 +1,70 @@
+# Your rules. The governor (coach/governor.py) enforces these in code; the agents read them too.
+# Notes in your workout plans are context the agents weigh. These are rules no note can override.
+# Edit this file (and commit) when something changes: a cleared knee, a new day count, new equipment.
+
+units: lb
+
+schedule:
+  days_per_week: 5          # Mon–Fri. The coach never adds or drops a training day.
+  days: [1, 2, 3, 4, 5]
+  session_minutes: { min: 35, max: 45 }   # checked against each workout's estimated time
+  exercises_per_workout: { target: 5, min: 4, max: 6 }
+
+goals:
+  - 'Build muscle: lats ("big wings"), chest (more defined), shoulders, biceps, back, lower back'
+  - "Lose body weight: about 1.5 lb a week toward 155 lb; while losing, holding strength is a win"
+  - "Stay consistent: the gym keeps me disciplined; 5 days a week is good for my spirit"
+
+injuries_and_limits:
+  - id: knee
+    summary: Knee injury. No lower-body training. Anything that loads the knee is out.
+    banned_patterns: [squat, lunge, leg_press, leg_extension, leg_curl, step_up, jump, deadlift, kettlebell_swing]
+    banned_exercises:
+      - Weighted crunch
+      - Seated kettlebell twist
+      - Hollow-body hold
+      - Dead bug
+    note: Weighted crunches, seated KB twists and hollow-body holds all bothered the leg. Can't do dead bugs yet.
+  - id: knee_test
+    summary: Exercises named "(knee test)" are on trial. Any pain flag on one means remove it, never progress it.
+
+preferences:
+  weights_only: true            # no cardio finishers in lifting sessions
+  prefer_dumbbells: true        # over barbells
+  barbells_allowed: false
+  one_cable_at_a_time: true     # only one cable stack free: no two-cable moves (cable flies, cable crossovers)
+  keep_duration_steady: true    # a change shouldn't push a workout past session_minutes.max
+
+equipment:
+  - dumbbells
+  - adjustable_bench
+  - incline_bench
+  - sit_up_bench
+  - single_cable
+  - lat_pulldown
+  - seated_cable_row
+  - chest_press_machine
+  - hammer_strength_back_extension
+  - hammer_strength_glute_ham
+  - rear_delt_machine
+
+increments:
+  # The smallest jump available. A jump bigger than max_jump_pct of the current weight is not allowed:
+  # add reps or a set instead (12.5 → 17.5 lb on raises is a 40% jump).
+  dumbbell: 5
+  machine: 5
+  cable: 5
+  max_jump_pct: 0.10
+
+changes:
+  # Mid-block, a week changes a few things at most, so you can tell what worked.
+  max_changes_per_week: 3
+  # Weekly volume grows slowly: at most this many sets added across the whole week.
+  max_added_sets_per_week: 4
+
+program:
+  block_weeks: 4                  # a month at a time: weekly check-ins, bigger changes at a block's end
+  min_weeks_between_program_changes: 4
+  planned_replacement: "The current Mon–Fri upper-body plan is due to be replaced around late January 2027."
+  # Set to true (and commit) to ask the coach for a new program at the next run, whatever the data says.
+  requested_program_change: false

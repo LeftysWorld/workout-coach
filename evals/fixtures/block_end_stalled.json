@@ -1,0 +1,5837 @@
+{
+ "meta": {
+  "schema_version": "1",
+  "as_of": "2026-11-27",
+  "months": 6,
+  "from": "2026-05-27",
+  "units": "lb",
+  "timezone": "America/New_York",
+  "fingerprint": "f0d386711443d75a"
+ },
+ "program": {
+  "workouts": [
+   {
+    "action_id": "mon",
+    "title": "Mon: Chest + Back",
+    "days": [
+     1
+    ],
+    "planned_minutes": 45,
+    "estimated_minutes": 33,
+    "details": "Warm-up: band pull-aparts, feeder sets.",
+    "exercises": [
+     {
+      "name": "Flat DB Bench Press",
+      "sets": 3,
+      "reps_min": 8,
+      "reps_max": 12,
+      "weight": 50,
+      "rest": "2–3 min",
+      "note": ""
+     },
+     {
+      "name": "Lat Pulldown",
+      "sets": 4,
+      "reps_min": 8,
+      "reps_max": 12,
+      "weight": 100,
+      "rest": "2–3 min",
+      "note": ""
+     },
+     {
+      "name": "Seated Lateral Raise",
+      "sets": 3,
+      "reps_min": 12,
+      "reps_max": 15,
+      "weight": 12.5,
+      "rest": "60 sec",
+      "note": ""
+     }
+    ],
+    "current_since": "2026-09-07",
+    "versions": [
+     {
+      "effective_on": "2026-09-07",
+      "source": "backfill",
+      "reason": "",
+      "exercises": [
+       {
+        "name": "Flat DB Bench Press",
+        "sets": 3,
+        "reps_min": 8,
+        "reps_max": 12,
+        "weight": 50,
+        "rest": "2–3 min",
+        "note": ""
+       },
+       {
+        "name": "Lat Pulldown",
+        "sets": 4,
+        "reps_min": 8,
+        "reps_max": 12,
+        "weight": 100,
+        "rest": "2–3 min",
+        "note": ""
+       },
+       {
+        "name": "Seated Lateral Raise",
+        "sets": 3,
+        "reps_min": 12,
+        "reps_max": 15,
+        "weight": 12.5,
+        "rest": "60 sec",
+        "note": ""
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "action_id": "tue",
+    "title": "Tue: Shoulders + Arms",
+    "days": [
+     2
+    ],
+    "planned_minutes": 45,
+    "estimated_minutes": 25,
+    "details": "Warm-up: band pull-aparts, feeder sets.",
+    "exercises": [
+     {
+      "name": "Seated DB Shoulder Press",
+      "sets": 3,
+      "reps_min": 8,
+      "reps_max": 12,
+      "weight": 35,
+      "rest": "2 min",
+      "note": ""
+     },
+     {
+      "name": "Seated DB Curl",
+      "sets": 3,
+      "reps_min": 10,
+      "reps_max": 12,
+      "weight": 25,
+      "rest": "90 sec",
+      "note": ""
+     },
+     {
+      "name": "Cable Triceps Pushdown",
+      "sets": 3,
+      "reps_min": 12,
+      "reps_max": 15,
+      "weight": 57.5,
+      "rest": "60 sec",
+      "note": ""
+     }
+    ],
+    "current_since": "2026-09-07",
+    "versions": [
+     {
+      "effective_on": "2026-09-07",
+      "source": "backfill",
+      "reason": "",
+      "exercises": [
+       {
+        "name": "Seated DB Shoulder Press",
+        "sets": 3,
+        "reps_min": 8,
+        "reps_max": 12,
+        "weight": 35,
+        "rest": "2 min",
+        "note": ""
+       },
+       {
+        "name": "Seated DB Curl",
+        "sets": 3,
+        "reps_min": 10,
+        "reps_max": 12,
+        "weight": 25,
+        "rest": "90 sec",
+        "note": ""
+       },
+       {
+        "name": "Cable Triceps Pushdown",
+        "sets": 3,
+        "reps_min": 12,
+        "reps_max": 15,
+        "weight": 57.5,
+        "rest": "60 sec",
+        "note": ""
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "action_id": "wed",
+    "title": "Wed: Back + Core",
+    "days": [
+     3
+    ],
+    "planned_minutes": 45,
+    "estimated_minutes": 29,
+    "details": "Warm-up: band pull-aparts, feeder sets.",
+    "exercises": [
+     {
+      "name": "Seated Cable Row",
+      "sets": 4,
+      "reps_min": 6,
+      "reps_max": 10,
+      "weight": 100,
+      "rest": "2–3 min",
+      "note": ""
+     },
+     {
+      "name": "Hammer Strength Back Extension",
+      "sets": 3,
+      "reps_min": 10,
+      "reps_max": 15,
+      "weight": null,
+      "rest": "90 sec",
+      "note": ""
+     },
+     {
+      "name": "Sit-Up Bench Crunch (knee test)",
+      "sets": 3,
+      "reps_min": 12,
+      "reps_max": 15,
+      "weight": null,
+      "rest": "45 sec",
+      "note": "First set at bodyweight: any knee pain, stop and skip it."
+     }
+    ],
+    "current_since": "2026-09-07",
+    "versions": [
+     {
+      "effective_on": "2026-09-07",
+      "source": "backfill",
+      "reason": "",
+      "exercises": [
+       {
+        "name": "Seated Cable Row",
+        "sets": 4,
+        "reps_min": 6,
+        "reps_max": 10,
+        "weight": 100,
+        "rest": "2–3 min",
+        "note": ""
+       },
+       {
+        "name": "Hammer Strength Back Extension",
+        "sets": 3,
+        "reps_min": 10,
+        "reps_max": 15,
+        "weight": null,
+        "rest": "90 sec",
+        "note": ""
+       },
+       {
+        "name": "Sit-Up Bench Crunch (knee test)",
+        "sets": 3,
+        "reps_min": 12,
+        "reps_max": 15,
+        "weight": null,
+        "rest": "45 sec",
+        "note": "First set at bodyweight: any knee pain, stop and skip it."
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "action_id": "thu",
+    "title": "Thu: Chest + Shoulders",
+    "days": [
+     4
+    ],
+    "planned_minutes": 45,
+    "estimated_minutes": 19,
+    "details": "Warm-up: band pull-aparts, feeder sets.",
+    "exercises": [
+     {
+      "name": "Incline DB Press",
+      "sets": 3,
+      "reps_min": 8,
+      "reps_max": 12,
+      "weight": 35,
+      "rest": "2 min",
+      "note": ""
+     },
+     {
+      "name": "Seated Rear-Delt Fly",
+      "sets": 3,
+      "reps_min": 12,
+      "reps_max": 15,
+      "weight": 15,
+      "rest": "60 sec",
+      "note": ""
+     }
+    ],
+    "current_since": "2026-09-07",
+    "versions": [
+     {
+      "effective_on": "2026-09-07",
+      "source": "backfill",
+      "reason": "",
+      "exercises": [
+       {
+        "name": "Incline DB Press",
+        "sets": 3,
+        "reps_min": 8,
+        "reps_max": 12,
+        "weight": 35,
+        "rest": "2 min",
+        "note": ""
+       },
+       {
+        "name": "Seated Rear-Delt Fly",
+        "sets": 3,
+        "reps_min": 12,
+        "reps_max": 15,
+        "weight": 15,
+        "rest": "60 sec",
+        "note": ""
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "action_id": "fri",
+    "title": "Fri: Lats + Arms",
+    "days": [
+     5
+    ],
+    "planned_minutes": 45,
+    "estimated_minutes": 17,
+    "details": "Warm-up: band pull-aparts, feeder sets.",
+    "exercises": [
+     {
+      "name": "Single-Arm DB Row",
+      "sets": 3,
+      "reps_min": 8,
+      "reps_max": 12,
+      "weight": 40,
+      "rest": "90 sec",
+      "note": ""
+     },
+     {
+      "name": "Seated Hammer Curl",
+      "sets": 3,
+      "reps_min": 10,
+      "reps_max": 12,
+      "weight": 20,
+      "rest": "60 sec",
+      "note": ""
+     }
+    ],
+    "current_since": "2026-09-07",
+    "versions": [
+     {
+      "effective_on": "2026-09-07",
+      "source": "backfill",
+      "reason": "",
+      "exercises": [
+       {
+        "name": "Single-Arm DB Row",
+        "sets": 3,
+        "reps_min": 8,
+        "reps_max": 12,
+        "weight": 40,
+        "rest": "90 sec",
+        "note": ""
+       },
+       {
+        "name": "Seated Hammer Curl",
+        "sets": 3,
+        "reps_min": 10,
+        "reps_max": 12,
+        "weight": 20,
+        "rest": "60 sec",
+        "note": ""
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "workouts_per_week": 5,
+  "last_structural_change_on": null,
+  "program_age_weeks": 11,
+  "last_target_change_on": null
+ },
+ "sessions": [
+  {
+   "date": "2026-10-05",
+   "week_start": "2026-10-05",
+   "action_id": "mon",
+   "workout": "Mon: Chest + Back",
+   "status": "done",
+   "minutes": 40,
+   "note": "",
+   "sets": [
+    {
+     "exercise": "Flat DB Bench Press",
+     "set_no": 1,
+     "weight": 40,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Flat DB Bench Press",
+     "set_no": 2,
+     "weight": 40,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Flat DB Bench Press",
+     "set_no": 3,
+     "weight": 40,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Lat Pulldown",
+     "set_no": 1,
+     "weight": 95,
+     "reps": 10,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Lat Pulldown",
+     "set_no": 2,
+     "weight": 95,
+     "reps": 10,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Lat Pulldown",
+     "set_no": 3,
+     "weight": 95,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Lat Pulldown",
+     "set_no": 4,
+     "weight": 95,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Lateral Raise",
+     "set_no": 1,
+     "weight": 12.5,
+     "reps": 14,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Lateral Raise",
+     "set_no": 2,
+     "weight": 12.5,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Lateral Raise",
+     "set_no": 3,
+     "weight": 12.5,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    }
+   ]
+  },
+  {
+   "date": "2026-10-06",
+   "week_start": "2026-10-05",
+   "action_id": "tue",
+   "workout": "Tue: Shoulders + Arms",
+   "status": "done",
+   "minutes": 40,
+   "note": "",
+   "sets": [
+    {
+     "exercise": "Cable Triceps Pushdown",
+     "set_no": 1,
+     "weight": 40,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Cable Triceps Pushdown",
+     "set_no": 2,
+     "weight": 40,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Cable Triceps Pushdown",
+     "set_no": 3,
+     "weight": 40,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Curl",
+     "set_no": 1,
+     "weight": 40,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Curl",
+     "set_no": 2,
+     "weight": 40,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Curl",
+     "set_no": 3,
+     "weight": 40,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Shoulder Press",
+     "set_no": 1,
+     "weight": 40,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Shoulder Press",
+     "set_no": 2,
+     "weight": 40,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Shoulder Press",
+     "set_no": 3,
+     "weight": 40,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    }
+   ]
+  },
+  {
+   "date": "2026-10-07",
+   "week_start": "2026-10-05",
+   "action_id": "wed",
+   "workout": "Wed: Back + Core",
+   "status": "done",
+   "minutes": 40,
+   "note": "",
+   "sets": [
+    {
+     "exercise": "Hammer Strength Back Extension",
+     "set_no": 1,
+     "weight": null,
+     "reps": 13,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Hammer Strength Back Extension",
+     "set_no": 2,
+     "weight": null,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Hammer Strength Back Extension",
+     "set_no": 3,
+     "weight": null,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Cable Row",
+     "set_no": 1,
+     "weight": 40,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Cable Row",
+     "set_no": 2,
+     "weight": 40,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Cable Row",
+     "set_no": 3,
+     "weight": 40,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Sit-Up Bench Crunch (knee test)",
+     "set_no": 1,
+     "weight": null,
+     "reps": 14,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Sit-Up Bench Crunch (knee test)",
+     "set_no": 2,
+     "weight": null,
+     "reps": 13,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Sit-Up Bench Crunch (knee test)",
+     "set_no": 3,
+     "weight": null,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    }
+   ]
+  },
+  {
+   "date": "2026-10-08",
+   "week_start": "2026-10-05",
+   "action_id": "thu",
+   "workout": "Thu: Chest + Shoulders",
+   "status": "done",
+   "minutes": 40,
+   "note": "",
+   "sets": [
+    {
+     "exercise": "Incline DB Press",
+     "set_no": 1,
+     "weight": 40,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Incline DB Press",
+     "set_no": 2,
+     "weight": 40,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Incline DB Press",
+     "set_no": 3,
+     "weight": 40,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Rear-Delt Fly",
+     "set_no": 1,
+     "weight": 15,
+     "reps": 14,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Rear-Delt Fly",
+     "set_no": 2,
+     "weight": 15,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Rear-Delt Fly",
+     "set_no": 3,
+     "weight": 15,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    }
+   ]
+  },
+  {
+   "date": "2026-10-09",
+   "week_start": "2026-10-05",
+   "action_id": "fri",
+   "workout": "Fri: Lats + Arms",
+   "status": "done",
+   "minutes": 40,
+   "note": "",
+   "sets": [
+    {
+     "exercise": "Seated Hammer Curl",
+     "set_no": 1,
+     "weight": 40,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Hammer Curl",
+     "set_no": 2,
+     "weight": 40,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Hammer Curl",
+     "set_no": 3,
+     "weight": 40,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Single-Arm DB Row",
+     "set_no": 1,
+     "weight": 40,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Single-Arm DB Row",
+     "set_no": 2,
+     "weight": 40,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Single-Arm DB Row",
+     "set_no": 3,
+     "weight": 40,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    }
+   ]
+  },
+  {
+   "date": "2026-10-12",
+   "week_start": "2026-10-12",
+   "action_id": "mon",
+   "workout": "Mon: Chest + Back",
+   "status": "done",
+   "minutes": 40,
+   "note": "",
+   "sets": [
+    {
+     "exercise": "Flat DB Bench Press",
+     "set_no": 1,
+     "weight": 42.5,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Flat DB Bench Press",
+     "set_no": 2,
+     "weight": 42.5,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Flat DB Bench Press",
+     "set_no": 3,
+     "weight": 42.5,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Lat Pulldown",
+     "set_no": 1,
+     "weight": 95,
+     "reps": 10,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Lat Pulldown",
+     "set_no": 2,
+     "weight": 95,
+     "reps": 10,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Lat Pulldown",
+     "set_no": 3,
+     "weight": 95,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Lat Pulldown",
+     "set_no": 4,
+     "weight": 95,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Lateral Raise",
+     "set_no": 1,
+     "weight": 12.5,
+     "reps": 14,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Lateral Raise",
+     "set_no": 2,
+     "weight": 12.5,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Lateral Raise",
+     "set_no": 3,
+     "weight": 12.5,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    }
+   ]
+  },
+  {
+   "date": "2026-10-13",
+   "week_start": "2026-10-12",
+   "action_id": "tue",
+   "workout": "Tue: Shoulders + Arms",
+   "status": "done",
+   "minutes": 40,
+   "note": "",
+   "sets": [
+    {
+     "exercise": "Cable Triceps Pushdown",
+     "set_no": 1,
+     "weight": 42.5,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Cable Triceps Pushdown",
+     "set_no": 2,
+     "weight": 42.5,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Cable Triceps Pushdown",
+     "set_no": 3,
+     "weight": 42.5,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Curl",
+     "set_no": 1,
+     "weight": 42.5,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Curl",
+     "set_no": 2,
+     "weight": 42.5,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Curl",
+     "set_no": 3,
+     "weight": 42.5,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Shoulder Press",
+     "set_no": 1,
+     "weight": 42.5,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Shoulder Press",
+     "set_no": 2,
+     "weight": 42.5,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Shoulder Press",
+     "set_no": 3,
+     "weight": 42.5,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    }
+   ]
+  },
+  {
+   "date": "2026-10-14",
+   "week_start": "2026-10-12",
+   "action_id": "wed",
+   "workout": "Wed: Back + Core",
+   "status": "done",
+   "minutes": 40,
+   "note": "",
+   "sets": [
+    {
+     "exercise": "Hammer Strength Back Extension",
+     "set_no": 1,
+     "weight": null,
+     "reps": 13,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Hammer Strength Back Extension",
+     "set_no": 2,
+     "weight": null,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Hammer Strength Back Extension",
+     "set_no": 3,
+     "weight": null,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Cable Row",
+     "set_no": 1,
+     "weight": 42.5,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Cable Row",
+     "set_no": 2,
+     "weight": 42.5,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Cable Row",
+     "set_no": 3,
+     "weight": 42.5,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Sit-Up Bench Crunch (knee test)",
+     "set_no": 1,
+     "weight": null,
+     "reps": 14,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Sit-Up Bench Crunch (knee test)",
+     "set_no": 2,
+     "weight": null,
+     "reps": 13,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Sit-Up Bench Crunch (knee test)",
+     "set_no": 3,
+     "weight": null,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    }
+   ]
+  },
+  {
+   "date": "2026-10-15",
+   "week_start": "2026-10-12",
+   "action_id": "thu",
+   "workout": "Thu: Chest + Shoulders",
+   "status": "done",
+   "minutes": 40,
+   "note": "",
+   "sets": [
+    {
+     "exercise": "Incline DB Press",
+     "set_no": 1,
+     "weight": 42.5,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Incline DB Press",
+     "set_no": 2,
+     "weight": 42.5,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Incline DB Press",
+     "set_no": 3,
+     "weight": 42.5,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Rear-Delt Fly",
+     "set_no": 1,
+     "weight": 15,
+     "reps": 14,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Rear-Delt Fly",
+     "set_no": 2,
+     "weight": 15,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Rear-Delt Fly",
+     "set_no": 3,
+     "weight": 15,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    }
+   ]
+  },
+  {
+   "date": "2026-10-16",
+   "week_start": "2026-10-12",
+   "action_id": "fri",
+   "workout": "Fri: Lats + Arms",
+   "status": "done",
+   "minutes": 40,
+   "note": "",
+   "sets": [
+    {
+     "exercise": "Seated Hammer Curl",
+     "set_no": 1,
+     "weight": 42.5,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Hammer Curl",
+     "set_no": 2,
+     "weight": 42.5,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Hammer Curl",
+     "set_no": 3,
+     "weight": 42.5,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Single-Arm DB Row",
+     "set_no": 1,
+     "weight": 42.5,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Single-Arm DB Row",
+     "set_no": 2,
+     "weight": 42.5,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Single-Arm DB Row",
+     "set_no": 3,
+     "weight": 42.5,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    }
+   ]
+  },
+  {
+   "date": "2026-10-19",
+   "week_start": "2026-10-19",
+   "action_id": "mon",
+   "workout": "Mon: Chest + Back",
+   "status": "done",
+   "minutes": 40,
+   "note": "",
+   "sets": [
+    {
+     "exercise": "Flat DB Bench Press",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Flat DB Bench Press",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Flat DB Bench Press",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Lat Pulldown",
+     "set_no": 1,
+     "weight": 97.5,
+     "reps": 10,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Lat Pulldown",
+     "set_no": 2,
+     "weight": 97.5,
+     "reps": 10,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Lat Pulldown",
+     "set_no": 3,
+     "weight": 97.5,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Lat Pulldown",
+     "set_no": 4,
+     "weight": 97.5,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Lateral Raise",
+     "set_no": 1,
+     "weight": 12.5,
+     "reps": 14,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Lateral Raise",
+     "set_no": 2,
+     "weight": 12.5,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Lateral Raise",
+     "set_no": 3,
+     "weight": 12.5,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    }
+   ]
+  },
+  {
+   "date": "2026-10-20",
+   "week_start": "2026-10-19",
+   "action_id": "tue",
+   "workout": "Tue: Shoulders + Arms",
+   "status": "done",
+   "minutes": 40,
+   "note": "",
+   "sets": [
+    {
+     "exercise": "Cable Triceps Pushdown",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Cable Triceps Pushdown",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Cable Triceps Pushdown",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Curl",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Curl",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Curl",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Shoulder Press",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Shoulder Press",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Shoulder Press",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    }
+   ]
+  },
+  {
+   "date": "2026-10-21",
+   "week_start": "2026-10-19",
+   "action_id": "wed",
+   "workout": "Wed: Back + Core",
+   "status": "done",
+   "minutes": 40,
+   "note": "",
+   "sets": [
+    {
+     "exercise": "Hammer Strength Back Extension",
+     "set_no": 1,
+     "weight": null,
+     "reps": 13,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Hammer Strength Back Extension",
+     "set_no": 2,
+     "weight": null,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Hammer Strength Back Extension",
+     "set_no": 3,
+     "weight": null,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Cable Row",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Cable Row",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Cable Row",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Sit-Up Bench Crunch (knee test)",
+     "set_no": 1,
+     "weight": null,
+     "reps": 14,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Sit-Up Bench Crunch (knee test)",
+     "set_no": 2,
+     "weight": null,
+     "reps": 13,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Sit-Up Bench Crunch (knee test)",
+     "set_no": 3,
+     "weight": null,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    }
+   ]
+  },
+  {
+   "date": "2026-10-22",
+   "week_start": "2026-10-19",
+   "action_id": "thu",
+   "workout": "Thu: Chest + Shoulders",
+   "status": "done",
+   "minutes": 40,
+   "note": "",
+   "sets": [
+    {
+     "exercise": "Incline DB Press",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Incline DB Press",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Incline DB Press",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Rear-Delt Fly",
+     "set_no": 1,
+     "weight": 15,
+     "reps": 14,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Rear-Delt Fly",
+     "set_no": 2,
+     "weight": 15,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Rear-Delt Fly",
+     "set_no": 3,
+     "weight": 15,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    }
+   ]
+  },
+  {
+   "date": "2026-10-23",
+   "week_start": "2026-10-19",
+   "action_id": "fri",
+   "workout": "Fri: Lats + Arms",
+   "status": "done",
+   "minutes": 40,
+   "note": "",
+   "sets": [
+    {
+     "exercise": "Seated Hammer Curl",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Hammer Curl",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Hammer Curl",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Single-Arm DB Row",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Single-Arm DB Row",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Single-Arm DB Row",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    }
+   ]
+  },
+  {
+   "date": "2026-10-26",
+   "week_start": "2026-10-26",
+   "action_id": "mon",
+   "workout": "Mon: Chest + Back",
+   "status": "done",
+   "minutes": 40,
+   "note": "",
+   "sets": [
+    {
+     "exercise": "Flat DB Bench Press",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Flat DB Bench Press",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Flat DB Bench Press",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Lat Pulldown",
+     "set_no": 1,
+     "weight": 97.5,
+     "reps": 10,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Lat Pulldown",
+     "set_no": 2,
+     "weight": 97.5,
+     "reps": 10,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Lat Pulldown",
+     "set_no": 3,
+     "weight": 97.5,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Lat Pulldown",
+     "set_no": 4,
+     "weight": 97.5,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Lateral Raise",
+     "set_no": 1,
+     "weight": 12.5,
+     "reps": 14,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Lateral Raise",
+     "set_no": 2,
+     "weight": 12.5,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Lateral Raise",
+     "set_no": 3,
+     "weight": 12.5,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    }
+   ]
+  },
+  {
+   "date": "2026-10-27",
+   "week_start": "2026-10-26",
+   "action_id": "tue",
+   "workout": "Tue: Shoulders + Arms",
+   "status": "done",
+   "minutes": 40,
+   "note": "",
+   "sets": [
+    {
+     "exercise": "Cable Triceps Pushdown",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Cable Triceps Pushdown",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Cable Triceps Pushdown",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Curl",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Curl",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Curl",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Shoulder Press",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Shoulder Press",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Shoulder Press",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    }
+   ]
+  },
+  {
+   "date": "2026-10-28",
+   "week_start": "2026-10-26",
+   "action_id": "wed",
+   "workout": "Wed: Back + Core",
+   "status": "done",
+   "minutes": 40,
+   "note": "",
+   "sets": [
+    {
+     "exercise": "Hammer Strength Back Extension",
+     "set_no": 1,
+     "weight": null,
+     "reps": 13,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Hammer Strength Back Extension",
+     "set_no": 2,
+     "weight": null,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Hammer Strength Back Extension",
+     "set_no": 3,
+     "weight": null,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Cable Row",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Cable Row",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Cable Row",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Sit-Up Bench Crunch (knee test)",
+     "set_no": 1,
+     "weight": null,
+     "reps": 14,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Sit-Up Bench Crunch (knee test)",
+     "set_no": 2,
+     "weight": null,
+     "reps": 13,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Sit-Up Bench Crunch (knee test)",
+     "set_no": 3,
+     "weight": null,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    }
+   ]
+  },
+  {
+   "date": "2026-10-29",
+   "week_start": "2026-10-26",
+   "action_id": "thu",
+   "workout": "Thu: Chest + Shoulders",
+   "status": "done",
+   "minutes": 40,
+   "note": "",
+   "sets": [
+    {
+     "exercise": "Incline DB Press",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Incline DB Press",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Incline DB Press",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Rear-Delt Fly",
+     "set_no": 1,
+     "weight": 15,
+     "reps": 14,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Rear-Delt Fly",
+     "set_no": 2,
+     "weight": 15,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Rear-Delt Fly",
+     "set_no": 3,
+     "weight": 15,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    }
+   ]
+  },
+  {
+   "date": "2026-10-30",
+   "week_start": "2026-10-26",
+   "action_id": "fri",
+   "workout": "Fri: Lats + Arms",
+   "status": "done",
+   "minutes": 40,
+   "note": "",
+   "sets": [
+    {
+     "exercise": "Seated Hammer Curl",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Hammer Curl",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Hammer Curl",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Single-Arm DB Row",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Single-Arm DB Row",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Single-Arm DB Row",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    }
+   ]
+  },
+  {
+   "date": "2026-11-02",
+   "week_start": "2026-11-02",
+   "action_id": "mon",
+   "workout": "Mon: Chest + Back",
+   "status": "done",
+   "minutes": 40,
+   "note": "",
+   "sets": [
+    {
+     "exercise": "Flat DB Bench Press",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Flat DB Bench Press",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Flat DB Bench Press",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Lat Pulldown",
+     "set_no": 1,
+     "weight": 100,
+     "reps": 10,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Lat Pulldown",
+     "set_no": 2,
+     "weight": 100,
+     "reps": 10,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Lat Pulldown",
+     "set_no": 3,
+     "weight": 100,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Lat Pulldown",
+     "set_no": 4,
+     "weight": 100,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Lateral Raise",
+     "set_no": 1,
+     "weight": 12.5,
+     "reps": 14,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Lateral Raise",
+     "set_no": 2,
+     "weight": 12.5,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Lateral Raise",
+     "set_no": 3,
+     "weight": 12.5,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    }
+   ]
+  },
+  {
+   "date": "2026-11-03",
+   "week_start": "2026-11-02",
+   "action_id": "tue",
+   "workout": "Tue: Shoulders + Arms",
+   "status": "done",
+   "minutes": 40,
+   "note": "",
+   "sets": [
+    {
+     "exercise": "Cable Triceps Pushdown",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Cable Triceps Pushdown",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Cable Triceps Pushdown",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Curl",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Curl",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Curl",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Shoulder Press",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Shoulder Press",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Shoulder Press",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    }
+   ]
+  },
+  {
+   "date": "2026-11-04",
+   "week_start": "2026-11-02",
+   "action_id": "wed",
+   "workout": "Wed: Back + Core",
+   "status": "done",
+   "minutes": 40,
+   "note": "",
+   "sets": [
+    {
+     "exercise": "Hammer Strength Back Extension",
+     "set_no": 1,
+     "weight": null,
+     "reps": 13,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Hammer Strength Back Extension",
+     "set_no": 2,
+     "weight": null,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Hammer Strength Back Extension",
+     "set_no": 3,
+     "weight": null,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Cable Row",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Cable Row",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Cable Row",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Sit-Up Bench Crunch (knee test)",
+     "set_no": 1,
+     "weight": null,
+     "reps": 14,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Sit-Up Bench Crunch (knee test)",
+     "set_no": 2,
+     "weight": null,
+     "reps": 13,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Sit-Up Bench Crunch (knee test)",
+     "set_no": 3,
+     "weight": null,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    }
+   ]
+  },
+  {
+   "date": "2026-11-05",
+   "week_start": "2026-11-02",
+   "action_id": "thu",
+   "workout": "Thu: Chest + Shoulders",
+   "status": "done",
+   "minutes": 40,
+   "note": "",
+   "sets": [
+    {
+     "exercise": "Incline DB Press",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Incline DB Press",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Incline DB Press",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Rear-Delt Fly",
+     "set_no": 1,
+     "weight": 15,
+     "reps": 14,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Rear-Delt Fly",
+     "set_no": 2,
+     "weight": 15,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Rear-Delt Fly",
+     "set_no": 3,
+     "weight": 15,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    }
+   ]
+  },
+  {
+   "date": "2026-11-06",
+   "week_start": "2026-11-02",
+   "action_id": "fri",
+   "workout": "Fri: Lats + Arms",
+   "status": "done",
+   "minutes": 40,
+   "note": "",
+   "sets": [
+    {
+     "exercise": "Seated Hammer Curl",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Hammer Curl",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Hammer Curl",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Single-Arm DB Row",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Single-Arm DB Row",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Single-Arm DB Row",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    }
+   ]
+  },
+  {
+   "date": "2026-11-09",
+   "week_start": "2026-11-09",
+   "action_id": "mon",
+   "workout": "Mon: Chest + Back",
+   "status": "done",
+   "minutes": 40,
+   "note": "",
+   "sets": [
+    {
+     "exercise": "Flat DB Bench Press",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Flat DB Bench Press",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Flat DB Bench Press",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Lat Pulldown",
+     "set_no": 1,
+     "weight": 100,
+     "reps": 10,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Lat Pulldown",
+     "set_no": 2,
+     "weight": 100,
+     "reps": 10,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Lat Pulldown",
+     "set_no": 3,
+     "weight": 100,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Lat Pulldown",
+     "set_no": 4,
+     "weight": 100,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Lateral Raise",
+     "set_no": 1,
+     "weight": 12.5,
+     "reps": 14,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Lateral Raise",
+     "set_no": 2,
+     "weight": 12.5,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Lateral Raise",
+     "set_no": 3,
+     "weight": 12.5,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    }
+   ]
+  },
+  {
+   "date": "2026-11-10",
+   "week_start": "2026-11-09",
+   "action_id": "tue",
+   "workout": "Tue: Shoulders + Arms",
+   "status": "done",
+   "minutes": 40,
+   "note": "",
+   "sets": [
+    {
+     "exercise": "Cable Triceps Pushdown",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Cable Triceps Pushdown",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Cable Triceps Pushdown",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Curl",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Curl",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Curl",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Shoulder Press",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Shoulder Press",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Shoulder Press",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    }
+   ]
+  },
+  {
+   "date": "2026-11-11",
+   "week_start": "2026-11-09",
+   "action_id": "wed",
+   "workout": "Wed: Back + Core",
+   "status": "done",
+   "minutes": 40,
+   "note": "",
+   "sets": [
+    {
+     "exercise": "Hammer Strength Back Extension",
+     "set_no": 1,
+     "weight": null,
+     "reps": 13,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Hammer Strength Back Extension",
+     "set_no": 2,
+     "weight": null,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Hammer Strength Back Extension",
+     "set_no": 3,
+     "weight": null,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Cable Row",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Cable Row",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Cable Row",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Sit-Up Bench Crunch (knee test)",
+     "set_no": 1,
+     "weight": null,
+     "reps": 14,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Sit-Up Bench Crunch (knee test)",
+     "set_no": 2,
+     "weight": null,
+     "reps": 13,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Sit-Up Bench Crunch (knee test)",
+     "set_no": 3,
+     "weight": null,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    }
+   ]
+  },
+  {
+   "date": "2026-11-12",
+   "week_start": "2026-11-09",
+   "action_id": "thu",
+   "workout": "Thu: Chest + Shoulders",
+   "status": "done",
+   "minutes": 40,
+   "note": "",
+   "sets": [
+    {
+     "exercise": "Incline DB Press",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Incline DB Press",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Incline DB Press",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Rear-Delt Fly",
+     "set_no": 1,
+     "weight": 15,
+     "reps": 14,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Rear-Delt Fly",
+     "set_no": 2,
+     "weight": 15,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Rear-Delt Fly",
+     "set_no": 3,
+     "weight": 15,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    }
+   ]
+  },
+  {
+   "date": "2026-11-13",
+   "week_start": "2026-11-09",
+   "action_id": "fri",
+   "workout": "Fri: Lats + Arms",
+   "status": "done",
+   "minutes": 40,
+   "note": "",
+   "sets": [
+    {
+     "exercise": "Seated Hammer Curl",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Hammer Curl",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Hammer Curl",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Single-Arm DB Row",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Single-Arm DB Row",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Single-Arm DB Row",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    }
+   ]
+  },
+  {
+   "date": "2026-11-16",
+   "week_start": "2026-11-16",
+   "action_id": "mon",
+   "workout": "Mon: Chest + Back",
+   "status": "done",
+   "minutes": 40,
+   "note": "",
+   "sets": [
+    {
+     "exercise": "Flat DB Bench Press",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Flat DB Bench Press",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Flat DB Bench Press",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Lat Pulldown",
+     "set_no": 1,
+     "weight": 102.5,
+     "reps": 10,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Lat Pulldown",
+     "set_no": 2,
+     "weight": 102.5,
+     "reps": 10,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Lat Pulldown",
+     "set_no": 3,
+     "weight": 102.5,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Lat Pulldown",
+     "set_no": 4,
+     "weight": 102.5,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Lateral Raise",
+     "set_no": 1,
+     "weight": 12.5,
+     "reps": 14,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Lateral Raise",
+     "set_no": 2,
+     "weight": 12.5,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Lateral Raise",
+     "set_no": 3,
+     "weight": 12.5,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    }
+   ]
+  },
+  {
+   "date": "2026-11-17",
+   "week_start": "2026-11-16",
+   "action_id": "tue",
+   "workout": "Tue: Shoulders + Arms",
+   "status": "done",
+   "minutes": 40,
+   "note": "",
+   "sets": [
+    {
+     "exercise": "Cable Triceps Pushdown",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Cable Triceps Pushdown",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Cable Triceps Pushdown",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Curl",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Curl",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Curl",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Shoulder Press",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Shoulder Press",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Shoulder Press",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    }
+   ]
+  },
+  {
+   "date": "2026-11-18",
+   "week_start": "2026-11-16",
+   "action_id": "wed",
+   "workout": "Wed: Back + Core",
+   "status": "done",
+   "minutes": 40,
+   "note": "",
+   "sets": [
+    {
+     "exercise": "Hammer Strength Back Extension",
+     "set_no": 1,
+     "weight": null,
+     "reps": 13,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Hammer Strength Back Extension",
+     "set_no": 2,
+     "weight": null,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Hammer Strength Back Extension",
+     "set_no": 3,
+     "weight": null,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Cable Row",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Cable Row",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Cable Row",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Sit-Up Bench Crunch (knee test)",
+     "set_no": 1,
+     "weight": null,
+     "reps": 14,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Sit-Up Bench Crunch (knee test)",
+     "set_no": 2,
+     "weight": null,
+     "reps": 13,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Sit-Up Bench Crunch (knee test)",
+     "set_no": 3,
+     "weight": null,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    }
+   ]
+  },
+  {
+   "date": "2026-11-19",
+   "week_start": "2026-11-16",
+   "action_id": "thu",
+   "workout": "Thu: Chest + Shoulders",
+   "status": "done",
+   "minutes": 40,
+   "note": "",
+   "sets": [
+    {
+     "exercise": "Incline DB Press",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Incline DB Press",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Incline DB Press",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Rear-Delt Fly",
+     "set_no": 1,
+     "weight": 15,
+     "reps": 14,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Rear-Delt Fly",
+     "set_no": 2,
+     "weight": 15,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Rear-Delt Fly",
+     "set_no": 3,
+     "weight": 15,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    }
+   ]
+  },
+  {
+   "date": "2026-11-20",
+   "week_start": "2026-11-16",
+   "action_id": "fri",
+   "workout": "Fri: Lats + Arms",
+   "status": "done",
+   "minutes": 40,
+   "note": "",
+   "sets": [
+    {
+     "exercise": "Seated Hammer Curl",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Hammer Curl",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Hammer Curl",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Single-Arm DB Row",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Single-Arm DB Row",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Single-Arm DB Row",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    }
+   ]
+  },
+  {
+   "date": "2026-11-23",
+   "week_start": "2026-11-23",
+   "action_id": "mon",
+   "workout": "Mon: Chest + Back",
+   "status": "done",
+   "minutes": 40,
+   "note": "",
+   "sets": [
+    {
+     "exercise": "Flat DB Bench Press",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Flat DB Bench Press",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Flat DB Bench Press",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Lat Pulldown",
+     "set_no": 1,
+     "weight": 102.5,
+     "reps": 10,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Lat Pulldown",
+     "set_no": 2,
+     "weight": 102.5,
+     "reps": 10,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Lat Pulldown",
+     "set_no": 3,
+     "weight": 102.5,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Lat Pulldown",
+     "set_no": 4,
+     "weight": 102.5,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Lateral Raise",
+     "set_no": 1,
+     "weight": 12.5,
+     "reps": 14,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Lateral Raise",
+     "set_no": 2,
+     "weight": 12.5,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Lateral Raise",
+     "set_no": 3,
+     "weight": 12.5,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    }
+   ]
+  },
+  {
+   "date": "2026-11-24",
+   "week_start": "2026-11-23",
+   "action_id": "tue",
+   "workout": "Tue: Shoulders + Arms",
+   "status": "done",
+   "minutes": 40,
+   "note": "",
+   "sets": [
+    {
+     "exercise": "Cable Triceps Pushdown",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Cable Triceps Pushdown",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Cable Triceps Pushdown",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Curl",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Curl",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Curl",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Shoulder Press",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Shoulder Press",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated DB Shoulder Press",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    }
+   ]
+  },
+  {
+   "date": "2026-11-25",
+   "week_start": "2026-11-23",
+   "action_id": "wed",
+   "workout": "Wed: Back + Core",
+   "status": "done",
+   "minutes": 40,
+   "note": "",
+   "sets": [
+    {
+     "exercise": "Hammer Strength Back Extension",
+     "set_no": 1,
+     "weight": null,
+     "reps": 13,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Hammer Strength Back Extension",
+     "set_no": 2,
+     "weight": null,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Hammer Strength Back Extension",
+     "set_no": 3,
+     "weight": null,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Cable Row",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Cable Row",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Cable Row",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Sit-Up Bench Crunch (knee test)",
+     "set_no": 1,
+     "weight": null,
+     "reps": 14,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Sit-Up Bench Crunch (knee test)",
+     "set_no": 2,
+     "weight": null,
+     "reps": 13,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Sit-Up Bench Crunch (knee test)",
+     "set_no": 3,
+     "weight": null,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    }
+   ]
+  },
+  {
+   "date": "2026-11-26",
+   "week_start": "2026-11-23",
+   "action_id": "thu",
+   "workout": "Thu: Chest + Shoulders",
+   "status": "done",
+   "minutes": 40,
+   "note": "",
+   "sets": [
+    {
+     "exercise": "Incline DB Press",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Incline DB Press",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Incline DB Press",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Rear-Delt Fly",
+     "set_no": 1,
+     "weight": 15,
+     "reps": 14,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Rear-Delt Fly",
+     "set_no": 2,
+     "weight": 15,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Rear-Delt Fly",
+     "set_no": 3,
+     "weight": 15,
+     "reps": 12,
+     "done": true,
+     "rir": 2,
+     "pain": false
+    }
+   ]
+  },
+  {
+   "date": "2026-11-27",
+   "week_start": "2026-11-23",
+   "action_id": "fri",
+   "workout": "Fri: Lats + Arms",
+   "status": "done",
+   "minutes": 40,
+   "note": "",
+   "sets": [
+    {
+     "exercise": "Seated Hammer Curl",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Hammer Curl",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Seated Hammer Curl",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Single-Arm DB Row",
+     "set_no": 1,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Single-Arm DB Row",
+     "set_no": 2,
+     "weight": 45,
+     "reps": 9,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    },
+    {
+     "exercise": "Single-Arm DB Row",
+     "set_no": 3,
+     "weight": 45,
+     "reps": 8,
+     "done": true,
+     "rir": 1,
+     "pain": false
+    }
+   ]
+  }
+ ],
+ "history": [
+  {
+   "week_start": "2026-09-07",
+   "exercise": "Cable Triceps Pushdown",
+   "sets_done": 3,
+   "best_weight": 30,
+   "best_reps": 9,
+   "e1rm": 39,
+   "volume": 780,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-07",
+   "exercise": "Flat DB Bench Press",
+   "sets_done": 3,
+   "best_weight": 30,
+   "best_reps": 9,
+   "e1rm": 39,
+   "volume": 780,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-07",
+   "exercise": "Hammer Strength Back Extension",
+   "sets_done": 3,
+   "best_weight": null,
+   "best_reps": 13,
+   "e1rm": null,
+   "volume": 0,
+   "avg_rir": 2,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-07",
+   "exercise": "Incline DB Press",
+   "sets_done": 3,
+   "best_weight": 30,
+   "best_reps": 9,
+   "e1rm": 39,
+   "volume": 780,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-07",
+   "exercise": "Lat Pulldown",
+   "sets_done": 4,
+   "best_weight": 90,
+   "best_reps": 10,
+   "e1rm": 120,
+   "volume": 3420,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-07",
+   "exercise": "Seated Cable Row",
+   "sets_done": 3,
+   "best_weight": 30,
+   "best_reps": 9,
+   "e1rm": 39,
+   "volume": 780,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-07",
+   "exercise": "Seated DB Curl",
+   "sets_done": 3,
+   "best_weight": 30,
+   "best_reps": 9,
+   "e1rm": 39,
+   "volume": 780,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-07",
+   "exercise": "Seated DB Shoulder Press",
+   "sets_done": 3,
+   "best_weight": 30,
+   "best_reps": 9,
+   "e1rm": 39,
+   "volume": 780,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-07",
+   "exercise": "Seated Hammer Curl",
+   "sets_done": 3,
+   "best_weight": 30,
+   "best_reps": 9,
+   "e1rm": 39,
+   "volume": 780,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-07",
+   "exercise": "Seated Lateral Raise",
+   "sets_done": 3,
+   "best_weight": 12.5,
+   "best_reps": 12,
+   "e1rm": 17.5,
+   "volume": 450,
+   "avg_rir": 2,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-07",
+   "exercise": "Seated Rear-Delt Fly",
+   "sets_done": 3,
+   "best_weight": 15,
+   "best_reps": 12,
+   "e1rm": 21,
+   "volume": 540,
+   "avg_rir": 2,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-07",
+   "exercise": "Single-Arm DB Row",
+   "sets_done": 3,
+   "best_weight": 30,
+   "best_reps": 9,
+   "e1rm": 39,
+   "volume": 780,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-07",
+   "exercise": "Sit-Up Bench Crunch (knee test)",
+   "sets_done": 3,
+   "best_weight": null,
+   "best_reps": 14,
+   "e1rm": null,
+   "volume": 0,
+   "avg_rir": 2,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-14",
+   "exercise": "Cable Triceps Pushdown",
+   "sets_done": 3,
+   "best_weight": 32.5,
+   "best_reps": 9,
+   "e1rm": 42.3,
+   "volume": 845,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-14",
+   "exercise": "Flat DB Bench Press",
+   "sets_done": 3,
+   "best_weight": 32.5,
+   "best_reps": 9,
+   "e1rm": 42.3,
+   "volume": 845,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-14",
+   "exercise": "Hammer Strength Back Extension",
+   "sets_done": 3,
+   "best_weight": null,
+   "best_reps": 13,
+   "e1rm": null,
+   "volume": 0,
+   "avg_rir": 2,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-14",
+   "exercise": "Incline DB Press",
+   "sets_done": 3,
+   "best_weight": 32.5,
+   "best_reps": 9,
+   "e1rm": 42.3,
+   "volume": 845,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-14",
+   "exercise": "Lat Pulldown",
+   "sets_done": 4,
+   "best_weight": 90,
+   "best_reps": 10,
+   "e1rm": 120,
+   "volume": 3420,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-14",
+   "exercise": "Seated Cable Row",
+   "sets_done": 3,
+   "best_weight": 32.5,
+   "best_reps": 9,
+   "e1rm": 42.3,
+   "volume": 845,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-14",
+   "exercise": "Seated DB Curl",
+   "sets_done": 3,
+   "best_weight": 32.5,
+   "best_reps": 9,
+   "e1rm": 42.3,
+   "volume": 845,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-14",
+   "exercise": "Seated DB Shoulder Press",
+   "sets_done": 3,
+   "best_weight": 32.5,
+   "best_reps": 9,
+   "e1rm": 42.3,
+   "volume": 845,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-14",
+   "exercise": "Seated Hammer Curl",
+   "sets_done": 3,
+   "best_weight": 32.5,
+   "best_reps": 9,
+   "e1rm": 42.3,
+   "volume": 845,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-14",
+   "exercise": "Seated Lateral Raise",
+   "sets_done": 3,
+   "best_weight": 12.5,
+   "best_reps": 12,
+   "e1rm": 17.5,
+   "volume": 450,
+   "avg_rir": 2,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-14",
+   "exercise": "Seated Rear-Delt Fly",
+   "sets_done": 3,
+   "best_weight": 15,
+   "best_reps": 12,
+   "e1rm": 21,
+   "volume": 540,
+   "avg_rir": 2,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-14",
+   "exercise": "Single-Arm DB Row",
+   "sets_done": 3,
+   "best_weight": 32.5,
+   "best_reps": 9,
+   "e1rm": 42.3,
+   "volume": 845,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-14",
+   "exercise": "Sit-Up Bench Crunch (knee test)",
+   "sets_done": 3,
+   "best_weight": null,
+   "best_reps": 14,
+   "e1rm": null,
+   "volume": 0,
+   "avg_rir": 2,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-21",
+   "exercise": "Cable Triceps Pushdown",
+   "sets_done": 3,
+   "best_weight": 35,
+   "best_reps": 9,
+   "e1rm": 45.5,
+   "volume": 910,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-21",
+   "exercise": "Flat DB Bench Press",
+   "sets_done": 3,
+   "best_weight": 35,
+   "best_reps": 9,
+   "e1rm": 45.5,
+   "volume": 910,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-21",
+   "exercise": "Hammer Strength Back Extension",
+   "sets_done": 3,
+   "best_weight": null,
+   "best_reps": 13,
+   "e1rm": null,
+   "volume": 0,
+   "avg_rir": 2,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-21",
+   "exercise": "Incline DB Press",
+   "sets_done": 3,
+   "best_weight": 35,
+   "best_reps": 9,
+   "e1rm": 45.5,
+   "volume": 910,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-21",
+   "exercise": "Lat Pulldown",
+   "sets_done": 4,
+   "best_weight": 92.5,
+   "best_reps": 10,
+   "e1rm": 123.3,
+   "volume": 3515,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-21",
+   "exercise": "Seated Cable Row",
+   "sets_done": 3,
+   "best_weight": 35,
+   "best_reps": 9,
+   "e1rm": 45.5,
+   "volume": 910,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-21",
+   "exercise": "Seated DB Curl",
+   "sets_done": 3,
+   "best_weight": 35,
+   "best_reps": 9,
+   "e1rm": 45.5,
+   "volume": 910,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-21",
+   "exercise": "Seated DB Shoulder Press",
+   "sets_done": 3,
+   "best_weight": 35,
+   "best_reps": 9,
+   "e1rm": 45.5,
+   "volume": 910,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-21",
+   "exercise": "Seated Hammer Curl",
+   "sets_done": 3,
+   "best_weight": 35,
+   "best_reps": 9,
+   "e1rm": 45.5,
+   "volume": 910,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-21",
+   "exercise": "Seated Lateral Raise",
+   "sets_done": 3,
+   "best_weight": 12.5,
+   "best_reps": 13,
+   "e1rm": 17.9,
+   "volume": 463,
+   "avg_rir": 2,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-21",
+   "exercise": "Seated Rear-Delt Fly",
+   "sets_done": 3,
+   "best_weight": 15,
+   "best_reps": 13,
+   "e1rm": 21.5,
+   "volume": 555,
+   "avg_rir": 2,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-21",
+   "exercise": "Single-Arm DB Row",
+   "sets_done": 3,
+   "best_weight": 35,
+   "best_reps": 9,
+   "e1rm": 45.5,
+   "volume": 910,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-21",
+   "exercise": "Sit-Up Bench Crunch (knee test)",
+   "sets_done": 3,
+   "best_weight": null,
+   "best_reps": 14,
+   "e1rm": null,
+   "volume": 0,
+   "avg_rir": 2,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-28",
+   "exercise": "Cable Triceps Pushdown",
+   "sets_done": 3,
+   "best_weight": 37.5,
+   "best_reps": 9,
+   "e1rm": 48.8,
+   "volume": 975,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-28",
+   "exercise": "Flat DB Bench Press",
+   "sets_done": 3,
+   "best_weight": 37.5,
+   "best_reps": 9,
+   "e1rm": 48.8,
+   "volume": 975,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-28",
+   "exercise": "Hammer Strength Back Extension",
+   "sets_done": 3,
+   "best_weight": null,
+   "best_reps": 13,
+   "e1rm": null,
+   "volume": 0,
+   "avg_rir": 2,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-28",
+   "exercise": "Incline DB Press",
+   "sets_done": 3,
+   "best_weight": 37.5,
+   "best_reps": 9,
+   "e1rm": 48.8,
+   "volume": 975,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-28",
+   "exercise": "Lat Pulldown",
+   "sets_done": 4,
+   "best_weight": 92.5,
+   "best_reps": 10,
+   "e1rm": 123.3,
+   "volume": 3515,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-28",
+   "exercise": "Seated Cable Row",
+   "sets_done": 3,
+   "best_weight": 37.5,
+   "best_reps": 9,
+   "e1rm": 48.8,
+   "volume": 975,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-28",
+   "exercise": "Seated DB Curl",
+   "sets_done": 3,
+   "best_weight": 37.5,
+   "best_reps": 9,
+   "e1rm": 48.8,
+   "volume": 975,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-28",
+   "exercise": "Seated DB Shoulder Press",
+   "sets_done": 3,
+   "best_weight": 37.5,
+   "best_reps": 9,
+   "e1rm": 48.8,
+   "volume": 975,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-28",
+   "exercise": "Seated Hammer Curl",
+   "sets_done": 3,
+   "best_weight": 37.5,
+   "best_reps": 9,
+   "e1rm": 48.8,
+   "volume": 975,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-28",
+   "exercise": "Seated Lateral Raise",
+   "sets_done": 3,
+   "best_weight": 12.5,
+   "best_reps": 13,
+   "e1rm": 17.9,
+   "volume": 463,
+   "avg_rir": 2,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-28",
+   "exercise": "Seated Rear-Delt Fly",
+   "sets_done": 3,
+   "best_weight": 15,
+   "best_reps": 13,
+   "e1rm": 21.5,
+   "volume": 555,
+   "avg_rir": 2,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-28",
+   "exercise": "Single-Arm DB Row",
+   "sets_done": 3,
+   "best_weight": 37.5,
+   "best_reps": 9,
+   "e1rm": 48.8,
+   "volume": 975,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-09-28",
+   "exercise": "Sit-Up Bench Crunch (knee test)",
+   "sets_done": 3,
+   "best_weight": null,
+   "best_reps": 14,
+   "e1rm": null,
+   "volume": 0,
+   "avg_rir": 2,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-05",
+   "exercise": "Cable Triceps Pushdown",
+   "sets_done": 3,
+   "best_weight": 40,
+   "best_reps": 9,
+   "e1rm": 52,
+   "volume": 1040,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-05",
+   "exercise": "Flat DB Bench Press",
+   "sets_done": 3,
+   "best_weight": 40,
+   "best_reps": 9,
+   "e1rm": 52,
+   "volume": 1040,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-05",
+   "exercise": "Hammer Strength Back Extension",
+   "sets_done": 3,
+   "best_weight": null,
+   "best_reps": 13,
+   "e1rm": null,
+   "volume": 0,
+   "avg_rir": 2,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-05",
+   "exercise": "Incline DB Press",
+   "sets_done": 3,
+   "best_weight": 40,
+   "best_reps": 9,
+   "e1rm": 52,
+   "volume": 1040,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-05",
+   "exercise": "Lat Pulldown",
+   "sets_done": 4,
+   "best_weight": 95,
+   "best_reps": 10,
+   "e1rm": 126.7,
+   "volume": 3610,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-05",
+   "exercise": "Seated Cable Row",
+   "sets_done": 3,
+   "best_weight": 40,
+   "best_reps": 9,
+   "e1rm": 52,
+   "volume": 1040,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-05",
+   "exercise": "Seated DB Curl",
+   "sets_done": 3,
+   "best_weight": 40,
+   "best_reps": 9,
+   "e1rm": 52,
+   "volume": 1040,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-05",
+   "exercise": "Seated DB Shoulder Press",
+   "sets_done": 3,
+   "best_weight": 40,
+   "best_reps": 9,
+   "e1rm": 52,
+   "volume": 1040,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-05",
+   "exercise": "Seated Hammer Curl",
+   "sets_done": 3,
+   "best_weight": 40,
+   "best_reps": 9,
+   "e1rm": 52,
+   "volume": 1040,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-05",
+   "exercise": "Seated Lateral Raise",
+   "sets_done": 3,
+   "best_weight": 12.5,
+   "best_reps": 14,
+   "e1rm": 18.3,
+   "volume": 475,
+   "avg_rir": 2,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-05",
+   "exercise": "Seated Rear-Delt Fly",
+   "sets_done": 3,
+   "best_weight": 15,
+   "best_reps": 14,
+   "e1rm": 22,
+   "volume": 570,
+   "avg_rir": 2,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-05",
+   "exercise": "Single-Arm DB Row",
+   "sets_done": 3,
+   "best_weight": 40,
+   "best_reps": 9,
+   "e1rm": 52,
+   "volume": 1040,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-05",
+   "exercise": "Sit-Up Bench Crunch (knee test)",
+   "sets_done": 3,
+   "best_weight": null,
+   "best_reps": 14,
+   "e1rm": null,
+   "volume": 0,
+   "avg_rir": 2,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-12",
+   "exercise": "Cable Triceps Pushdown",
+   "sets_done": 3,
+   "best_weight": 42.5,
+   "best_reps": 9,
+   "e1rm": 55.3,
+   "volume": 1105,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-12",
+   "exercise": "Flat DB Bench Press",
+   "sets_done": 3,
+   "best_weight": 42.5,
+   "best_reps": 9,
+   "e1rm": 55.3,
+   "volume": 1105,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-12",
+   "exercise": "Hammer Strength Back Extension",
+   "sets_done": 3,
+   "best_weight": null,
+   "best_reps": 13,
+   "e1rm": null,
+   "volume": 0,
+   "avg_rir": 2,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-12",
+   "exercise": "Incline DB Press",
+   "sets_done": 3,
+   "best_weight": 42.5,
+   "best_reps": 9,
+   "e1rm": 55.3,
+   "volume": 1105,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-12",
+   "exercise": "Lat Pulldown",
+   "sets_done": 4,
+   "best_weight": 95,
+   "best_reps": 10,
+   "e1rm": 126.7,
+   "volume": 3610,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-12",
+   "exercise": "Seated Cable Row",
+   "sets_done": 3,
+   "best_weight": 42.5,
+   "best_reps": 9,
+   "e1rm": 55.3,
+   "volume": 1105,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-12",
+   "exercise": "Seated DB Curl",
+   "sets_done": 3,
+   "best_weight": 42.5,
+   "best_reps": 9,
+   "e1rm": 55.3,
+   "volume": 1105,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-12",
+   "exercise": "Seated DB Shoulder Press",
+   "sets_done": 3,
+   "best_weight": 42.5,
+   "best_reps": 9,
+   "e1rm": 55.3,
+   "volume": 1105,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-12",
+   "exercise": "Seated Hammer Curl",
+   "sets_done": 3,
+   "best_weight": 42.5,
+   "best_reps": 9,
+   "e1rm": 55.3,
+   "volume": 1105,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-12",
+   "exercise": "Seated Lateral Raise",
+   "sets_done": 3,
+   "best_weight": 12.5,
+   "best_reps": 14,
+   "e1rm": 18.3,
+   "volume": 475,
+   "avg_rir": 2,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-12",
+   "exercise": "Seated Rear-Delt Fly",
+   "sets_done": 3,
+   "best_weight": 15,
+   "best_reps": 14,
+   "e1rm": 22,
+   "volume": 570,
+   "avg_rir": 2,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-12",
+   "exercise": "Single-Arm DB Row",
+   "sets_done": 3,
+   "best_weight": 42.5,
+   "best_reps": 9,
+   "e1rm": 55.3,
+   "volume": 1105,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-12",
+   "exercise": "Sit-Up Bench Crunch (knee test)",
+   "sets_done": 3,
+   "best_weight": null,
+   "best_reps": 14,
+   "e1rm": null,
+   "volume": 0,
+   "avg_rir": 2,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-19",
+   "exercise": "Cable Triceps Pushdown",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-19",
+   "exercise": "Flat DB Bench Press",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-19",
+   "exercise": "Hammer Strength Back Extension",
+   "sets_done": 3,
+   "best_weight": null,
+   "best_reps": 13,
+   "e1rm": null,
+   "volume": 0,
+   "avg_rir": 2,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-19",
+   "exercise": "Incline DB Press",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-19",
+   "exercise": "Lat Pulldown",
+   "sets_done": 4,
+   "best_weight": 97.5,
+   "best_reps": 10,
+   "e1rm": 130,
+   "volume": 3705,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-19",
+   "exercise": "Seated Cable Row",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-19",
+   "exercise": "Seated DB Curl",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-19",
+   "exercise": "Seated DB Shoulder Press",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-19",
+   "exercise": "Seated Hammer Curl",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-19",
+   "exercise": "Seated Lateral Raise",
+   "sets_done": 3,
+   "best_weight": 12.5,
+   "best_reps": 14,
+   "e1rm": 18.3,
+   "volume": 475,
+   "avg_rir": 2,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-19",
+   "exercise": "Seated Rear-Delt Fly",
+   "sets_done": 3,
+   "best_weight": 15,
+   "best_reps": 14,
+   "e1rm": 22,
+   "volume": 570,
+   "avg_rir": 2,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-19",
+   "exercise": "Single-Arm DB Row",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-19",
+   "exercise": "Sit-Up Bench Crunch (knee test)",
+   "sets_done": 3,
+   "best_weight": null,
+   "best_reps": 14,
+   "e1rm": null,
+   "volume": 0,
+   "avg_rir": 2,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-26",
+   "exercise": "Cable Triceps Pushdown",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-26",
+   "exercise": "Flat DB Bench Press",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-26",
+   "exercise": "Hammer Strength Back Extension",
+   "sets_done": 3,
+   "best_weight": null,
+   "best_reps": 13,
+   "e1rm": null,
+   "volume": 0,
+   "avg_rir": 2,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-26",
+   "exercise": "Incline DB Press",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-26",
+   "exercise": "Lat Pulldown",
+   "sets_done": 4,
+   "best_weight": 97.5,
+   "best_reps": 10,
+   "e1rm": 130,
+   "volume": 3705,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-26",
+   "exercise": "Seated Cable Row",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-26",
+   "exercise": "Seated DB Curl",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-26",
+   "exercise": "Seated DB Shoulder Press",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-26",
+   "exercise": "Seated Hammer Curl",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-26",
+   "exercise": "Seated Lateral Raise",
+   "sets_done": 3,
+   "best_weight": 12.5,
+   "best_reps": 14,
+   "e1rm": 18.3,
+   "volume": 475,
+   "avg_rir": 2,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-26",
+   "exercise": "Seated Rear-Delt Fly",
+   "sets_done": 3,
+   "best_weight": 15,
+   "best_reps": 14,
+   "e1rm": 22,
+   "volume": 570,
+   "avg_rir": 2,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-26",
+   "exercise": "Single-Arm DB Row",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-10-26",
+   "exercise": "Sit-Up Bench Crunch (knee test)",
+   "sets_done": 3,
+   "best_weight": null,
+   "best_reps": 14,
+   "e1rm": null,
+   "volume": 0,
+   "avg_rir": 2,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-02",
+   "exercise": "Cable Triceps Pushdown",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-02",
+   "exercise": "Flat DB Bench Press",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-02",
+   "exercise": "Hammer Strength Back Extension",
+   "sets_done": 3,
+   "best_weight": null,
+   "best_reps": 13,
+   "e1rm": null,
+   "volume": 0,
+   "avg_rir": 2,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-02",
+   "exercise": "Incline DB Press",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-02",
+   "exercise": "Lat Pulldown",
+   "sets_done": 4,
+   "best_weight": 100,
+   "best_reps": 10,
+   "e1rm": 133.3,
+   "volume": 3800,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-02",
+   "exercise": "Seated Cable Row",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-02",
+   "exercise": "Seated DB Curl",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-02",
+   "exercise": "Seated DB Shoulder Press",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-02",
+   "exercise": "Seated Hammer Curl",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-02",
+   "exercise": "Seated Lateral Raise",
+   "sets_done": 3,
+   "best_weight": 12.5,
+   "best_reps": 14,
+   "e1rm": 18.3,
+   "volume": 475,
+   "avg_rir": 2,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-02",
+   "exercise": "Seated Rear-Delt Fly",
+   "sets_done": 3,
+   "best_weight": 15,
+   "best_reps": 14,
+   "e1rm": 22,
+   "volume": 570,
+   "avg_rir": 2,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-02",
+   "exercise": "Single-Arm DB Row",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-02",
+   "exercise": "Sit-Up Bench Crunch (knee test)",
+   "sets_done": 3,
+   "best_weight": null,
+   "best_reps": 14,
+   "e1rm": null,
+   "volume": 0,
+   "avg_rir": 2,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-09",
+   "exercise": "Cable Triceps Pushdown",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-09",
+   "exercise": "Flat DB Bench Press",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-09",
+   "exercise": "Hammer Strength Back Extension",
+   "sets_done": 3,
+   "best_weight": null,
+   "best_reps": 13,
+   "e1rm": null,
+   "volume": 0,
+   "avg_rir": 2,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-09",
+   "exercise": "Incline DB Press",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-09",
+   "exercise": "Lat Pulldown",
+   "sets_done": 4,
+   "best_weight": 100,
+   "best_reps": 10,
+   "e1rm": 133.3,
+   "volume": 3800,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-09",
+   "exercise": "Seated Cable Row",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-09",
+   "exercise": "Seated DB Curl",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-09",
+   "exercise": "Seated DB Shoulder Press",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-09",
+   "exercise": "Seated Hammer Curl",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-09",
+   "exercise": "Seated Lateral Raise",
+   "sets_done": 3,
+   "best_weight": 12.5,
+   "best_reps": 14,
+   "e1rm": 18.3,
+   "volume": 475,
+   "avg_rir": 2,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-09",
+   "exercise": "Seated Rear-Delt Fly",
+   "sets_done": 3,
+   "best_weight": 15,
+   "best_reps": 14,
+   "e1rm": 22,
+   "volume": 570,
+   "avg_rir": 2,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-09",
+   "exercise": "Single-Arm DB Row",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-09",
+   "exercise": "Sit-Up Bench Crunch (knee test)",
+   "sets_done": 3,
+   "best_weight": null,
+   "best_reps": 14,
+   "e1rm": null,
+   "volume": 0,
+   "avg_rir": 2,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-16",
+   "exercise": "Cable Triceps Pushdown",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-16",
+   "exercise": "Flat DB Bench Press",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-16",
+   "exercise": "Hammer Strength Back Extension",
+   "sets_done": 3,
+   "best_weight": null,
+   "best_reps": 13,
+   "e1rm": null,
+   "volume": 0,
+   "avg_rir": 2,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-16",
+   "exercise": "Incline DB Press",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-16",
+   "exercise": "Lat Pulldown",
+   "sets_done": 4,
+   "best_weight": 102.5,
+   "best_reps": 10,
+   "e1rm": 136.7,
+   "volume": 3895,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-16",
+   "exercise": "Seated Cable Row",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-16",
+   "exercise": "Seated DB Curl",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-16",
+   "exercise": "Seated DB Shoulder Press",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-16",
+   "exercise": "Seated Hammer Curl",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-16",
+   "exercise": "Seated Lateral Raise",
+   "sets_done": 3,
+   "best_weight": 12.5,
+   "best_reps": 14,
+   "e1rm": 18.3,
+   "volume": 475,
+   "avg_rir": 2,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-16",
+   "exercise": "Seated Rear-Delt Fly",
+   "sets_done": 3,
+   "best_weight": 15,
+   "best_reps": 14,
+   "e1rm": 22,
+   "volume": 570,
+   "avg_rir": 2,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-16",
+   "exercise": "Single-Arm DB Row",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-16",
+   "exercise": "Sit-Up Bench Crunch (knee test)",
+   "sets_done": 3,
+   "best_weight": null,
+   "best_reps": 14,
+   "e1rm": null,
+   "volume": 0,
+   "avg_rir": 2,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-23",
+   "exercise": "Cable Triceps Pushdown",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-23",
+   "exercise": "Flat DB Bench Press",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-23",
+   "exercise": "Hammer Strength Back Extension",
+   "sets_done": 3,
+   "best_weight": null,
+   "best_reps": 13,
+   "e1rm": null,
+   "volume": 0,
+   "avg_rir": 2,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-23",
+   "exercise": "Incline DB Press",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-23",
+   "exercise": "Lat Pulldown",
+   "sets_done": 4,
+   "best_weight": 102.5,
+   "best_reps": 10,
+   "e1rm": 136.7,
+   "volume": 3895,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-23",
+   "exercise": "Seated Cable Row",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-23",
+   "exercise": "Seated DB Curl",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-23",
+   "exercise": "Seated DB Shoulder Press",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-23",
+   "exercise": "Seated Hammer Curl",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-23",
+   "exercise": "Seated Lateral Raise",
+   "sets_done": 3,
+   "best_weight": 12.5,
+   "best_reps": 14,
+   "e1rm": 18.3,
+   "volume": 475,
+   "avg_rir": 2,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-23",
+   "exercise": "Seated Rear-Delt Fly",
+   "sets_done": 3,
+   "best_weight": 15,
+   "best_reps": 14,
+   "e1rm": 22,
+   "volume": 570,
+   "avg_rir": 2,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-23",
+   "exercise": "Single-Arm DB Row",
+   "sets_done": 3,
+   "best_weight": 45,
+   "best_reps": 9,
+   "e1rm": 58.5,
+   "volume": 1170,
+   "avg_rir": 1,
+   "pain": false
+  },
+  {
+   "week_start": "2026-11-23",
+   "exercise": "Sit-Up Bench Crunch (knee test)",
+   "sets_done": 3,
+   "best_weight": null,
+   "best_reps": 14,
+   "e1rm": null,
+   "volume": 0,
+   "avg_rir": 2,
+   "pain": false
+  }
+ ],
+ "metrics": {
+  "exercises": [
+   {
+    "exercise": "Cable Triceps Pushdown",
+    "workouts": [
+     "Tue: Shoulders + Arms"
+    ],
+    "planned": {
+     "sets": 3,
+     "reps_min": 12,
+     "reps_max": 15,
+     "weight": 57.5
+    },
+    "sessions": 12,
+    "first_seen": "2026-09-08",
+    "last_seen": "2026-11-24",
+    "last_weight": 45,
+    "e1rm_now": 58.5,
+    "e1rm_3w_ago": 58.5,
+    "e1rm_trend_pct": 0,
+    "weeks_since_gain": 5,
+    "stalled": true,
+    "top_of_range_streak": 0,
+    "avg_rir_2w": 1,
+    "pain_flags_4w": 0,
+    "next_step_pct": 0.111
+   },
+   {
+    "exercise": "Flat DB Bench Press",
+    "workouts": [
+     "Mon: Chest + Back"
+    ],
+    "planned": {
+     "sets": 3,
+     "reps_min": 8,
+     "reps_max": 12,
+     "weight": 50
+    },
+    "sessions": 12,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-11-23",
+    "last_weight": 45,
+    "e1rm_now": 58.5,
+    "e1rm_3w_ago": 58.5,
+    "e1rm_trend_pct": 0,
+    "weeks_since_gain": 5,
+    "stalled": true,
+    "top_of_range_streak": 0,
+    "avg_rir_2w": 1,
+    "pain_flags_4w": 0,
+    "next_step_pct": 0.111
+   },
+   {
+    "exercise": "Hammer Strength Back Extension",
+    "workouts": [
+     "Wed: Back + Core"
+    ],
+    "planned": {
+     "sets": 3,
+     "reps_min": 10,
+     "reps_max": 15,
+     "weight": null
+    },
+    "sessions": 12,
+    "first_seen": "2026-09-09",
+    "last_seen": "2026-11-25",
+    "last_weight": null,
+    "e1rm_now": null,
+    "e1rm_3w_ago": null,
+    "e1rm_trend_pct": null,
+    "weeks_since_gain": null,
+    "stalled": false,
+    "top_of_range_streak": 0,
+    "avg_rir_2w": 2,
+    "pain_flags_4w": 0,
+    "next_step_pct": null
+   },
+   {
+    "exercise": "Incline DB Press",
+    "workouts": [
+     "Thu: Chest + Shoulders"
+    ],
+    "planned": {
+     "sets": 3,
+     "reps_min": 8,
+     "reps_max": 12,
+     "weight": 35
+    },
+    "sessions": 12,
+    "first_seen": "2026-09-10",
+    "last_seen": "2026-11-26",
+    "last_weight": 45,
+    "e1rm_now": 58.5,
+    "e1rm_3w_ago": 58.5,
+    "e1rm_trend_pct": 0,
+    "weeks_since_gain": 5,
+    "stalled": true,
+    "top_of_range_streak": 0,
+    "avg_rir_2w": 1,
+    "pain_flags_4w": 0,
+    "next_step_pct": 0.111
+   },
+   {
+    "exercise": "Lat Pulldown",
+    "workouts": [
+     "Mon: Chest + Back"
+    ],
+    "planned": {
+     "sets": 4,
+     "reps_min": 8,
+     "reps_max": 12,
+     "weight": 100
+    },
+    "sessions": 12,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-11-23",
+    "last_weight": 102.5,
+    "e1rm_now": 136.7,
+    "e1rm_3w_ago": 133.3,
+    "e1rm_trend_pct": 2.6,
+    "weeks_since_gain": 1,
+    "stalled": false,
+    "top_of_range_streak": 0,
+    "avg_rir_2w": 1,
+    "pain_flags_4w": 0,
+    "next_step_pct": 0.049
+   },
+   {
+    "exercise": "Seated Cable Row",
+    "workouts": [
+     "Wed: Back + Core"
+    ],
+    "planned": {
+     "sets": 4,
+     "reps_min": 6,
+     "reps_max": 10,
+     "weight": 100
+    },
+    "sessions": 12,
+    "first_seen": "2026-09-09",
+    "last_seen": "2026-11-25",
+    "last_weight": 45,
+    "e1rm_now": 58.5,
+    "e1rm_3w_ago": 58.5,
+    "e1rm_trend_pct": 0,
+    "weeks_since_gain": 5,
+    "stalled": true,
+    "top_of_range_streak": 0,
+    "avg_rir_2w": 1,
+    "pain_flags_4w": 0,
+    "next_step_pct": 0.111
+   },
+   {
+    "exercise": "Seated DB Curl",
+    "workouts": [
+     "Tue: Shoulders + Arms"
+    ],
+    "planned": {
+     "sets": 3,
+     "reps_min": 10,
+     "reps_max": 12,
+     "weight": 25
+    },
+    "sessions": 12,
+    "first_seen": "2026-09-08",
+    "last_seen": "2026-11-24",
+    "last_weight": 45,
+    "e1rm_now": 58.5,
+    "e1rm_3w_ago": 58.5,
+    "e1rm_trend_pct": 0,
+    "weeks_since_gain": 5,
+    "stalled": true,
+    "top_of_range_streak": 0,
+    "avg_rir_2w": 1,
+    "pain_flags_4w": 0,
+    "next_step_pct": 0.111
+   },
+   {
+    "exercise": "Seated DB Shoulder Press",
+    "workouts": [
+     "Tue: Shoulders + Arms"
+    ],
+    "planned": {
+     "sets": 3,
+     "reps_min": 8,
+     "reps_max": 12,
+     "weight": 35
+    },
+    "sessions": 12,
+    "first_seen": "2026-09-08",
+    "last_seen": "2026-11-24",
+    "last_weight": 45,
+    "e1rm_now": 58.5,
+    "e1rm_3w_ago": 58.5,
+    "e1rm_trend_pct": 0,
+    "weeks_since_gain": 5,
+    "stalled": true,
+    "top_of_range_streak": 0,
+    "avg_rir_2w": 1,
+    "pain_flags_4w": 0,
+    "next_step_pct": 0.111
+   },
+   {
+    "exercise": "Seated Hammer Curl",
+    "workouts": [
+     "Fri: Lats + Arms"
+    ],
+    "planned": {
+     "sets": 3,
+     "reps_min": 10,
+     "reps_max": 12,
+     "weight": 20
+    },
+    "sessions": 12,
+    "first_seen": "2026-09-11",
+    "last_seen": "2026-11-27",
+    "last_weight": 45,
+    "e1rm_now": 58.5,
+    "e1rm_3w_ago": 58.5,
+    "e1rm_trend_pct": 0,
+    "weeks_since_gain": 5,
+    "stalled": true,
+    "top_of_range_streak": 0,
+    "avg_rir_2w": 1,
+    "pain_flags_4w": 0,
+    "next_step_pct": 0.111
+   },
+   {
+    "exercise": "Seated Lateral Raise",
+    "workouts": [
+     "Mon: Chest + Back"
+    ],
+    "planned": {
+     "sets": 3,
+     "reps_min": 12,
+     "reps_max": 15,
+     "weight": 12.5
+    },
+    "sessions": 12,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-11-23",
+    "last_weight": 12.5,
+    "e1rm_now": 18.3,
+    "e1rm_3w_ago": 18.3,
+    "e1rm_trend_pct": 0,
+    "weeks_since_gain": 7,
+    "stalled": true,
+    "top_of_range_streak": 0,
+    "avg_rir_2w": 2,
+    "pain_flags_4w": 0,
+    "next_step_pct": 0.4
+   },
+   {
+    "exercise": "Seated Rear-Delt Fly",
+    "workouts": [
+     "Thu: Chest + Shoulders"
+    ],
+    "planned": {
+     "sets": 3,
+     "reps_min": 12,
+     "reps_max": 15,
+     "weight": 15
+    },
+    "sessions": 12,
+    "first_seen": "2026-09-10",
+    "last_seen": "2026-11-26",
+    "last_weight": 15,
+    "e1rm_now": 22,
+    "e1rm_3w_ago": 22,
+    "e1rm_trend_pct": 0,
+    "weeks_since_gain": 7,
+    "stalled": true,
+    "top_of_range_streak": 0,
+    "avg_rir_2w": 2,
+    "pain_flags_4w": 0,
+    "next_step_pct": 0.333
+   },
+   {
+    "exercise": "Single-Arm DB Row",
+    "workouts": [
+     "Fri: Lats + Arms"
+    ],
+    "planned": {
+     "sets": 3,
+     "reps_min": 8,
+     "reps_max": 12,
+     "weight": 40
+    },
+    "sessions": 12,
+    "first_seen": "2026-09-11",
+    "last_seen": "2026-11-27",
+    "last_weight": 45,
+    "e1rm_now": 58.5,
+    "e1rm_3w_ago": 58.5,
+    "e1rm_trend_pct": 0,
+    "weeks_since_gain": 5,
+    "stalled": true,
+    "top_of_range_streak": 0,
+    "avg_rir_2w": 1,
+    "pain_flags_4w": 0,
+    "next_step_pct": 0.111
+   },
+   {
+    "exercise": "Sit-Up Bench Crunch (knee test)",
+    "workouts": [
+     "Wed: Back + Core"
+    ],
+    "planned": {
+     "sets": 3,
+     "reps_min": 12,
+     "reps_max": 15,
+     "weight": null
+    },
+    "sessions": 12,
+    "first_seen": "2026-09-09",
+    "last_seen": "2026-11-25",
+    "last_weight": null,
+    "e1rm_now": null,
+    "e1rm_3w_ago": null,
+    "e1rm_trend_pct": null,
+    "weeks_since_gain": null,
+    "stalled": false,
+    "top_of_range_streak": 0,
+    "avg_rir_2w": 2,
+    "pain_flags_4w": 0,
+    "next_step_pct": null
+   }
+  ],
+  "attendance_4w": 1,
+  "attendance_8w": 1,
+  "workouts_done_4w": 20,
+  "workouts_planned_4w": 20,
+  "set_completion_4w": 1,
+  "avg_session_minutes_4w": 40,
+  "weekly_sets": [
+   {
+    "week_start": "2026-09-07",
+    "sets": 40
+   },
+   {
+    "week_start": "2026-09-14",
+    "sets": 40
+   },
+   {
+    "week_start": "2026-09-21",
+    "sets": 40
+   },
+   {
+    "week_start": "2026-09-28",
+    "sets": 40
+   },
+   {
+    "week_start": "2026-10-05",
+    "sets": 40
+   },
+   {
+    "week_start": "2026-10-12",
+    "sets": 40
+   },
+   {
+    "week_start": "2026-10-19",
+    "sets": 40
+   },
+   {
+    "week_start": "2026-10-26",
+    "sets": 40
+   },
+   {
+    "week_start": "2026-11-02",
+    "sets": 40
+   },
+   {
+    "week_start": "2026-11-09",
+    "sets": 40
+   },
+   {
+    "week_start": "2026-11-16",
+    "sets": 40
+   },
+   {
+    "week_start": "2026-11-23",
+    "sets": 40
+   }
+  ]
+ },
+ "comments": [
+  {
+   "date": "2026-09-07",
+   "source": "details",
+   "workout": "Mon: Chest + Back",
+   "exercise": null,
+   "text": "Warm-up: band pull-aparts, feeder sets."
+  },
+  {
+   "date": "2026-09-07",
+   "source": "details",
+   "workout": "Tue: Shoulders + Arms",
+   "exercise": null,
+   "text": "Warm-up: band pull-aparts, feeder sets."
+  },
+  {
+   "date": "2026-09-07",
+   "source": "details",
+   "workout": "Wed: Back + Core",
+   "exercise": null,
+   "text": "Warm-up: band pull-aparts, feeder sets."
+  },
+  {
+   "date": "2026-09-07",
+   "source": "plan_note",
+   "workout": "Wed: Back + Core",
+   "exercise": "Sit-Up Bench Crunch (knee test)",
+   "text": "First set at bodyweight: any knee pain, stop and skip it."
+  },
+  {
+   "date": "2026-09-07",
+   "source": "details",
+   "workout": "Thu: Chest + Shoulders",
+   "exercise": null,
+   "text": "Warm-up: band pull-aparts, feeder sets."
+  },
+  {
+   "date": "2026-09-07",
+   "source": "details",
+   "workout": "Fri: Lats + Arms",
+   "exercise": null,
+   "text": "Warm-up: band pull-aparts, feeder sets."
+  }
+ ],
+ "bodyweight": {
+  "shared": false
+ },
+ "decisions": [],
+ "since_last": null
+}
