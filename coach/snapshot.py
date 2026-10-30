@@ -1,4 +1,8 @@
-"""The workout history snapshot, schema 1: the agent's only input from the app.
+"""The workout history snapshot, schema 2: the agent's only input from the app.
+
+Schema 2 is what you actually did: each exercise's recent workouts as done (weight, reps, effort
+1–10, pain), workouts per week, body weight and body measurements. Plan targets live only in
+`program`, which the planner needs to write changes against; the analyst never sees them.
 
 Mirrors `supabase/functions/_shared/workout_history.ts` in the six-month-plan repo. Unknown fields are
 kept (extra="allow") so a newer app doesn't break an older agent, but a different schema_version is
@@ -11,7 +15,7 @@ from typing import Literal, Optional, Union
 
 from pydantic import BaseModel, ConfigDict, Field
 
-SCHEMA_VERSION = "1"
+SCHEMA_VERSION = "2"
 
 
 class _Model(BaseModel):
@@ -73,8 +77,16 @@ class SetRow(_Model):
     weight: Optional[float] = None
     reps: Optional[int] = None
     done: bool
-    rir: Optional[int] = None
+
+
+class ExerciseLog(_Model):
+    """How one exercise went in one workout: effort 1–10 (10 = no reps left), hurt and where, a note."""
+
+    exercise: str
+    effort: Optional[int] = None
     pain: bool = False
+    pain_where: str = ""
+    note: str = ""
 
 
 class Session(_Model):
@@ -85,7 +97,13 @@ class Session(_Model):
     status: str
     minutes: Optional[int] = None
     note: str = ""
+    effort: Optional[int] = None
     sets: list[SetRow] = []
+    exercises: list[ExerciseLog] = []
+
+    def log(self, exercise: str) -> Optional[ExerciseLog]:
+        key = exercise.strip().lower()
+        return next((x for x in self.exercises if x.exercise.strip().lower() == key), None)
 
 
 class ExerciseWeek(_Model):
@@ -96,21 +114,26 @@ class ExerciseWeek(_Model):
     best_reps: Optional[int] = None
     e1rm: Optional[float] = None
     volume: float
-    avg_rir: Optional[float] = None
+    avg_effort: Optional[float] = None
     pain: bool = False
 
 
-class Planned(_Model):
-    sets: int
-    reps_min: int
-    reps_max: int
+class ExerciseSession(_Model):
+    """One workout's worth of an exercise, as done."""
+
+    date: str
     weight: Optional[float] = None
+    reps: list[int] = []
+    weights: list[Optional[float]] = []
+    effort: Optional[int] = None
+    pain: bool = False
+    e1rm: Optional[float] = None
+    e1rm_adj: Optional[float] = None
 
 
 class ExerciseMetrics(_Model):
     exercise: str
     workouts: list[str] = []
-    planned: Optional[Planned] = None
     sessions: int
     first_seen: Optional[str] = None
     last_seen: Optional[str] = None
@@ -120,31 +143,32 @@ class ExerciseMetrics(_Model):
     e1rm_trend_pct: Optional[float] = None
     weeks_since_gain: Optional[int] = None
     stalled: bool = False
-    top_of_range_streak: int = 0
-    avg_rir_2w: Optional[float] = None
+    recent: list[ExerciseSession] = []
+    sessions_at_weight: int = 0
+    effort_last: Optional[int] = None
+    avg_effort_2w: Optional[float] = None
     pain_flags_4w: int = 0
     next_step_pct: Optional[float] = None
 
 
-class WeeklySets(_Model):
+class Week(_Model):
     week_start: str
+    workouts: int
     sets: int
+    avg_effort: Optional[float] = None
 
 
 class Metrics(_Model):
     exercises: list[ExerciseMetrics]
-    attendance_4w: Optional[float] = None
-    attendance_8w: Optional[float] = None
     workouts_done_4w: int = 0
-    workouts_planned_4w: int = 0
-    set_completion_4w: Optional[float] = None
+    days_since_last_workout: Optional[int] = None
     avg_session_minutes_4w: Optional[int] = None
-    weekly_sets: list[WeeklySets] = []
+    weeks: list[Week] = []
 
 
 class Comment(_Model):
     date: Optional[str] = None
-    source: Literal["plan_note", "details", "session_note"]
+    source: Literal["plan_note", "details", "session_note", "exercise_note"]
     workout: str
     exercise: Optional[str] = None
     text: str
@@ -170,6 +194,14 @@ class BodyweightShared(_Model):
 
 class BodyweightHidden(_Model):
     shared: Literal[False]
+
+
+class BodyMeasurement(_Model):
+    name: str
+    unit: str
+    latest: Optional[Reading] = None
+    weekly: list[WeeklyWeight] = []
+    change_4w: Optional[float] = None
 
 
 class PastChange(_Model):
@@ -210,6 +242,7 @@ class Snapshot(_Model):
     metrics: Metrics
     comments: list[Comment] = []
     bodyweight: Union[BodyweightShared, BodyweightHidden]
+    body_measurements: list[BodyMeasurement] = []
     decisions: list[PastDecision] = []
     since_last: Optional[SinceLast] = None
 

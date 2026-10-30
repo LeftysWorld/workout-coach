@@ -5,6 +5,7 @@ agents/<name>/AGENT.md starts with a small header:
     ---
     name: planner
     skills: [change-ladder, exercise-selection, program-blocks]
+    profile: [goals, injuries_and_limits]   # optional: only these parts of athlete.yaml
     ---
 
 The body is the agent's role. Each listed skill's SKILL.md body is appended under "Skills", then
@@ -47,7 +48,15 @@ def system_prompt(agent: str) -> str:
     for skill in meta.get("skills", []):
         _, skill_body = _split((SKILLS / skill / "SKILL.md").read_text())
         parts += ["", skill_body.strip()]
-    parts += ["", "# The athlete's rules (profile/athlete.yaml). These are rules, not suggestions.", "```yaml", (PROFILE / "athlete.yaml").read_text().strip(), "```"]
+    profile = (PROFILE / "athlete.yaml").read_text().strip()
+    keys = meta.get("profile")
+    if keys:
+        # Only the parts this agent needs (the analyst sees your goals and limits, not your schedule).
+        import yaml
+
+        data = yaml.safe_load(profile)
+        profile = yaml.safe_dump({k: data[k] for k in keys if k in data}, sort_keys=False, allow_unicode=True).strip()
+    parts += ["", "# The athlete's rules (profile/athlete.yaml). These are rules, not suggestions.", "```yaml", profile, "```"]
     return "\n".join(parts)
 
 

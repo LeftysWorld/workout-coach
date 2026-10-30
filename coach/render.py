@@ -23,6 +23,7 @@ READS = {
     "progressing": "progressing",
     "holding": "holding",
     "stalled": "stalled",
+    "too_heavy": "too heavy now",
     "regressing": "slipping",
     "pain": "⚠ pain",
     "too_early": "too early to tell",
@@ -64,6 +65,14 @@ def target(t: Optional[ExerciseTarget]) -> str:
     return " · ".join(parts) or "–"
 
 
+def _last_time(e: dict) -> str:
+    r = (e.get("recent") or [None])[-1]
+    if not r:
+        return "–"
+    w = "BW" if r.get("weight") is None else num(r["weight"])
+    return f"{w} × {', '.join(str(x) for x in r.get('reps', []))}" + (f" @{r['effort']}" if r.get("effort") is not None else "")
+
+
 def _label(iso: str) -> str:
     dt = date.fromisoformat(iso)
     return f"{dt.strftime('%a %b')} {dt.day}, {dt.year}"
@@ -81,8 +90,8 @@ def render_report(state: dict, ctx: Any) -> str:
     assessment = state.get("assessment")
     if assessment is not None:
         reads = {r.exercise.strip().lower(): READS.get(r.verdict, r.verdict) for r in assessment.exercises}
-    keys = ("last_weight", "e1rm_now", "e1rm_trend_pct", "weeks_since_gain", "avg_rir_2w")
-    exercises = [{**{k: None for k in keys}, **e, "read": reads.get(e["exercise"].strip().lower(), "–")} for e in facts.get("exercises", []) if e.get("planned")]
+    keys = ("last_weight", "e1rm_now", "e1rm_trend_pct", "weeks_since_gain", "avg_effort_2w")
+    exercises = [{**{k: None for k in keys}, **e, "last_time": _last_time(e), "read": reads.get(e["exercise"].strip().lower(), "–")} for e in facts.get("exercises", []) if e.get("workouts")]
 
     if decision.recommendation == "none":
         headline = "No recommendation this week"
@@ -126,15 +135,25 @@ def render_report(state: dict, ctx: Any) -> str:
         ]
         if x
     )
-    att = facts.get("attendance") or {}
+    act = facts.get("activity") or {}
+    ps = facts.get("program_signals") or {}
     block = facts.get("block") or {}
-    glance = [("Workouts, last 4 weeks", f"{att.get('workouts_done_4w', '–')} of {att.get('workouts_planned_4w', '–')}" + (f" ({pct(att['attendance_4w'])})" if att.get("attendance_4w") is not None else "")), ("Sets completed, last 4 weeks", pct(att.get("set_completion_4w")))]
+    glance = [("Workouts done, last 4 weeks", str(act.get("workouts_done_4w", "–")))]
+    if ps.get("workouts_per_week_recent") is not None:
+        glance.append(("Workouts a week", f"{num(ps['workouts_per_week_recent'])} lately" + (f" · {num(ps['workouts_per_week_usual'])} usually" if ps.get("workouts_per_week_usual") is not None else "")))
+    if ps.get("workout_effort_recent") is not None:
+        glance.append(("Whole-workout effort", f"{num(ps['workout_effort_recent'])} lately" + (f" · {num(ps['workout_effort_usual'])} usually" if ps.get("workout_effort_usual") is not None else "")))
+    if ps.get("deload_signals"):
+        glance.append(("Signs you need a lighter week", "; ".join(ps["deload_signals"])))
     if block.get("program_age_weeks") is not None:
         glance.append(("Program", f"{block['program_age_weeks']} weeks old · block {block['block_number']}, week {block['week_in_block']} of {ctx.athlete.program.block_weeks}" + (" (the block ends: bigger changes are on the table)" if block.get("at_block_end") else "")))
     bw = facts.get("bodyweight")
     if bw:
         latest = bw.get("latest")
         glance.append(("Body weight", (f"{num(latest['value'])} {bw['unit']}" if latest else "–") + (f" · {signed(bw.get('trend_per_week'))} {bw['unit']}/week" if bw.get("trend_per_week") is not None else "")))
+    for b in facts.get("body_measurements") or []:
+        latest = b.get("latest")
+        glance.append((b["name"], (f"{num(latest['value'], 2)} {b['unit']}" if latest else "–") + (f" · {signed(b.get('change_4w'))} {b['unit']} over 4 weeks" if b.get("change_4w") is not None else "")))
     return _env.get_template("coach_report.md.j2").render(
         as_of_label=_label(as_of),
         headline=headline,

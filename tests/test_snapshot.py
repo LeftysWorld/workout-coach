@@ -1,4 +1,5 @@
 import copy
+import json
 
 import pytest
 
@@ -15,7 +16,7 @@ def test_every_fixture_parses_and_passes_its_own_arithmetic(raw, path):
 
 def test_a_different_schema_is_refused(raw):
     data = raw()
-    data["meta"]["schema_version"] = "2"
+    data["meta"]["schema_version"] = "1"
     with pytest.raises(SnapshotError, match="schema"):
         parse_snapshot(data)
 
@@ -46,3 +47,40 @@ def test_facts_mark_big_jumps_and_the_block(raw, athlete, library):
 def test_too_little_data_is_caught(raw):
     ok, why = metrics.enough_data(parse_snapshot(raw("too_little_data")))
     assert not ok and "two weeks" in why
+
+
+def test_the_analyst_never_sees_the_plan(raw, athlete, library):
+    f = metrics.build_facts(parse_snapshot(raw()), athlete, library)
+    view = metrics.analyst_view(f)
+    assert "workouts" in f and "plan_notes" in f
+    assert "workouts" not in view and "plan_notes" not in view
+    text = json.dumps(view)
+    for gone in ("reps_min", "reps_max", "planned", "attendance", "top_of_range", '"details"', "plan_note"):
+        assert gone not in text, gone
+
+
+def test_signals_read_what_was_done(raw, athlete, library):
+    def ex(name, scenario):
+        f = metrics.build_facts(parse_snapshot(raw(scenario)), athlete, library)
+        return next(e for e in f["exercises"] if e["exercise"] == name), f["program_signals"]
+
+    bench, _ = ex("Flat DB Bench Press", "ready_to_progress")
+    assert bench["ready_to_add_weight"] and not bench["too_heavy"]
+    press, ps = ex("Seated DB Shoulder Press", "too_heavy")
+    assert press["too_heavy"] and not press["ready_to_add_weight"]
+    assert not ps["deload_suggested"]
+    lat, _ = ex("Lat Pulldown", "stall")
+    assert lat["stalled"] and not lat["ready_to_add_weight"]
+    _, tired = ex("Flat DB Bench Press", "fatigue_deload")
+    assert tired["deload_suggested"] and len(tired["exercises_getting_harder"]) >= 3
+    assert "whole workouts rated harder than usual" in tired["deload_signals"]
+    _, fewer = ex("Flat DB Bench Press", "missed_sessions")
+    assert fewer["consistency_ratio"] < 0.75 and not fewer["deload_suggested"]
+
+
+def test_body_measurements_come_through_while_cutting(raw, athlete, library):
+    f = metrics.build_facts(parse_snapshot(raw("cutting_holding")), athlete, library)
+    names = {b["name"]: b for b in f["body_measurements"]}
+    assert set(names) == {"Waist", "Chest", "Right arm", "Left arm", "Shoulders"}
+    assert names["Waist"]["change_4w"] == -1 and names["Right arm"]["change_4w"] == 0
+    assert 0.5 < f["program_signals"]["bodyweight_loss_pct_per_week"] < 1.0

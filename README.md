@@ -28,17 +28,24 @@ Any failure → an honest "no recommendation this week" report.
 6 new program. Weekly check-ins stay small; bigger changes happen at the end of a 4-week block,
 with evidence.
 
-**Reward:** `0.35 attendance + 0.30 progression + 0.15 quality + 0.10 balance − 0.10 risk`
-(`coach/score.py`, version `r2`). Fixed by me, never chosen by an agent.
+**Reward:** `0.35 consistency + 0.30 progression + 0.15 quality + 0.10 balance − 0.10 risk`
+(`coach/score.py`, version `r3`). Fixed by me, never chosen by an agent.
+
+**What it judges from:** what I actually did, never what was planned. Weights and reps per set, the
+1–10 effort I give each exercise (10 = no reps left), pain flags and where, my notes, body weight and
+body measurements (waist, chest, arms, shoulders). The analyst never sees the plan's targets or my
+schedule; only the planner sees the plan, to write changes against it. From that history, code works
+out the signals: ready for more weight, too heavy, the same weights getting harder, strength falling,
+fewer workouts than my usual, a cut that's too fast, and when two or more line up, a lighter week.
 
 **Access:** the agent's key opens exactly two doors, `GET /history` and `POST /reports`. It sees
-workouts (plans and their history, sets, effort, pain, notes), weekly body weight (unless turned
-off in the app) and past coach decisions. Nothing else in the app.
+workouts (plans and their history, sets, effort, pain, notes), body weight and body measurements
+(unless turned off in the app) and past coach decisions. Nothing else in the app.
 
 ## Set up
 
-1. **App side** (in six-month-plan, branch `feature/workout-coach`): run the migration, deploy the
-   `workout-agent` function and set its secrets. See `docs/WORKOUT_COACH.md` there.
+1. **App side** (in six-month-plan, on main): run the migrations, deploy the `workout-agent`
+   function and set its secrets. See `docs/WORKOUT_COACH.md` there.
 2. **Here:**
    ```bash
    python -m venv .venv && source .venv/bin/activate

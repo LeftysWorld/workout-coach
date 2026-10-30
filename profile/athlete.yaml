@@ -1,5 +1,7 @@
 # Your rules. The governor (coach/governor.py) enforces these in code; the agents read them too.
 # Notes in your workout plans are context the agents weigh. These are rules no note can override.
+# These are boundaries (your knee, your gym, your time), not expectations: the coach judges your
+# progress from what you actually did. The analyst sees only your goals and limits from this file.
 # Edit this file (and commit) when something changes: a cleared knee, a new day count, new equipment.
 
 units: lb

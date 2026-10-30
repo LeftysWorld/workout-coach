@@ -40,3 +40,11 @@ def test_every_agent_loads_its_skills_and_the_rules():
         assert skills_of(agent)
     assert "## The change ladder" in system_prompt("planner")
     assert len(prompt_version()) == 10
+
+
+def test_the_analyst_sees_goals_and_limits_not_the_schedule():
+    analyst = system_prompt("analyst")
+    assert "banned_patterns" in analyst and "goals" in analyst
+    assert "days_per_week" not in analyst and "session_minutes" not in analyst
+    assert "days_per_week" in system_prompt("planner")
+    assert "## Fatigue and the lighter week" in analyst and "## Body weight and measurements" in analyst

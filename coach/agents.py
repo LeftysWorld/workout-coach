@@ -1,6 +1,6 @@
 """The three agents. Each is one structured call: what it's shown, what it must return.
 
-- Analyst: reads the facts, returns an assessment (per exercise and for the program). No proposals.
+- Analyst: reads what you actually did (no plan targets), returns an assessment. No proposals.
 - Planner: returns 2–3 options for next week, always including a hold, each sized on the ladder.
 - Critic: argues for leaving things alone. Accepts, downgrades (drops changes) or asks for one revision.
 """
@@ -11,6 +11,7 @@ import json
 
 from .decision import LEVELS, Assessment, CriticVerdict, Option, Options
 from .llm import LLM
+from .metrics import analyst_view
 from .profile import Athlete, Library
 from .prompts import system_prompt
 
@@ -40,8 +41,8 @@ def allowed_library(athlete: Athlete, library: Library) -> list[dict]:
 def run_analyst(llm: LLM, facts: dict) -> Assessment:
     user = "\n\n".join(
         [
-            "Assess this week. Every number you write must come from the facts below.",
-            "## Facts\n" + _j(facts),
+            "Assess this week from what was actually done. Every number you write must come from the facts below.",
+            "## Facts\n" + _j(analyst_view(facts)),
         ]
     )
     return llm.complete_json(agent="analyst", system=system_prompt("analyst"), user=user, schema=Assessment)
@@ -70,6 +71,6 @@ def run_critic(llm: LLM, facts: dict, assessment: Assessment, options: list[Opti
         "## Past decisions and what became of them\n" + _j(facts.get("decisions", [])),
         "## Where the program is\n" + _j(facts.get("block", {})),
         "## Assessment\n" + _j(assessment.model_dump()),
-        "## Facts\n" + _j({k: v for k, v in facts.items() if k not in ("decisions",)}),
+        "## Facts\n" + _j({k: v for k, v in analyst_view(facts).items() if k not in ("decisions",)}),
     ]
     return llm.complete_json(agent="critic", system=system_prompt("critic"), user="\n\n".join(parts), schema=CriticVerdict)

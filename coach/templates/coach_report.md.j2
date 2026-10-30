@@ -13,15 +13,16 @@
 {% endfor %}
 
 {% if exercises %}
-| Exercise | Last weight | Est. max now | Change (3 wks) | Wks since gain | Effort | Read |
+| Exercise | Last time | Est. max now | Change (3 wks) | Wks since gain | Effort (2 wks) | Read |
 |---|---|---|---|---|---|---|
 {% for e in exercises %}
-| {{ e.exercise }} | {{ 'BW' if e.last_weight is none else num(e.last_weight) }} | {{ num(e.e1rm_now) }} | {{ signed(e.e1rm_trend_pct, '%') }} | {{ '–' if e.weeks_since_gain is none else e.weeks_since_gain }} | {{ '–' if e.avg_rir_2w is none else '@' ~ num(e.avg_rir_2w) }} | {{ e.read }} |
+| {{ e.exercise }} | {{ e.last_time }} | {{ num(e.e1rm_now) }} | {{ signed(e.e1rm_trend_pct, '%') }} | {{ '–' if e.weeks_since_gain is none else e.weeks_since_gain }} | {{ '–' if e.avg_effort_2w is none else '@' ~ num(e.avg_effort_2w) }} | {{ e.read }} |
 {% endfor %}
 
 {% endif %}
 {% if assessment %}
-{{ assessment.attendance }} {{ assessment.recovery }} {{ assessment.program_fit }}
+{{ assessment.consistency }} {{ assessment.recovery }} {{ assessment.program_fit }}{% if assessment.deload_due %} **A lighter week is due:** {{ assessment.deload_reason }}.{% endif %}
+
 
 {% endif %}
 ## What to change
@@ -33,7 +34,7 @@
 | {{ c.workout }} | {{ c.exercise }} | {{ c.type }} | {{ target(c.from_) }} → {{ target(c.to) }} | {{ c.reason }} |
 {% endfor %}
 {% elif decision.recommendation == 'none' %}
-Nothing this week: the coach couldn't make a recommendation. Keep training as planned.
+Nothing this week: the coach couldn't make a recommendation. Keep training as you have been.
 {% else %}
 Nothing. Keep the plan exactly as it is next week.
 {% endif %}

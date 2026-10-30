@@ -89,7 +89,17 @@ def expectations(state: dict, e: Expect) -> Result:
     for word in e.forbid_names:
         if any(word in ((c.to.name if c.to else "") or "").lower() for c in d.changes):
             problems.append(f"added a {word}")
+    for ex in e.forbid_increase_on:
+        if any(c.exercise.lower() == ex.lower() and _increases(c) for c in d.changes):
+            problems.append(f"{ex} was pushed up")
     return (not problems), "; ".join(problems)
+
+
+def _increases(c) -> bool:
+    f, t = c.from_, c.to
+    if t is None:
+        return False
+    return ((t.weight or 0) > ((f.weight if f else 0) or 0)) or ((t.sets or 0) > ((f.sets if f else 0) or 0)) or ((t.reps_max or 0) > ((f.reps_max if f else 0) or 0))
 
 
 UNIVERSAL = {

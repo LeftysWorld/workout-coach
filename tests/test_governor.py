@@ -86,3 +86,19 @@ def test_apply_changes_builds_the_next_plan(raw, athlete, library):
     names = [e["name"] for e in plans[MON]]
     assert "Wide-Grip Lat Pulldown" in names and "Lat Pulldown" not in names
     assert next(e for e in plans[MON] if e["name"] == "Flat DB Bench Press")["weight"] == 55
+
+
+def test_no_more_weight_on_a_lift_that_is_too_heavy_or_was_all_out(raw, athlete, library):
+    s, block = ctx(raw, athlete, library, "too_heavy")
+    tue = "Tue: Shoulders + Arms"
+    up = check(opt(2, ch(tue, "Seated DB Shoulder Press", "load", {"weight": 35}, {"weight": 40})), s, athlete, library, block)
+    assert codes(up) & {"allout_load", "too_heavy_load"}
+    down = check(opt(2, ch(tue, "Seated DB Shoulder Press", "load", {"weight": 35}, {"weight": 30})), s, athlete, library, block)
+    assert not codes(down) & {"allout_load", "too_heavy_load"}
+
+
+def test_a_lighter_week_passes_mid_block(raw, athlete, library):
+    s, block = ctx(raw, athlete, library, "fatigue_deload")
+    assert not block["at_block_end"]
+    lighter = [ch(w.title, e.name, "deload", {"sets": e.sets}, {"sets": e.sets - 1}) for w in s.program.workouts for e in w.exercises if e.sets > 1]
+    assert check(opt(5, *lighter), s, athlete, library, block) == []

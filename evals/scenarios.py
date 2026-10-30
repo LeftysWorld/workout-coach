@@ -27,6 +27,8 @@ class Expect:
     forbid_types_on: dict[str, set[str]] = field(default_factory=dict)
     # No new exercise whose name contains any of these.
     forbid_names: list[str] = field(default_factory=list)
+    # Exercises that must never get more weight, sets or reps.
+    forbid_increase_on: set[str] = field(default_factory=set)
     why: str = ""
 
 
@@ -42,11 +44,12 @@ class Scenario:
 BENCH = "Flat DB Bench Press"
 LAT = "Lat Pulldown"
 RAISE = "Seated Lateral Raise"
+PRESS = "Seated DB Shoulder Press"
 CRUNCH = "Sit-Up Bench Crunch (knee test)"
 
 SCENARIOS: list[Scenario] = [
-    Scenario("ready_to_progress", Expect(levels={1, 2}, must_touch={BENCH: {"load", "reps"}}, why="Bench hit 12 on every set two sessions running: move it up.")),
-    Scenario("missed_sessions", Expect(levels={0, 1}, why="Six of twenty workouts missed: keep it simple, don't add change.")),
+    Scenario("ready_to_progress", Expect(levels={1, 2}, must_touch={BENCH: {"load", "reps"}}, why="Bench at 12, 12, 12 rated 7 two workouts running: reps to spare, move it up.")),
+    Scenario("missed_sessions", Expect(levels={0, 1}, why="Three workouts a week lately against a usual five: keep it simple, don't add change.")),
     Scenario("pain_note", Expect(levels={4}, must_touch={CRUNCH: {"remove", "swap"}}, forbid_types_on={CRUNCH: {"load", "reps", "sets"}}, why="A knee-test exercise hurt twice: remove it.")),
     Scenario("stall", Expect(levels={0, 1, 3, 4}, forbid_types_on={LAT: {"load"}}, why="Lat pulldown flat for weeks after a weight increase: reps, a set or a swap; not more weight.")),
     Scenario("recent_program_change", Expect(levels={0, 1, 2, 3, 4}, why="The program changed two weeks ago: no new program now.")),
@@ -57,6 +60,8 @@ SCENARIOS: list[Scenario] = [
     Scenario("cutting_holding", Expect(levels={0, 1, 2}, why="Losing 1.5 lb a week with lifts holding: that's a win; keep going.")),
     Scenario("all_progressing", Expect(levels={0, 1, 2}, why="Everything moving mid-block: hold, or the smallest step.")),
     Scenario("last_not_applied", Expect(levels={0, 1, 2}, why="Last week's bench increase wasn't applied: don't escalate.")),
+    Scenario("fatigue_deload", Expect(levels={5}, why="Six lifts rated harder at the same weights, reps slipping, whole workouts at 9, a tired note: a lighter week.")),
+    Scenario("too_heavy", Expect(levels={1, 2, 3, 4}, must_touch={PRESS: {"load", "reps", "sets"}}, forbid_increase_on={PRESS}, why="Shoulder press reps falling three workouts running at a 9–10: lighter, not heavier.")),
 ]
 
 
@@ -73,6 +78,7 @@ def export() -> Path:
         e["levels"] = sorted(e["levels"])
         e["must_touch"] = {k: sorted(v) for k, v in e["must_touch"].items()}
         e["forbid_types_on"] = {k: sorted(v) for k, v in e["forbid_types_on"].items()}
+        e["forbid_increase_on"] = sorted(e["forbid_increase_on"])
         rows.append({"name": s.name, "inputs": {"scenario": s.name}, "outputs": e})
     out = DATASETS / "scenarios.json"
     out.write_text(json.dumps(rows, indent=2))

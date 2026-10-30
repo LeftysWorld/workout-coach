@@ -24,6 +24,7 @@ from pathlib import Path
 
 from coach.client import AppClient
 from coach.flow import Context
+from coach.metrics import exercise_signals
 from coach.profile import load_athlete, load_library, step_for
 from coach.runner import run_plain
 from coach.score import REWARD_VERSION, week_score
@@ -43,15 +44,23 @@ def fridays(start: str, end: str) -> list[str]:
 
 
 def baseline(s: Snapshot) -> dict[str, str]:
-    """Double progression: exercise → 'load' when every set hit the top of the range last time and the step is small enough; else 'hold'."""
+    """The simple rule, on what was done: 'load' when the lift is ready for more weight (two workouts at
+    an 8 or lower with reps holding) and the step is small enough, 'reps' when it's ready but the step
+    is too big, 'load' (down) when it's too heavy; else 'hold'."""
     athlete, library = load_athlete(), load_library()
     out = {}
     for m in s.metrics.exercises:
-        if not m.planned:
+        if not m.workouts:
             continue
+        sig = exercise_signals(m)
         step = step_for(library.find(m.exercise), athlete)
         small = bool(step and m.last_weight and step / m.last_weight <= athlete.increments.max_jump_pct)
-        out[m.exercise] = "load" if m.top_of_range_streak >= 1 and small and m.pain_flags_4w == 0 else ("reps" if m.top_of_range_streak >= 1 else "hold")
+        if sig["too_heavy"]:
+            out[m.exercise] = "load"
+        elif sig["ready_to_add_weight"]:
+            out[m.exercise] = "load" if small else "reps"
+        else:
+            out[m.exercise] = "hold"
     return out
 
 

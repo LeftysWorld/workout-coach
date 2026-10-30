@@ -77,16 +77,21 @@ class Options(BaseModel):
 
 class ExerciseRead(BaseModel):
     exercise: str
-    verdict: Literal["ready_to_progress", "progressing", "holding", "stalled", "regressing", "pain", "too_early", "not_done"]
+    verdict: Literal["ready_to_progress", "progressing", "holding", "stalled", "too_heavy", "regressing", "pain", "too_early", "not_done"]
     evidence: list[str] = []
     note: str = ""
 
 
 class Assessment(BaseModel):
     summary: str
-    attendance: str
+    # How often you've been training lately, against your own recent average (never against the plan).
+    consistency: str
     recovery: str
     program_fit: str
+    # A lighter week now: from the fatigue signals (the same weights feeling harder, strength
+    # falling, whole workouts rated harder, fewer workouts, a fast cut), not from the calendar.
+    deload_due: bool = False
+    deload_reason: str = ""
     program_due_for_change: bool = False
     program_change_reason: str = ""
     exercises: list[ExerciseRead]

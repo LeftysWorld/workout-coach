@@ -18,7 +18,8 @@
       },
       "forbid_types_on": {},
       "forbid_names": [],
-      "why": "Bench hit 12 on every set two sessions running: move it up."
+      "forbid_increase_on": [],
+      "why": "Bench at 12, 12, 12 rated 7 two workouts running: reps to spare, move it up."
     }
   },
   {
@@ -35,7 +36,8 @@
       "must_touch": {},
       "forbid_types_on": {},
       "forbid_names": [],
-      "why": "Six of twenty workouts missed: keep it simple, don't add change."
+      "forbid_increase_on": [],
+      "why": "Three workouts a week lately against a usual five: keep it simple, don't add change."
     }
   },
   {
@@ -62,6 +64,7 @@
         ]
       },
       "forbid_names": [],
+      "forbid_increase_on": [],
       "why": "A knee-test exercise hurt twice: remove it."
     }
   },
@@ -85,6 +88,7 @@
         ]
       },
       "forbid_names": [],
+      "forbid_increase_on": [],
       "why": "Lat pulldown flat for weeks after a weight increase: reps, a set or a swap; not more weight."
     }
   },
@@ -105,6 +109,7 @@
       "must_touch": {},
       "forbid_types_on": {},
       "forbid_names": [],
+      "forbid_increase_on": [],
       "why": "The program changed two weeks ago: no new program now."
     }
   },
@@ -128,6 +133,7 @@
         ]
       },
       "forbid_names": [],
+      "forbid_increase_on": [],
       "why": "12.5 \u2192 17.5 lb is a 40% jump: progress raises with reps or a set."
     }
   },
@@ -153,6 +159,7 @@
         "leg press",
         "deadlift"
       ],
+      "forbid_increase_on": [],
       "why": "A note asks for squats; the knee rule wins."
     }
   },
@@ -172,6 +179,7 @@
       "must_touch": {},
       "forbid_types_on": {},
       "forbid_names": [],
+      "forbid_increase_on": [],
       "why": "Twelve weeks in, at a block's end, most lifts flat for weeks: a real change is due."
     }
   },
@@ -188,6 +196,7 @@
       "must_touch": {},
       "forbid_types_on": {},
       "forbid_names": [],
+      "forbid_increase_on": [],
       "why": "One week of data: too early to recommend anything."
     }
   },
@@ -206,6 +215,7 @@
       "must_touch": {},
       "forbid_types_on": {},
       "forbid_names": [],
+      "forbid_increase_on": [],
       "why": "Losing 1.5 lb a week with lifts holding: that's a win; keep going."
     }
   },
@@ -224,6 +234,7 @@
       "must_touch": {},
       "forbid_types_on": {},
       "forbid_names": [],
+      "forbid_increase_on": [],
       "why": "Everything moving mid-block: hold, or the smallest step."
     }
   },
@@ -242,7 +253,53 @@
       "must_touch": {},
       "forbid_types_on": {},
       "forbid_names": [],
+      "forbid_increase_on": [],
       "why": "Last week's bench increase wasn't applied: don't escalate."
+    }
+  },
+  {
+    "name": "fatigue_deload",
+    "inputs": {
+      "scenario": "fatigue_deload"
+    },
+    "outputs": {
+      "levels": [
+        5
+      ],
+      "recommendation": null,
+      "must_touch": {},
+      "forbid_types_on": {},
+      "forbid_names": [],
+      "forbid_increase_on": [],
+      "why": "Six lifts rated harder at the same weights, reps slipping, whole workouts at 9, a tired note: a lighter week."
+    }
+  },
+  {
+    "name": "too_heavy",
+    "inputs": {
+      "scenario": "too_heavy"
+    },
+    "outputs": {
+      "levels": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "recommendation": null,
+      "must_touch": {
+        "Seated DB Shoulder Press": [
+          "load",
+          "reps",
+          "sets"
+        ]
+      },
+      "forbid_types_on": {},
+      "forbid_names": [],
+      "forbid_increase_on": [
+        "Seated DB Shoulder Press"
+      ],
+      "why": "Shoulder press reps falling three workouts running at a 9\u201310: lighter, not heavier."
     }
   }
 ]

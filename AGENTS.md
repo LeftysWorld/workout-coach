@@ -30,8 +30,8 @@ a report. It never changes the plan itself. A person reads the report and decide
 |---|---|
 | `coach/flow.py` | The pipeline: NODES and ROUTES, defined once |
 | `coach/graph.py` / `coach/runner.py` | The same flow in LangGraph / walked directly (tests, evals) |
-| `coach/snapshot.py` | Schema 1 of the app's snapshot (pydantic) |
-| `coach/metrics.py` | Contract check, the facts the agents read, block position |
+| `coach/snapshot.py` | Schema 2 of the app's snapshot (pydantic): what was actually done, effort 1–10 per exercise, body measurements |
+| `coach/metrics.py` | Contract check, the signals (ready, too heavy, getting harder, lighter week due), the facts the agents read; `analyst_view` hides the plan |
 | `coach/governor.py` | Hard rules |
 | `coach/score.py` | The reward function |
 | `coach/agents.py`, `coach/prompts.py` | The three agents; prompt assembly and `prompt_version()` |
@@ -46,7 +46,7 @@ a report. It never changes the plan itself. A person reads the report and decide
 ```bash
 pip install -e ".[dev]"
 pytest -q                       # unit tests and the pipeline with the scripted rules
-coach evals --scripted          # every scenario, scripted rules: must stay 12/12
+coach evals --scripted          # every scenario, scripted rules: must stay 14/14
 ```
 
 If you changed anything under `agents/`, `skills/`, `profile/` or `coach/score.py`, also run the real
@@ -57,6 +57,14 @@ repeats, and the backtest is at least as good as the simple rule.
 New scenario: add a case to `evals/fixtures/generate.ts` (run it with `npx tsx` from a sibling
 checkout of six-month-plan, so the fixture comes from the app's real builder), then an `Expect` in
 `evals/scenarios.py`.
+
+## Actuals, not expectations
+
+The analyst judges only from what was done: weights, reps, effort 1–10, pain, notes, body weight and
+measurements. It never sees the plan's targets or the schedule (`analyst_view`, and `profile:` in
+`agents/analyst/AGENT.md` limits which parts of `athlete.yaml` it reads). The planner sees the plan
+because changes are written against it. Keep it that way: a new signal goes in `coach/metrics.py`,
+computed from the history, never as "done vs planned".
 
 ## Style
 

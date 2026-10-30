@@ -33,20 +33,28 @@ def _pain(facts: dict, e: dict) -> bool:
     if (e.get("pain_flags_4w") or 0) > 0:
         return True
     name = e["exercise"].lower()
-    return any(PAIN_WORDS.search(c["text"]) and (name.split(" (")[0].split()[-1] in c["text"].lower()) for c in facts.get("comments", []) if c["source"] == "session_note")
+    return any(PAIN_WORDS.search(c["text"]) and (name.split(" (")[0].split()[-1] in c["text"].lower()) for c in facts.get("comments", []) if c["source"] in ("session_note", "exercise_note"))
+
+
+def _ratio(f: dict) -> float:
+    r = (f.get("program_signals") or {}).get("consistency_ratio")
+    return 1.0 if r is None else r
 
 
 def analyst(user: str) -> dict:
     f = section(user, "Facts")
+    assert "workouts" not in f, "the analyst must not see the plan"
     reads = []
     for e in f["exercises"]:
-        if not e.get("planned"):
+        if not e.get("workouts"):
             continue
         if _pain(f, e):
             v = "pain"
         elif (e.get("sessions") or 0) < 3:
             v = "too_early"
-        elif (e.get("top_of_range_streak") or 0) >= 2 or ((e.get("avg_rir_2w") or 0) >= 3):
+        elif e.get("too_heavy"):
+            v = "too_heavy"
+        elif e.get("ready_to_add_weight"):
             v = "ready_to_progress"
         elif e.get("stalled"):
             v = "stalled"
@@ -56,15 +64,19 @@ def analyst(user: str) -> dict:
             v = "holding"
         reads.append({"exercise": e["exercise"], "verdict": v, "evidence": []})
     block = f["block"]
+    ps = f.get("program_signals") or {}
     stalled = sum(1 for r in reads if r["verdict"] == "stalled")
     due = bool(block.get("at_block_end")) and stalled >= max(2, len(reads) // 2)
-    att = f["attendance"].get("attendance_4w") or 0
+    deload = bool(ps.get("deload_suggested"))
+    less = _ratio(f) < 0.8
     return {
-        "summary": "Attendance is the main story this week." if att < 0.8 else "Workouts are happening; the question is which lifts are ready.",
-        "attendance": "Some workouts were missed." if att < 0.8 else "Attendance is solid.",
-        "recovery": "No sign of under-recovery." if not any(r["verdict"] == "pain" for r in reads) else "Something hurt; ease off it.",
+        "summary": "Training less than usual is the main story this week." if less else ("The same weights are feeling harder across the board: time to back off for a week." if deload else "Workouts are happening; the question is which lifts are ready."),
+        "consistency": "Fewer workouts than usual lately." if less else "Training as often as usual.",
+        "recovery": "Wearing down: the same weights feel harder." if deload else ("Something hurt; ease off it." if any(r["verdict"] == "pain" for r in reads) else "No sign of under-recovery."),
         "program_fit": "Most lifts have stalled at a block's end." if due else "The program still fits.",
-        "program_due_for_change": due,
+        "deload_due": deload,
+        "deload_reason": "; ".join(ps.get("deload_signals") or []),
+        "program_due_for_change": due and not deload,
         "program_change_reason": "Most lifts flat for weeks at a block's end." if due else "",
         "exercises": reads,
         "flags": [],
@@ -95,12 +107,23 @@ def planner(user: str) -> dict:
                 c = change("swap", ex, {"name": ex}, {"name": alt, "sets": plan["sets"], "reps_min": plan["reps_min"], "reps_max": plan["reps_max"]}, "It hurt: swap it for a gentler one.") if alt else change("remove", ex, {"name": ex}, {}, "It hurt: take it out.")
             if c:
                 small.append(c)
+        elif v == "too_heavy":
+            step = e.get("weight_step") or 5
+            used = e.get("last_weight") or plan.get("weight")
+            if used and used - step > 0:
+                # From what was actually lifted, not the plan's number.
+                c = change("load", ex, {"weight": plan.get("weight")}, {"weight": used - step}, f"Reps falling at a hard effort at {_n(used)}: one step lighter.")
+            else:
+                c = change("reps", ex, {"reps_min": plan["reps_min"], "reps_max": plan["reps_max"]}, {"reps_min": max(1, plan["reps_min"] - 2), "reps_max": max(2, plan["reps_max"] - 2)}, "Reps falling at a hard effort: a lower range for now.")
+            if c:
+                small.append(c)
         elif v == "ready_to_progress":
             if e.get("jump_too_big") or plan.get("weight") is None:
-                c = change("reps", ex, {"reps_min": plan["reps_min"], "reps_max": plan["reps_max"]}, {"reps_min": plan["reps_max"], "reps_max": plan["reps_max"] + 3}, "Top of the range, and the next weight is too big a jump: more reps first.")
+                c = change("reps", ex, {"reps_min": plan["reps_min"], "reps_max": plan["reps_max"]}, {"reps_min": plan["reps_max"], "reps_max": plan["reps_max"] + 3}, "Reps holding with reps to spare, and the next weight is too big a jump: more reps first.")
             else:
                 step = e.get("weight_step") or 5
-                c = change("load", ex, {"weight": plan["weight"]}, {"weight": plan["weight"] + step}, "Top of the range on every set: one step up.")
+                base = max(plan["weight"], e.get("last_weight") or 0)
+                c = change("load", ex, {"weight": plan["weight"]}, {"weight": base + step}, "Reps holding with reps to spare at this weight: one step up.")
             if c:
                 small.append(c)
         elif v == "stalled":
@@ -113,23 +136,33 @@ def planner(user: str) -> dict:
                 c = change("swap", ex, {"name": ex}, {"name": alt, "sets": plan["sets"], "reps_min": plan["reps_min"], "reps_max": plan["reps_max"]}, "Flat for weeks: a fresh variation.")
                 if c:
                     big.append(c)
-    # Mid-block, at most one structural change; non-structural first.
+    # Mid-block, at most one structural change; non-structural first; at most three changes.
     structural = [c for c in small if c["type"] in {"swap", "remove", "add"}]
-    small = [c for c in small if c["type"] not in {"swap", "remove", "add"}] + structural[:1]
-    level = lambda cs: max(({"reps": 1, "load": 2, "sets": 3, "swap": 4, "remove": 4, "add": 4}[c["type"]] for c in cs), default=0)  # noqa: E731
+    pain_first = sorted([c for c in small if c["type"] not in {"swap", "remove", "add"}], key=lambda c: 0 if "lighter" in c["reason"] else 1)
+    small = (structural[:1] + pain_first)[:3]
+    level = lambda cs: max(({"reps": 1, "load": 2, "sets": 3, "swap": 4, "remove": 4, "add": 4, "deload": 5}[c["type"]] for c in cs), default=0)  # noqa: E731
     options = [{"id": "hold", "label": "Hold: no change", "change_level": 0, "changes": []}]
     if small:
         options.append({"id": "small", "label": "Small adjustments", "change_level": level(small), "changes": small})
+    if a.get("deload_due"):
+        lighter = []
+        for w in f["workouts"]:
+            for x in w["exercises"]:
+                if x["sets"] > 1:
+                    lighter.append({"workout": w["title"], "action_id": w["action_id"], "type": "deload", "exercise": x["name"], "from": {"sets": x["sets"]}, "to": {"sets": x["sets"] - 1}, "reason": "A lighter week: one fewer set at the same weight."})
+        if lighter:
+            options.append({"id": "lighter", "label": "A lighter week", "change_level": 5, "changes": lighter})
     if a.get("program_due_for_change") and big:
         options.append({"id": "program", "label": "New program: fresh variations for stalled lifts", "change_level": 6, "changes": big[:3]})
-    att = f["attendance"].get("attendance_4w") or 0
-    pain = any(r["verdict"] == "pain" for r in a["exercises"])
+    pain = any(r["verdict"] in ("pain", "too_heavy") for r in a["exercises"])
     rec = "hold"
-    if pain and small:
+    if a.get("deload_due"):
+        rec = "lighter"
+    elif pain and small:
         rec = "small"
-    elif att >= 0.8 and a.get("program_due_for_change") and big:
+    elif _ratio(f) >= 0.8 and a.get("program_due_for_change") and big:
         rec = "program"
-    elif att >= 0.8 and small:
+    elif _ratio(f) >= 0.8 and small:
         rec = "small"
     return {"options": options, "recommended_option_id": rec}
 
@@ -137,12 +170,15 @@ def planner(user: str) -> dict:
 def critic(user: str) -> dict:
     options = section(user, "Options (each already passed the rules check), with scores from the fixed reward function") or []
     f = section(user, "Facts")
+    a = section(user, "Assessment") or {}
     ids = {o["id"] for o in options}
-    att = f["attendance"].get("attendance_4w") or 0
-    pain_fix = next((o for o in options if any(c["type"] in {"remove", "swap"} and "hurt" in c["reason"] for c in o["changes"])), None)
-    if pain_fix:
+    pain_fix = next((o for o in options if any(c["type"] in {"remove", "swap"} and "hurt" in c["reason"] or "lighter" in c["reason"] and c["type"] == "load" for c in o["changes"])), None)
+    lighter = next((o for o in options if o["change_level"] == 5), None)
+    if a.get("deload_due") and lighter:
+        chosen = lighter["id"]
+    elif pain_fix:
         chosen = pain_fix["id"]
-    elif att < 0.8:
+    elif _ratio(f) < 0.8:
         chosen = "hold"
     else:
         chosen = max(options, key=lambda o: (o.get("score") or 0, -o["change_level"]))["id"] if options else "hold"
@@ -151,8 +187,12 @@ def critic(user: str) -> dict:
         "verdict": "accept",
         "drop_exercises": [],
         "reasons": ["The chosen option fixes what the data points at and nothing else."],
-        "would_change_mind": ["A missed workout or a pain flag next week."],
+        "would_change_mind": ["Fewer workouts than usual, or a pain flag, next week."],
     }
+
+
+def _n(v: float) -> str:
+    return str(int(v)) if float(v).is_integer() else f"{v:g}"
 
 
 def scripted_llm() -> ScriptedLLM:

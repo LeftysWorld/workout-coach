@@ -1,12 +1,12 @@
 {
  "meta": {
-  "schema_version": "1",
+  "schema_version": "2",
   "as_of": "2026-11-27",
   "months": 6,
   "from": "2026-05-27",
   "units": "lb",
   "timezone": "America/New_York",
-  "fingerprint": "eb6c362a76c9b739"
+  "fingerprint": "de6ca0ae5f541e3d"
  },
  "program": {
   "workouts": [
@@ -369,96 +369,100 @@
    "status": "done",
    "minutes": 40,
    "note": "",
+   "effort": 7,
    "sets": [
     {
      "exercise": "Flat DB Bench Press",
      "set_no": 1,
      "weight": 40,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Flat DB Bench Press",
      "set_no": 2,
      "weight": 40,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Flat DB Bench Press",
      "set_no": 3,
      "weight": 40,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Lat Pulldown",
      "set_no": 1,
      "weight": 95,
      "reps": 10,
-     "done": true,
-     "rir": 1,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Lat Pulldown",
      "set_no": 2,
      "weight": 95,
      "reps": 10,
-     "done": true,
-     "rir": 1,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Lat Pulldown",
      "set_no": 3,
      "weight": 95,
      "reps": 9,
-     "done": true,
-     "rir": 1,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Lat Pulldown",
      "set_no": 4,
      "weight": 95,
      "reps": 9,
-     "done": true,
-     "rir": 1,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Lateral Raise",
      "set_no": 1,
      "weight": 12.5,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Lateral Raise",
      "set_no": 2,
      "weight": 12.5,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Lateral Raise",
      "set_no": 3,
      "weight": 12.5,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
+    }
+   ],
+   "exercises": [
+    {
+     "exercise": "Flat DB Bench Press",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Lat Pulldown",
+     "effort": 9,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Seated Lateral Raise",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
     }
    ]
   },
@@ -470,87 +474,93 @@
    "status": "done",
    "minutes": 40,
    "note": "",
+   "effort": 7,
    "sets": [
     {
      "exercise": "Cable Triceps Pushdown",
      "set_no": 1,
      "weight": 50,
      "reps": 13,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Cable Triceps Pushdown",
      "set_no": 2,
      "weight": 50,
      "reps": 13,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Cable Triceps Pushdown",
      "set_no": 3,
      "weight": 50,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated DB Curl",
      "set_no": 1,
      "weight": 20,
      "reps": 11,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated DB Curl",
      "set_no": 2,
      "weight": 20,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated DB Curl",
      "set_no": 3,
      "weight": 20,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated DB Shoulder Press",
      "set_no": 1,
      "weight": 30,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated DB Shoulder Press",
      "set_no": 2,
      "weight": 30,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated DB Shoulder Press",
      "set_no": 3,
      "weight": 30,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
+    }
+   ],
+   "exercises": [
+    {
+     "exercise": "Cable Triceps Pushdown",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Seated DB Curl",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Seated DB Shoulder Press",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
     }
    ]
   },
@@ -562,96 +572,100 @@
    "status": "done",
    "minutes": 40,
    "note": "",
+   "effort": 7,
    "sets": [
     {
      "exercise": "Hammer Strength Back Extension",
      "set_no": 1,
      "weight": null,
      "reps": 13,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Hammer Strength Back Extension",
      "set_no": 2,
      "weight": null,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Hammer Strength Back Extension",
      "set_no": 3,
      "weight": null,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Cable Row",
      "set_no": 1,
      "weight": 90,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Cable Row",
      "set_no": 2,
      "weight": 90,
      "reps": 8,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Cable Row",
      "set_no": 3,
      "weight": 90,
      "reps": 8,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Cable Row",
      "set_no": 4,
      "weight": 90,
      "reps": 8,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Sit-Up Bench Crunch (knee test)",
      "set_no": 1,
      "weight": null,
      "reps": 14,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Sit-Up Bench Crunch (knee test)",
      "set_no": 2,
      "weight": null,
      "reps": 13,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Sit-Up Bench Crunch (knee test)",
      "set_no": 3,
      "weight": null,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
+    }
+   ],
+   "exercises": [
+    {
+     "exercise": "Hammer Strength Back Extension",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Seated Cable Row",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Sit-Up Bench Crunch (knee test)",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
     }
    ]
   },
@@ -663,60 +677,65 @@
    "status": "done",
    "minutes": 40,
    "note": "",
+   "effort": 7,
    "sets": [
     {
      "exercise": "Incline DB Press",
      "set_no": 1,
      "weight": 30,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Incline DB Press",
      "set_no": 2,
      "weight": 30,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Incline DB Press",
      "set_no": 3,
      "weight": 30,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Rear-Delt Fly",
      "set_no": 1,
      "weight": 15,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Rear-Delt Fly",
      "set_no": 2,
      "weight": 15,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Rear-Delt Fly",
      "set_no": 3,
      "weight": 15,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
+    }
+   ],
+   "exercises": [
+    {
+     "exercise": "Incline DB Press",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Seated Rear-Delt Fly",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
     }
    ]
   },
@@ -728,60 +747,65 @@
    "status": "done",
    "minutes": 40,
    "note": "",
+   "effort": 7,
    "sets": [
     {
      "exercise": "Seated Hammer Curl",
      "set_no": 1,
      "weight": 17.5,
      "reps": 11,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Hammer Curl",
      "set_no": 2,
      "weight": 17.5,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Hammer Curl",
      "set_no": 3,
      "weight": 17.5,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Single-Arm DB Row",
      "set_no": 1,
      "weight": 35,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Single-Arm DB Row",
      "set_no": 2,
      "weight": 35,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Single-Arm DB Row",
      "set_no": 3,
      "weight": 35,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
+    }
+   ],
+   "exercises": [
+    {
+     "exercise": "Seated Hammer Curl",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Single-Arm DB Row",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
     }
    ]
   },
@@ -793,96 +817,100 @@
    "status": "done",
    "minutes": 40,
    "note": "",
+   "effort": 7,
    "sets": [
     {
      "exercise": "Flat DB Bench Press",
      "set_no": 1,
      "weight": 40,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Flat DB Bench Press",
      "set_no": 2,
      "weight": 40,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Flat DB Bench Press",
      "set_no": 3,
      "weight": 40,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Lat Pulldown",
      "set_no": 1,
      "weight": 100,
      "reps": 9,
-     "done": true,
-     "rir": 1,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Lat Pulldown",
      "set_no": 2,
      "weight": 100,
      "reps": 9,
-     "done": true,
-     "rir": 1,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Lat Pulldown",
      "set_no": 3,
      "weight": 100,
      "reps": 8,
-     "done": true,
-     "rir": 1,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Lat Pulldown",
      "set_no": 4,
      "weight": 100,
      "reps": 8,
-     "done": true,
-     "rir": 1,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Lateral Raise",
      "set_no": 1,
      "weight": 12.5,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Lateral Raise",
      "set_no": 2,
      "weight": 12.5,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Lateral Raise",
      "set_no": 3,
      "weight": 12.5,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
+    }
+   ],
+   "exercises": [
+    {
+     "exercise": "Flat DB Bench Press",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Lat Pulldown",
+     "effort": 9,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Seated Lateral Raise",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
     }
    ]
   },
@@ -894,87 +922,93 @@
    "status": "done",
    "minutes": 40,
    "note": "",
+   "effort": 7,
    "sets": [
     {
      "exercise": "Cable Triceps Pushdown",
      "set_no": 1,
      "weight": 50,
      "reps": 13,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Cable Triceps Pushdown",
      "set_no": 2,
      "weight": 50,
      "reps": 13,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Cable Triceps Pushdown",
      "set_no": 3,
      "weight": 50,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated DB Curl",
      "set_no": 1,
      "weight": 20,
      "reps": 11,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated DB Curl",
      "set_no": 2,
      "weight": 20,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated DB Curl",
      "set_no": 3,
      "weight": 20,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated DB Shoulder Press",
      "set_no": 1,
      "weight": 30,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated DB Shoulder Press",
      "set_no": 2,
      "weight": 30,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated DB Shoulder Press",
      "set_no": 3,
      "weight": 30,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
+    }
+   ],
+   "exercises": [
+    {
+     "exercise": "Cable Triceps Pushdown",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Seated DB Curl",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Seated DB Shoulder Press",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
     }
    ]
   },
@@ -986,96 +1020,100 @@
    "status": "done",
    "minutes": 40,
    "note": "",
+   "effort": 7,
    "sets": [
     {
      "exercise": "Hammer Strength Back Extension",
      "set_no": 1,
      "weight": null,
      "reps": 13,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Hammer Strength Back Extension",
      "set_no": 2,
      "weight": null,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Hammer Strength Back Extension",
      "set_no": 3,
      "weight": null,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Cable Row",
      "set_no": 1,
      "weight": 90,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Cable Row",
      "set_no": 2,
      "weight": 90,
      "reps": 8,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Cable Row",
      "set_no": 3,
      "weight": 90,
      "reps": 8,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Cable Row",
      "set_no": 4,
      "weight": 90,
      "reps": 8,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Sit-Up Bench Crunch (knee test)",
      "set_no": 1,
      "weight": null,
      "reps": 14,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Sit-Up Bench Crunch (knee test)",
      "set_no": 2,
      "weight": null,
      "reps": 13,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Sit-Up Bench Crunch (knee test)",
      "set_no": 3,
      "weight": null,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
+    }
+   ],
+   "exercises": [
+    {
+     "exercise": "Hammer Strength Back Extension",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Seated Cable Row",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Sit-Up Bench Crunch (knee test)",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
     }
    ]
   },
@@ -1087,60 +1125,65 @@
    "status": "done",
    "minutes": 40,
    "note": "",
+   "effort": 7,
    "sets": [
     {
      "exercise": "Incline DB Press",
      "set_no": 1,
      "weight": 30,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Incline DB Press",
      "set_no": 2,
      "weight": 30,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Incline DB Press",
      "set_no": 3,
      "weight": 30,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Rear-Delt Fly",
      "set_no": 1,
      "weight": 15,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Rear-Delt Fly",
      "set_no": 2,
      "weight": 15,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Rear-Delt Fly",
      "set_no": 3,
      "weight": 15,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
+    }
+   ],
+   "exercises": [
+    {
+     "exercise": "Incline DB Press",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Seated Rear-Delt Fly",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
     }
    ]
   },
@@ -1152,60 +1195,65 @@
    "status": "done",
    "minutes": 40,
    "note": "",
+   "effort": 7,
    "sets": [
     {
      "exercise": "Seated Hammer Curl",
      "set_no": 1,
      "weight": 17.5,
      "reps": 11,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Hammer Curl",
      "set_no": 2,
      "weight": 17.5,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Hammer Curl",
      "set_no": 3,
      "weight": 17.5,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Single-Arm DB Row",
      "set_no": 1,
      "weight": 35,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Single-Arm DB Row",
      "set_no": 2,
      "weight": 35,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Single-Arm DB Row",
      "set_no": 3,
      "weight": 35,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
+    }
+   ],
+   "exercises": [
+    {
+     "exercise": "Seated Hammer Curl",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Single-Arm DB Row",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
     }
    ]
   },
@@ -1217,96 +1265,100 @@
    "status": "done",
    "minutes": 40,
    "note": "",
+   "effort": 7,
    "sets": [
     {
      "exercise": "Flat DB Bench Press",
      "set_no": 1,
      "weight": 42.5,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Flat DB Bench Press",
      "set_no": 2,
      "weight": 42.5,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Flat DB Bench Press",
      "set_no": 3,
      "weight": 42.5,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Lat Pulldown",
      "set_no": 1,
      "weight": 100,
      "reps": 9,
-     "done": true,
-     "rir": 1,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Lat Pulldown",
      "set_no": 2,
      "weight": 100,
      "reps": 9,
-     "done": true,
-     "rir": 1,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Lat Pulldown",
      "set_no": 3,
      "weight": 100,
      "reps": 8,
-     "done": true,
-     "rir": 1,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Lat Pulldown",
      "set_no": 4,
      "weight": 100,
      "reps": 8,
-     "done": true,
-     "rir": 1,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Lateral Raise",
      "set_no": 1,
      "weight": 12.5,
      "reps": 13,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Lateral Raise",
      "set_no": 2,
      "weight": 12.5,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Lateral Raise",
      "set_no": 3,
      "weight": 12.5,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
+    }
+   ],
+   "exercises": [
+    {
+     "exercise": "Flat DB Bench Press",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Lat Pulldown",
+     "effort": 9,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Seated Lateral Raise",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
     }
    ]
   },
@@ -1318,87 +1370,93 @@
    "status": "done",
    "minutes": 40,
    "note": "",
+   "effort": 7,
    "sets": [
     {
      "exercise": "Cable Triceps Pushdown",
      "set_no": 1,
      "weight": 52.5,
      "reps": 13,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Cable Triceps Pushdown",
      "set_no": 2,
      "weight": 52.5,
      "reps": 13,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Cable Triceps Pushdown",
      "set_no": 3,
      "weight": 52.5,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated DB Curl",
      "set_no": 1,
      "weight": 22.5,
      "reps": 11,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated DB Curl",
      "set_no": 2,
      "weight": 22.5,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated DB Curl",
      "set_no": 3,
      "weight": 22.5,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated DB Shoulder Press",
      "set_no": 1,
      "weight": 32.5,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated DB Shoulder Press",
      "set_no": 2,
      "weight": 32.5,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated DB Shoulder Press",
      "set_no": 3,
      "weight": 32.5,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
+    }
+   ],
+   "exercises": [
+    {
+     "exercise": "Cable Triceps Pushdown",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Seated DB Curl",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Seated DB Shoulder Press",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
     }
    ]
   },
@@ -1410,96 +1468,100 @@
    "status": "done",
    "minutes": 40,
    "note": "",
+   "effort": 7,
    "sets": [
     {
      "exercise": "Hammer Strength Back Extension",
      "set_no": 1,
      "weight": null,
      "reps": 13,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Hammer Strength Back Extension",
      "set_no": 2,
      "weight": null,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Hammer Strength Back Extension",
      "set_no": 3,
      "weight": null,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Cable Row",
      "set_no": 1,
      "weight": 92.5,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Cable Row",
      "set_no": 2,
      "weight": 92.5,
      "reps": 8,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Cable Row",
      "set_no": 3,
      "weight": 92.5,
      "reps": 8,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Cable Row",
      "set_no": 4,
      "weight": 92.5,
      "reps": 8,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Sit-Up Bench Crunch (knee test)",
      "set_no": 1,
      "weight": null,
      "reps": 14,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Sit-Up Bench Crunch (knee test)",
      "set_no": 2,
      "weight": null,
      "reps": 13,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Sit-Up Bench Crunch (knee test)",
      "set_no": 3,
      "weight": null,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
+    }
+   ],
+   "exercises": [
+    {
+     "exercise": "Hammer Strength Back Extension",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Seated Cable Row",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Sit-Up Bench Crunch (knee test)",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
     }
    ]
   },
@@ -1511,60 +1573,65 @@
    "status": "done",
    "minutes": 40,
    "note": "",
+   "effort": 7,
    "sets": [
     {
      "exercise": "Incline DB Press",
      "set_no": 1,
      "weight": 32.5,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Incline DB Press",
      "set_no": 2,
      "weight": 32.5,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Incline DB Press",
      "set_no": 3,
      "weight": 32.5,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Rear-Delt Fly",
      "set_no": 1,
      "weight": 15,
      "reps": 13,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Rear-Delt Fly",
      "set_no": 2,
      "weight": 15,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Rear-Delt Fly",
      "set_no": 3,
      "weight": 15,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
+    }
+   ],
+   "exercises": [
+    {
+     "exercise": "Incline DB Press",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Seated Rear-Delt Fly",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
     }
    ]
   },
@@ -1576,60 +1643,65 @@
    "status": "done",
    "minutes": 40,
    "note": "",
+   "effort": 7,
    "sets": [
     {
      "exercise": "Seated Hammer Curl",
      "set_no": 1,
      "weight": 20,
      "reps": 11,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Hammer Curl",
      "set_no": 2,
      "weight": 20,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Hammer Curl",
      "set_no": 3,
      "weight": 20,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Single-Arm DB Row",
      "set_no": 1,
      "weight": 37.5,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Single-Arm DB Row",
      "set_no": 2,
      "weight": 37.5,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Single-Arm DB Row",
      "set_no": 3,
      "weight": 37.5,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
+    }
+   ],
+   "exercises": [
+    {
+     "exercise": "Seated Hammer Curl",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Single-Arm DB Row",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
     }
    ]
   },
@@ -1641,96 +1713,100 @@
    "status": "done",
    "minutes": 40,
    "note": "",
+   "effort": 7,
    "sets": [
     {
      "exercise": "Flat DB Bench Press",
      "set_no": 1,
      "weight": 42.5,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Flat DB Bench Press",
      "set_no": 2,
      "weight": 42.5,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Flat DB Bench Press",
      "set_no": 3,
      "weight": 42.5,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Lat Pulldown",
      "set_no": 1,
      "weight": 100,
      "reps": 9,
-     "done": true,
-     "rir": 1,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Lat Pulldown",
      "set_no": 2,
      "weight": 100,
      "reps": 9,
-     "done": true,
-     "rir": 1,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Lat Pulldown",
      "set_no": 3,
      "weight": 100,
      "reps": 8,
-     "done": true,
-     "rir": 1,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Lat Pulldown",
      "set_no": 4,
      "weight": 100,
      "reps": 8,
-     "done": true,
-     "rir": 1,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Lateral Raise",
      "set_no": 1,
      "weight": 12.5,
      "reps": 13,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Lateral Raise",
      "set_no": 2,
      "weight": 12.5,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Lateral Raise",
      "set_no": 3,
      "weight": 12.5,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
+    }
+   ],
+   "exercises": [
+    {
+     "exercise": "Flat DB Bench Press",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Lat Pulldown",
+     "effort": 9,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Seated Lateral Raise",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
     }
    ]
   },
@@ -1742,87 +1818,93 @@
    "status": "done",
    "minutes": 40,
    "note": "",
+   "effort": 7,
    "sets": [
     {
      "exercise": "Cable Triceps Pushdown",
      "set_no": 1,
      "weight": 52.5,
      "reps": 13,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Cable Triceps Pushdown",
      "set_no": 2,
      "weight": 52.5,
      "reps": 13,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Cable Triceps Pushdown",
      "set_no": 3,
      "weight": 52.5,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated DB Curl",
      "set_no": 1,
      "weight": 22.5,
      "reps": 11,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated DB Curl",
      "set_no": 2,
      "weight": 22.5,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated DB Curl",
      "set_no": 3,
      "weight": 22.5,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated DB Shoulder Press",
      "set_no": 1,
      "weight": 32.5,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated DB Shoulder Press",
      "set_no": 2,
      "weight": 32.5,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated DB Shoulder Press",
      "set_no": 3,
      "weight": 32.5,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
+    }
+   ],
+   "exercises": [
+    {
+     "exercise": "Cable Triceps Pushdown",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Seated DB Curl",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Seated DB Shoulder Press",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
     }
    ]
   },
@@ -1834,96 +1916,100 @@
    "status": "done",
    "minutes": 40,
    "note": "",
+   "effort": 7,
    "sets": [
     {
      "exercise": "Hammer Strength Back Extension",
      "set_no": 1,
      "weight": null,
      "reps": 13,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Hammer Strength Back Extension",
      "set_no": 2,
      "weight": null,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Hammer Strength Back Extension",
      "set_no": 3,
      "weight": null,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Cable Row",
      "set_no": 1,
      "weight": 92.5,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Cable Row",
      "set_no": 2,
      "weight": 92.5,
      "reps": 8,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Cable Row",
      "set_no": 3,
      "weight": 92.5,
      "reps": 8,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Cable Row",
      "set_no": 4,
      "weight": 92.5,
      "reps": 8,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Sit-Up Bench Crunch (knee test)",
      "set_no": 1,
      "weight": null,
      "reps": 14,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Sit-Up Bench Crunch (knee test)",
      "set_no": 2,
      "weight": null,
      "reps": 13,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Sit-Up Bench Crunch (knee test)",
      "set_no": 3,
      "weight": null,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
+    }
+   ],
+   "exercises": [
+    {
+     "exercise": "Hammer Strength Back Extension",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Seated Cable Row",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Sit-Up Bench Crunch (knee test)",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
     }
    ]
   },
@@ -1935,60 +2021,65 @@
    "status": "done",
    "minutes": 40,
    "note": "",
+   "effort": 7,
    "sets": [
     {
      "exercise": "Incline DB Press",
      "set_no": 1,
      "weight": 32.5,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Incline DB Press",
      "set_no": 2,
      "weight": 32.5,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Incline DB Press",
      "set_no": 3,
      "weight": 32.5,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Rear-Delt Fly",
      "set_no": 1,
      "weight": 15,
      "reps": 13,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Rear-Delt Fly",
      "set_no": 2,
      "weight": 15,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Rear-Delt Fly",
      "set_no": 3,
      "weight": 15,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
+    }
+   ],
+   "exercises": [
+    {
+     "exercise": "Incline DB Press",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Seated Rear-Delt Fly",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
     }
    ]
   },
@@ -2000,60 +2091,65 @@
    "status": "done",
    "minutes": 40,
    "note": "",
+   "effort": 7,
    "sets": [
     {
      "exercise": "Seated Hammer Curl",
      "set_no": 1,
      "weight": 20,
      "reps": 11,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Hammer Curl",
      "set_no": 2,
      "weight": 20,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Hammer Curl",
      "set_no": 3,
      "weight": 20,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Single-Arm DB Row",
      "set_no": 1,
      "weight": 37.5,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Single-Arm DB Row",
      "set_no": 2,
      "weight": 37.5,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Single-Arm DB Row",
      "set_no": 3,
      "weight": 37.5,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
+    }
+   ],
+   "exercises": [
+    {
+     "exercise": "Seated Hammer Curl",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Single-Arm DB Row",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
     }
    ]
   },
@@ -2065,96 +2161,100 @@
    "status": "done",
    "minutes": 40,
    "note": "",
+   "effort": 7,
    "sets": [
     {
      "exercise": "Flat DB Bench Press",
      "set_no": 1,
      "weight": 45,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Flat DB Bench Press",
      "set_no": 2,
      "weight": 45,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Flat DB Bench Press",
      "set_no": 3,
      "weight": 45,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Lat Pulldown",
      "set_no": 1,
      "weight": 100,
      "reps": 9,
-     "done": true,
-     "rir": 1,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Lat Pulldown",
      "set_no": 2,
      "weight": 100,
      "reps": 9,
-     "done": true,
-     "rir": 1,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Lat Pulldown",
      "set_no": 3,
      "weight": 100,
      "reps": 8,
-     "done": true,
-     "rir": 1,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Lat Pulldown",
      "set_no": 4,
      "weight": 100,
      "reps": 8,
-     "done": true,
-     "rir": 1,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Lateral Raise",
      "set_no": 1,
      "weight": 12.5,
      "reps": 14,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Lateral Raise",
      "set_no": 2,
      "weight": 12.5,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Lateral Raise",
      "set_no": 3,
      "weight": 12.5,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
+    }
+   ],
+   "exercises": [
+    {
+     "exercise": "Flat DB Bench Press",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Lat Pulldown",
+     "effort": 9,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Seated Lateral Raise",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
     }
    ]
   },
@@ -2166,87 +2266,93 @@
    "status": "done",
    "minutes": 40,
    "note": "",
+   "effort": 7,
    "sets": [
     {
      "exercise": "Cable Triceps Pushdown",
      "set_no": 1,
      "weight": 55,
      "reps": 13,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Cable Triceps Pushdown",
      "set_no": 2,
      "weight": 55,
      "reps": 13,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Cable Triceps Pushdown",
      "set_no": 3,
      "weight": 55,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated DB Curl",
      "set_no": 1,
      "weight": 25,
      "reps": 11,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated DB Curl",
      "set_no": 2,
      "weight": 25,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated DB Curl",
      "set_no": 3,
      "weight": 25,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated DB Shoulder Press",
      "set_no": 1,
      "weight": 35,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated DB Shoulder Press",
      "set_no": 2,
      "weight": 35,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated DB Shoulder Press",
      "set_no": 3,
      "weight": 35,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
+    }
+   ],
+   "exercises": [
+    {
+     "exercise": "Cable Triceps Pushdown",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Seated DB Curl",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Seated DB Shoulder Press",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
     }
    ]
   },
@@ -2258,96 +2364,100 @@
    "status": "done",
    "minutes": 40,
    "note": "",
+   "effort": 7,
    "sets": [
     {
      "exercise": "Hammer Strength Back Extension",
      "set_no": 1,
      "weight": null,
      "reps": 13,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Hammer Strength Back Extension",
      "set_no": 2,
      "weight": null,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Hammer Strength Back Extension",
      "set_no": 3,
      "weight": null,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Cable Row",
      "set_no": 1,
      "weight": 95,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Cable Row",
      "set_no": 2,
      "weight": 95,
      "reps": 8,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Cable Row",
      "set_no": 3,
      "weight": 95,
      "reps": 8,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Cable Row",
      "set_no": 4,
      "weight": 95,
      "reps": 8,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Sit-Up Bench Crunch (knee test)",
      "set_no": 1,
      "weight": null,
      "reps": 14,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Sit-Up Bench Crunch (knee test)",
      "set_no": 2,
      "weight": null,
      "reps": 13,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Sit-Up Bench Crunch (knee test)",
      "set_no": 3,
      "weight": null,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
+    }
+   ],
+   "exercises": [
+    {
+     "exercise": "Hammer Strength Back Extension",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Seated Cable Row",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Sit-Up Bench Crunch (knee test)",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
     }
    ]
   },
@@ -2359,60 +2469,65 @@
    "status": "done",
    "minutes": 40,
    "note": "",
+   "effort": 7,
    "sets": [
     {
      "exercise": "Incline DB Press",
      "set_no": 1,
      "weight": 35,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Incline DB Press",
      "set_no": 2,
      "weight": 35,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Incline DB Press",
      "set_no": 3,
      "weight": 35,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Rear-Delt Fly",
      "set_no": 1,
      "weight": 15,
      "reps": 14,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Rear-Delt Fly",
      "set_no": 2,
      "weight": 15,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Rear-Delt Fly",
      "set_no": 3,
      "weight": 15,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
+    }
+   ],
+   "exercises": [
+    {
+     "exercise": "Incline DB Press",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Seated Rear-Delt Fly",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
     }
    ]
   },
@@ -2424,60 +2539,65 @@
    "status": "done",
    "minutes": 40,
    "note": "",
+   "effort": 7,
    "sets": [
     {
      "exercise": "Seated Hammer Curl",
      "set_no": 1,
      "weight": 22.5,
      "reps": 11,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Hammer Curl",
      "set_no": 2,
      "weight": 22.5,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Hammer Curl",
      "set_no": 3,
      "weight": 22.5,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Single-Arm DB Row",
      "set_no": 1,
      "weight": 40,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Single-Arm DB Row",
      "set_no": 2,
      "weight": 40,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Single-Arm DB Row",
      "set_no": 3,
      "weight": 40,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
+    }
+   ],
+   "exercises": [
+    {
+     "exercise": "Seated Hammer Curl",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Single-Arm DB Row",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
     }
    ]
   },
@@ -2489,96 +2609,100 @@
    "status": "done",
    "minutes": 40,
    "note": "",
+   "effort": 7,
    "sets": [
     {
      "exercise": "Flat DB Bench Press",
      "set_no": 1,
      "weight": 45,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Flat DB Bench Press",
      "set_no": 2,
      "weight": 45,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Flat DB Bench Press",
      "set_no": 3,
      "weight": 45,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Lat Pulldown",
      "set_no": 1,
      "weight": 100,
      "reps": 9,
-     "done": true,
-     "rir": 1,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Lat Pulldown",
      "set_no": 2,
      "weight": 100,
      "reps": 9,
-     "done": true,
-     "rir": 1,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Lat Pulldown",
      "set_no": 3,
      "weight": 100,
      "reps": 8,
-     "done": true,
-     "rir": 1,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Lat Pulldown",
      "set_no": 4,
      "weight": 100,
      "reps": 8,
-     "done": true,
-     "rir": 1,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Lateral Raise",
      "set_no": 1,
      "weight": 12.5,
      "reps": 14,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Lateral Raise",
      "set_no": 2,
      "weight": 12.5,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Lateral Raise",
      "set_no": 3,
      "weight": 12.5,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
+    }
+   ],
+   "exercises": [
+    {
+     "exercise": "Flat DB Bench Press",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Lat Pulldown",
+     "effort": 9,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Seated Lateral Raise",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
     }
    ]
   },
@@ -2590,87 +2714,93 @@
    "status": "done",
    "minutes": 40,
    "note": "",
+   "effort": 7,
    "sets": [
     {
      "exercise": "Cable Triceps Pushdown",
      "set_no": 1,
      "weight": 55,
      "reps": 13,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Cable Triceps Pushdown",
      "set_no": 2,
      "weight": 55,
      "reps": 13,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Cable Triceps Pushdown",
      "set_no": 3,
      "weight": 55,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated DB Curl",
      "set_no": 1,
      "weight": 25,
      "reps": 11,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated DB Curl",
      "set_no": 2,
      "weight": 25,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated DB Curl",
      "set_no": 3,
      "weight": 25,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated DB Shoulder Press",
      "set_no": 1,
      "weight": 35,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated DB Shoulder Press",
      "set_no": 2,
      "weight": 35,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated DB Shoulder Press",
      "set_no": 3,
      "weight": 35,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
+    }
+   ],
+   "exercises": [
+    {
+     "exercise": "Cable Triceps Pushdown",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Seated DB Curl",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Seated DB Shoulder Press",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
     }
    ]
   },
@@ -2682,96 +2812,100 @@
    "status": "done",
    "minutes": 40,
    "note": "",
+   "effort": 7,
    "sets": [
     {
      "exercise": "Hammer Strength Back Extension",
      "set_no": 1,
      "weight": null,
      "reps": 13,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Hammer Strength Back Extension",
      "set_no": 2,
      "weight": null,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Hammer Strength Back Extension",
      "set_no": 3,
      "weight": null,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Cable Row",
      "set_no": 1,
      "weight": 95,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Cable Row",
      "set_no": 2,
      "weight": 95,
      "reps": 8,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Cable Row",
      "set_no": 3,
      "weight": 95,
      "reps": 8,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Cable Row",
      "set_no": 4,
      "weight": 95,
      "reps": 8,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Sit-Up Bench Crunch (knee test)",
      "set_no": 1,
      "weight": null,
      "reps": 14,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Sit-Up Bench Crunch (knee test)",
      "set_no": 2,
      "weight": null,
      "reps": 13,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Sit-Up Bench Crunch (knee test)",
      "set_no": 3,
      "weight": null,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
+    }
+   ],
+   "exercises": [
+    {
+     "exercise": "Hammer Strength Back Extension",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Seated Cable Row",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Sit-Up Bench Crunch (knee test)",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
     }
    ]
   },
@@ -2783,60 +2917,65 @@
    "status": "done",
    "minutes": 40,
    "note": "",
+   "effort": 7,
    "sets": [
     {
      "exercise": "Incline DB Press",
      "set_no": 1,
      "weight": 35,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Incline DB Press",
      "set_no": 2,
      "weight": 35,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Incline DB Press",
      "set_no": 3,
      "weight": 35,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Rear-Delt Fly",
      "set_no": 1,
      "weight": 15,
      "reps": 14,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Rear-Delt Fly",
      "set_no": 2,
      "weight": 15,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Rear-Delt Fly",
      "set_no": 3,
      "weight": 15,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
+    }
+   ],
+   "exercises": [
+    {
+     "exercise": "Incline DB Press",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Seated Rear-Delt Fly",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
     }
    ]
   },
@@ -2848,60 +2987,65 @@
    "status": "done",
    "minutes": 40,
    "note": "",
+   "effort": 7,
    "sets": [
     {
      "exercise": "Seated Hammer Curl",
      "set_no": 1,
      "weight": 22.5,
      "reps": 11,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Hammer Curl",
      "set_no": 2,
      "weight": 22.5,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Hammer Curl",
      "set_no": 3,
      "weight": 22.5,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Single-Arm DB Row",
      "set_no": 1,
      "weight": 40,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Single-Arm DB Row",
      "set_no": 2,
      "weight": 40,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Single-Arm DB Row",
      "set_no": 3,
      "weight": 40,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
+    }
+   ],
+   "exercises": [
+    {
+     "exercise": "Seated Hammer Curl",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Single-Arm DB Row",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
     }
    ]
   },
@@ -2913,96 +3057,100 @@
    "status": "done",
    "minutes": 40,
    "note": "",
+   "effort": 7,
    "sets": [
     {
      "exercise": "Flat DB Bench Press",
      "set_no": 1,
      "weight": 47.5,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Flat DB Bench Press",
      "set_no": 2,
      "weight": 47.5,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Flat DB Bench Press",
      "set_no": 3,
      "weight": 47.5,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Lat Pulldown",
      "set_no": 1,
      "weight": 100,
      "reps": 9,
-     "done": true,
-     "rir": 1,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Lat Pulldown",
      "set_no": 2,
      "weight": 100,
      "reps": 9,
-     "done": true,
-     "rir": 1,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Lat Pulldown",
      "set_no": 3,
      "weight": 100,
      "reps": 8,
-     "done": true,
-     "rir": 1,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Lat Pulldown",
      "set_no": 4,
      "weight": 100,
      "reps": 8,
-     "done": true,
-     "rir": 1,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Lateral Raise",
      "set_no": 1,
      "weight": 12.5,
      "reps": 14,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Lateral Raise",
      "set_no": 2,
      "weight": 12.5,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Lateral Raise",
      "set_no": 3,
      "weight": 12.5,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
+    }
+   ],
+   "exercises": [
+    {
+     "exercise": "Flat DB Bench Press",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Lat Pulldown",
+     "effort": 9,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Seated Lateral Raise",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
     }
    ]
   },
@@ -3014,87 +3162,93 @@
    "status": "done",
    "minutes": 40,
    "note": "",
+   "effort": 7,
    "sets": [
     {
      "exercise": "Cable Triceps Pushdown",
      "set_no": 1,
      "weight": 57.5,
      "reps": 13,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Cable Triceps Pushdown",
      "set_no": 2,
      "weight": 57.5,
      "reps": 13,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Cable Triceps Pushdown",
      "set_no": 3,
      "weight": 57.5,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated DB Curl",
      "set_no": 1,
      "weight": 27.5,
      "reps": 11,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated DB Curl",
      "set_no": 2,
      "weight": 27.5,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated DB Curl",
      "set_no": 3,
      "weight": 27.5,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated DB Shoulder Press",
      "set_no": 1,
      "weight": 37.5,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated DB Shoulder Press",
      "set_no": 2,
      "weight": 37.5,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated DB Shoulder Press",
      "set_no": 3,
      "weight": 37.5,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
+    }
+   ],
+   "exercises": [
+    {
+     "exercise": "Cable Triceps Pushdown",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Seated DB Curl",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Seated DB Shoulder Press",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
     }
    ]
   },
@@ -3106,96 +3260,100 @@
    "status": "done",
    "minutes": 40,
    "note": "",
+   "effort": 7,
    "sets": [
     {
      "exercise": "Hammer Strength Back Extension",
      "set_no": 1,
      "weight": null,
      "reps": 13,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Hammer Strength Back Extension",
      "set_no": 2,
      "weight": null,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Hammer Strength Back Extension",
      "set_no": 3,
      "weight": null,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Cable Row",
      "set_no": 1,
      "weight": 97.5,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Cable Row",
      "set_no": 2,
      "weight": 97.5,
      "reps": 8,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Cable Row",
      "set_no": 3,
      "weight": 97.5,
      "reps": 8,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Cable Row",
      "set_no": 4,
      "weight": 97.5,
      "reps": 8,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Sit-Up Bench Crunch (knee test)",
      "set_no": 1,
      "weight": null,
      "reps": 14,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Sit-Up Bench Crunch (knee test)",
      "set_no": 2,
      "weight": null,
      "reps": 13,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Sit-Up Bench Crunch (knee test)",
      "set_no": 3,
      "weight": null,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
+    }
+   ],
+   "exercises": [
+    {
+     "exercise": "Hammer Strength Back Extension",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Seated Cable Row",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Sit-Up Bench Crunch (knee test)",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
     }
    ]
   },
@@ -3207,60 +3365,65 @@
    "status": "done",
    "minutes": 40,
    "note": "",
+   "effort": 7,
    "sets": [
     {
      "exercise": "Incline DB Press",
      "set_no": 1,
      "weight": 37.5,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Incline DB Press",
      "set_no": 2,
      "weight": 37.5,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Incline DB Press",
      "set_no": 3,
      "weight": 37.5,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Rear-Delt Fly",
      "set_no": 1,
      "weight": 15,
      "reps": 14,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Rear-Delt Fly",
      "set_no": 2,
      "weight": 15,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Rear-Delt Fly",
      "set_no": 3,
      "weight": 15,
      "reps": 12,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
+    }
+   ],
+   "exercises": [
+    {
+     "exercise": "Incline DB Press",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Seated Rear-Delt Fly",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
     }
    ]
   },
@@ -3272,60 +3435,65 @@
    "status": "done",
    "minutes": 40,
    "note": "",
+   "effort": 7,
    "sets": [
     {
      "exercise": "Seated Hammer Curl",
      "set_no": 1,
      "weight": 25,
      "reps": 11,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Hammer Curl",
      "set_no": 2,
      "weight": 25,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Seated Hammer Curl",
      "set_no": 3,
      "weight": 25,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Single-Arm DB Row",
      "set_no": 1,
      "weight": 42.5,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Single-Arm DB Row",
      "set_no": 2,
      "weight": 42.5,
      "reps": 10,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
     },
     {
      "exercise": "Single-Arm DB Row",
      "set_no": 3,
      "weight": 42.5,
      "reps": 9,
-     "done": true,
-     "rir": 2,
-     "pain": false
+     "done": true
+    }
+   ],
+   "exercises": [
+    {
+     "exercise": "Seated Hammer Curl",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
+    },
+    {
+     "exercise": "Single-Arm DB Row",
+     "effort": 8,
+     "pain": false,
+     "pain_where": "",
+     "note": ""
     }
    ]
   }
@@ -3339,7 +3507,7 @@
    "best_reps": 13,
    "e1rm": 71.7,
    "volume": 1900,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3350,7 +3518,7 @@
    "best_reps": 10,
    "e1rm": 53.3,
    "volume": 1160,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3361,7 +3529,7 @@
    "best_reps": 13,
    "e1rm": null,
    "volume": 0,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3372,7 +3540,7 @@
    "best_reps": 10,
    "e1rm": 40,
    "volume": 840,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3383,7 +3551,7 @@
    "best_reps": 10,
    "e1rm": 126.7,
    "volume": 3610,
-   "avg_rir": 1,
+   "avg_effort": 9,
    "pain": false
   },
   {
@@ -3394,7 +3562,7 @@
    "best_reps": 9,
    "e1rm": 117,
    "volume": 2970,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3405,7 +3573,7 @@
    "best_reps": 11,
    "e1rm": 27.3,
    "volume": 620,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3416,7 +3584,7 @@
    "best_reps": 10,
    "e1rm": 40,
    "volume": 840,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3427,7 +3595,7 @@
    "best_reps": 11,
    "e1rm": 23.9,
    "volume": 543,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3438,7 +3606,7 @@
    "best_reps": 12,
    "e1rm": 17.5,
    "volume": 450,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3449,7 +3617,7 @@
    "best_reps": 12,
    "e1rm": 21,
    "volume": 540,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3460,7 +3628,7 @@
    "best_reps": 10,
    "e1rm": 46.7,
    "volume": 1015,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3471,7 +3639,7 @@
    "best_reps": 14,
    "e1rm": null,
    "volume": 0,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3482,7 +3650,7 @@
    "best_reps": 13,
    "e1rm": 71.7,
    "volume": 1900,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3493,7 +3661,7 @@
    "best_reps": 10,
    "e1rm": 53.3,
    "volume": 1160,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3504,7 +3672,7 @@
    "best_reps": 13,
    "e1rm": null,
    "volume": 0,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3515,7 +3683,7 @@
    "best_reps": 10,
    "e1rm": 40,
    "volume": 840,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3526,7 +3694,7 @@
    "best_reps": 9,
    "e1rm": 130,
    "volume": 3400,
-   "avg_rir": 1,
+   "avg_effort": 9,
    "pain": false
   },
   {
@@ -3537,7 +3705,7 @@
    "best_reps": 9,
    "e1rm": 117,
    "volume": 2970,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3548,7 +3716,7 @@
    "best_reps": 11,
    "e1rm": 27.3,
    "volume": 620,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3559,7 +3727,7 @@
    "best_reps": 10,
    "e1rm": 40,
    "volume": 840,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3570,7 +3738,7 @@
    "best_reps": 11,
    "e1rm": 23.9,
    "volume": 543,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3581,7 +3749,7 @@
    "best_reps": 12,
    "e1rm": 17.5,
    "volume": 450,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3592,7 +3760,7 @@
    "best_reps": 12,
    "e1rm": 21,
    "volume": 540,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3603,7 +3771,7 @@
    "best_reps": 10,
    "e1rm": 46.7,
    "volume": 1015,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3614,7 +3782,7 @@
    "best_reps": 14,
    "e1rm": null,
    "volume": 0,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3625,7 +3793,7 @@
    "best_reps": 13,
    "e1rm": 75.3,
    "volume": 1995,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3636,7 +3804,7 @@
    "best_reps": 10,
    "e1rm": 56.7,
    "volume": 1233,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3647,7 +3815,7 @@
    "best_reps": 13,
    "e1rm": null,
    "volume": 0,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3658,7 +3826,7 @@
    "best_reps": 10,
    "e1rm": 43.3,
    "volume": 910,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3669,7 +3837,7 @@
    "best_reps": 9,
    "e1rm": 130,
    "volume": 3400,
-   "avg_rir": 1,
+   "avg_effort": 9,
    "pain": false
   },
   {
@@ -3680,7 +3848,7 @@
    "best_reps": 9,
    "e1rm": 120.3,
    "volume": 3053,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3691,7 +3859,7 @@
    "best_reps": 11,
    "e1rm": 30.8,
    "volume": 698,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3702,7 +3870,7 @@
    "best_reps": 10,
    "e1rm": 43.3,
    "volume": 910,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3713,7 +3881,7 @@
    "best_reps": 11,
    "e1rm": 27.3,
    "volume": 620,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3724,7 +3892,7 @@
    "best_reps": 13,
    "e1rm": 17.9,
    "volume": 463,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3735,7 +3903,7 @@
    "best_reps": 13,
    "e1rm": 21.5,
    "volume": 555,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3746,7 +3914,7 @@
    "best_reps": 10,
    "e1rm": 50,
    "volume": 1088,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3757,7 +3925,7 @@
    "best_reps": 14,
    "e1rm": null,
    "volume": 0,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3768,7 +3936,7 @@
    "best_reps": 13,
    "e1rm": 75.3,
    "volume": 1995,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3779,7 +3947,7 @@
    "best_reps": 10,
    "e1rm": 56.7,
    "volume": 1233,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3790,7 +3958,7 @@
    "best_reps": 13,
    "e1rm": null,
    "volume": 0,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3801,7 +3969,7 @@
    "best_reps": 10,
    "e1rm": 43.3,
    "volume": 910,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3812,7 +3980,7 @@
    "best_reps": 9,
    "e1rm": 130,
    "volume": 3400,
-   "avg_rir": 1,
+   "avg_effort": 9,
    "pain": false
   },
   {
@@ -3823,7 +3991,7 @@
    "best_reps": 9,
    "e1rm": 120.3,
    "volume": 3053,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3834,7 +4002,7 @@
    "best_reps": 11,
    "e1rm": 30.8,
    "volume": 698,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3845,7 +4013,7 @@
    "best_reps": 10,
    "e1rm": 43.3,
    "volume": 910,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3856,7 +4024,7 @@
    "best_reps": 11,
    "e1rm": 27.3,
    "volume": 620,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3867,7 +4035,7 @@
    "best_reps": 13,
    "e1rm": 17.9,
    "volume": 463,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3878,7 +4046,7 @@
    "best_reps": 13,
    "e1rm": 21.5,
    "volume": 555,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3889,7 +4057,7 @@
    "best_reps": 10,
    "e1rm": 50,
    "volume": 1088,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3900,7 +4068,7 @@
    "best_reps": 14,
    "e1rm": null,
    "volume": 0,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3911,7 +4079,7 @@
    "best_reps": 13,
    "e1rm": 78.8,
    "volume": 2090,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3922,7 +4090,7 @@
    "best_reps": 10,
    "e1rm": 60,
    "volume": 1305,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3933,7 +4101,7 @@
    "best_reps": 13,
    "e1rm": null,
    "volume": 0,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3944,7 +4112,7 @@
    "best_reps": 10,
    "e1rm": 46.7,
    "volume": 980,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3955,7 +4123,7 @@
    "best_reps": 9,
    "e1rm": 130,
    "volume": 3400,
-   "avg_rir": 1,
+   "avg_effort": 9,
    "pain": false
   },
   {
@@ -3966,7 +4134,7 @@
    "best_reps": 9,
    "e1rm": 123.5,
    "volume": 3135,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3977,7 +4145,7 @@
    "best_reps": 11,
    "e1rm": 34.2,
    "volume": 775,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3988,7 +4156,7 @@
    "best_reps": 10,
    "e1rm": 46.7,
    "volume": 980,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -3999,7 +4167,7 @@
    "best_reps": 11,
    "e1rm": 30.8,
    "volume": 698,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -4010,7 +4178,7 @@
    "best_reps": 14,
    "e1rm": 18.3,
    "volume": 475,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -4021,7 +4189,7 @@
    "best_reps": 14,
    "e1rm": 22,
    "volume": 570,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -4032,7 +4200,7 @@
    "best_reps": 10,
    "e1rm": 53.3,
    "volume": 1160,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -4043,7 +4211,7 @@
    "best_reps": 14,
    "e1rm": null,
    "volume": 0,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -4054,7 +4222,7 @@
    "best_reps": 13,
    "e1rm": 78.8,
    "volume": 2090,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -4065,7 +4233,7 @@
    "best_reps": 10,
    "e1rm": 60,
    "volume": 1305,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -4076,7 +4244,7 @@
    "best_reps": 13,
    "e1rm": null,
    "volume": 0,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -4087,7 +4255,7 @@
    "best_reps": 10,
    "e1rm": 46.7,
    "volume": 980,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -4098,7 +4266,7 @@
    "best_reps": 9,
    "e1rm": 130,
    "volume": 3400,
-   "avg_rir": 1,
+   "avg_effort": 9,
    "pain": false
   },
   {
@@ -4109,7 +4277,7 @@
    "best_reps": 9,
    "e1rm": 123.5,
    "volume": 3135,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -4120,7 +4288,7 @@
    "best_reps": 11,
    "e1rm": 34.2,
    "volume": 775,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -4131,7 +4299,7 @@
    "best_reps": 10,
    "e1rm": 46.7,
    "volume": 980,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -4142,7 +4310,7 @@
    "best_reps": 11,
    "e1rm": 30.8,
    "volume": 698,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -4153,7 +4321,7 @@
    "best_reps": 14,
    "e1rm": 18.3,
    "volume": 475,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -4164,7 +4332,7 @@
    "best_reps": 14,
    "e1rm": 22,
    "volume": 570,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -4175,7 +4343,7 @@
    "best_reps": 10,
    "e1rm": 53.3,
    "volume": 1160,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -4186,7 +4354,7 @@
    "best_reps": 14,
    "e1rm": null,
    "volume": 0,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -4197,7 +4365,7 @@
    "best_reps": 13,
    "e1rm": 82.4,
    "volume": 2185,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -4208,7 +4376,7 @@
    "best_reps": 10,
    "e1rm": 63.3,
    "volume": 1378,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -4219,7 +4387,7 @@
    "best_reps": 13,
    "e1rm": null,
    "volume": 0,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -4230,7 +4398,7 @@
    "best_reps": 10,
    "e1rm": 50,
    "volume": 1050,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -4241,7 +4409,7 @@
    "best_reps": 9,
    "e1rm": 130,
    "volume": 3400,
-   "avg_rir": 1,
+   "avg_effort": 9,
    "pain": false
   },
   {
@@ -4252,7 +4420,7 @@
    "best_reps": 9,
    "e1rm": 126.8,
    "volume": 3218,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -4263,7 +4431,7 @@
    "best_reps": 11,
    "e1rm": 37.6,
    "volume": 853,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -4274,7 +4442,7 @@
    "best_reps": 10,
    "e1rm": 50,
    "volume": 1050,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -4285,7 +4453,7 @@
    "best_reps": 11,
    "e1rm": 34.2,
    "volume": 775,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -4296,7 +4464,7 @@
    "best_reps": 14,
    "e1rm": 18.3,
    "volume": 475,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -4307,7 +4475,7 @@
    "best_reps": 14,
    "e1rm": 22,
    "volume": 570,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -4318,7 +4486,7 @@
    "best_reps": 10,
    "e1rm": 56.7,
    "volume": 1233,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   },
   {
@@ -4329,7 +4497,7 @@
    "best_reps": 14,
    "e1rm": null,
    "volume": 0,
-   "avg_rir": 2,
+   "avg_effort": 8,
    "pain": false
   }
  ],
@@ -4340,12 +4508,6 @@
     "workouts": [
      "Tue: Shoulders + Arms"
     ],
-    "planned": {
-     "sets": 3,
-     "reps_min": 12,
-     "reps_max": 15,
-     "weight": 57.5
-    },
     "sessions": 7,
     "first_seen": "2026-10-13",
     "last_seen": "2026-11-24",
@@ -4355,8 +4517,119 @@
     "e1rm_trend_pct": 9.4,
     "weeks_since_gain": 0,
     "stalled": false,
-    "top_of_range_streak": 0,
-    "avg_rir_2w": 2,
+    "recent": [
+     {
+      "date": "2026-10-20",
+      "weight": 50,
+      "reps": [
+       13,
+       13,
+       12
+      ],
+      "weights": [
+       50,
+       50,
+       50
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 71.7,
+      "e1rm_adj": 73.3
+     },
+     {
+      "date": "2026-10-27",
+      "weight": 52.5,
+      "reps": [
+       13,
+       13,
+       12
+      ],
+      "weights": [
+       52.5,
+       52.5,
+       52.5
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 75.3,
+      "e1rm_adj": 77
+     },
+     {
+      "date": "2026-11-03",
+      "weight": 52.5,
+      "reps": [
+       13,
+       13,
+       12
+      ],
+      "weights": [
+       52.5,
+       52.5,
+       52.5
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 75.3,
+      "e1rm_adj": 77
+     },
+     {
+      "date": "2026-11-10",
+      "weight": 55,
+      "reps": [
+       13,
+       13,
+       12
+      ],
+      "weights": [
+       55,
+       55,
+       55
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 78.8,
+      "e1rm_adj": 80.7
+     },
+     {
+      "date": "2026-11-17",
+      "weight": 55,
+      "reps": [
+       13,
+       13,
+       12
+      ],
+      "weights": [
+       55,
+       55,
+       55
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 78.8,
+      "e1rm_adj": 80.7
+     },
+     {
+      "date": "2026-11-24",
+      "weight": 57.5,
+      "reps": [
+       13,
+       13,
+       12
+      ],
+      "weights": [
+       57.5,
+       57.5,
+       57.5
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 82.4,
+      "e1rm_adj": 84.3
+     }
+    ],
+    "sessions_at_weight": 1,
+    "effort_last": 8,
+    "avg_effort_2w": 8,
     "pain_flags_4w": 0,
     "next_step_pct": 0.087
    },
@@ -4365,12 +4638,6 @@
     "workouts": [
      "Mon: Chest + Back"
     ],
-    "planned": {
-     "sets": 3,
-     "reps_min": 8,
-     "reps_max": 12,
-     "weight": 50
-    },
     "sessions": 7,
     "first_seen": "2026-10-12",
     "last_seen": "2026-11-23",
@@ -4380,8 +4647,119 @@
     "e1rm_trend_pct": 11.6,
     "weeks_since_gain": 0,
     "stalled": false,
-    "top_of_range_streak": 0,
-    "avg_rir_2w": 2,
+    "recent": [
+     {
+      "date": "2026-10-19",
+      "weight": 40,
+      "reps": [
+       10,
+       10,
+       9
+      ],
+      "weights": [
+       40,
+       40,
+       40
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 53.3,
+      "e1rm_adj": 54.7
+     },
+     {
+      "date": "2026-10-26",
+      "weight": 42.5,
+      "reps": [
+       10,
+       10,
+       9
+      ],
+      "weights": [
+       42.5,
+       42.5,
+       42.5
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 56.7,
+      "e1rm_adj": 58.1
+     },
+     {
+      "date": "2026-11-02",
+      "weight": 42.5,
+      "reps": [
+       10,
+       10,
+       9
+      ],
+      "weights": [
+       42.5,
+       42.5,
+       42.5
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 56.7,
+      "e1rm_adj": 58.1
+     },
+     {
+      "date": "2026-11-09",
+      "weight": 45,
+      "reps": [
+       10,
+       10,
+       9
+      ],
+      "weights": [
+       45,
+       45,
+       45
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 60,
+      "e1rm_adj": 61.5
+     },
+     {
+      "date": "2026-11-16",
+      "weight": 45,
+      "reps": [
+       10,
+       10,
+       9
+      ],
+      "weights": [
+       45,
+       45,
+       45
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 60,
+      "e1rm_adj": 61.5
+     },
+     {
+      "date": "2026-11-23",
+      "weight": 47.5,
+      "reps": [
+       10,
+       10,
+       9
+      ],
+      "weights": [
+       47.5,
+       47.5,
+       47.5
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 63.3,
+      "e1rm_adj": 64.9
+     }
+    ],
+    "sessions_at_weight": 1,
+    "effort_last": 8,
+    "avg_effort_2w": 8,
     "pain_flags_4w": 0,
     "next_step_pct": 0.105
    },
@@ -4390,12 +4768,6 @@
     "workouts": [
      "Wed: Back + Core"
     ],
-    "planned": {
-     "sets": 3,
-     "reps_min": 10,
-     "reps_max": 15,
-     "weight": null
-    },
     "sessions": 7,
     "first_seen": "2026-10-14",
     "last_seen": "2026-11-25",
@@ -4405,8 +4777,119 @@
     "e1rm_trend_pct": null,
     "weeks_since_gain": null,
     "stalled": false,
-    "top_of_range_streak": 0,
-    "avg_rir_2w": 2,
+    "recent": [
+     {
+      "date": "2026-10-21",
+      "weight": null,
+      "reps": [
+       13,
+       12,
+       12
+      ],
+      "weights": [
+       null,
+       null,
+       null
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": null,
+      "e1rm_adj": null
+     },
+     {
+      "date": "2026-10-28",
+      "weight": null,
+      "reps": [
+       13,
+       12,
+       12
+      ],
+      "weights": [
+       null,
+       null,
+       null
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": null,
+      "e1rm_adj": null
+     },
+     {
+      "date": "2026-11-04",
+      "weight": null,
+      "reps": [
+       13,
+       12,
+       12
+      ],
+      "weights": [
+       null,
+       null,
+       null
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": null,
+      "e1rm_adj": null
+     },
+     {
+      "date": "2026-11-11",
+      "weight": null,
+      "reps": [
+       13,
+       12,
+       12
+      ],
+      "weights": [
+       null,
+       null,
+       null
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": null,
+      "e1rm_adj": null
+     },
+     {
+      "date": "2026-11-18",
+      "weight": null,
+      "reps": [
+       13,
+       12,
+       12
+      ],
+      "weights": [
+       null,
+       null,
+       null
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": null,
+      "e1rm_adj": null
+     },
+     {
+      "date": "2026-11-25",
+      "weight": null,
+      "reps": [
+       13,
+       12,
+       12
+      ],
+      "weights": [
+       null,
+       null,
+       null
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": null,
+      "e1rm_adj": null
+     }
+    ],
+    "sessions_at_weight": 7,
+    "effort_last": 8,
+    "avg_effort_2w": 8,
     "pain_flags_4w": 0,
     "next_step_pct": null
    },
@@ -4415,12 +4898,6 @@
     "workouts": [
      "Thu: Chest + Shoulders"
     ],
-    "planned": {
-     "sets": 3,
-     "reps_min": 8,
-     "reps_max": 12,
-     "weight": 35
-    },
     "sessions": 7,
     "first_seen": "2026-10-15",
     "last_seen": "2026-11-26",
@@ -4430,8 +4907,119 @@
     "e1rm_trend_pct": 15.5,
     "weeks_since_gain": 0,
     "stalled": false,
-    "top_of_range_streak": 0,
-    "avg_rir_2w": 2,
+    "recent": [
+     {
+      "date": "2026-10-22",
+      "weight": 30,
+      "reps": [
+       10,
+       9,
+       9
+      ],
+      "weights": [
+       30,
+       30,
+       30
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 40,
+      "e1rm_adj": 41
+     },
+     {
+      "date": "2026-10-29",
+      "weight": 32.5,
+      "reps": [
+       10,
+       9,
+       9
+      ],
+      "weights": [
+       32.5,
+       32.5,
+       32.5
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 43.3,
+      "e1rm_adj": 44.4
+     },
+     {
+      "date": "2026-11-05",
+      "weight": 32.5,
+      "reps": [
+       10,
+       9,
+       9
+      ],
+      "weights": [
+       32.5,
+       32.5,
+       32.5
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 43.3,
+      "e1rm_adj": 44.4
+     },
+     {
+      "date": "2026-11-12",
+      "weight": 35,
+      "reps": [
+       10,
+       9,
+       9
+      ],
+      "weights": [
+       35,
+       35,
+       35
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 46.7,
+      "e1rm_adj": 47.8
+     },
+     {
+      "date": "2026-11-19",
+      "weight": 35,
+      "reps": [
+       10,
+       9,
+       9
+      ],
+      "weights": [
+       35,
+       35,
+       35
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 46.7,
+      "e1rm_adj": 47.8
+     },
+     {
+      "date": "2026-11-26",
+      "weight": 37.5,
+      "reps": [
+       10,
+       9,
+       9
+      ],
+      "weights": [
+       37.5,
+       37.5,
+       37.5
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 50,
+      "e1rm_adj": 51.3
+     }
+    ],
+    "sessions_at_weight": 1,
+    "effort_last": 8,
+    "avg_effort_2w": 8,
     "pain_flags_4w": 0,
     "next_step_pct": 0.133
    },
@@ -4440,12 +5028,6 @@
     "workouts": [
      "Mon: Chest + Back"
     ],
-    "planned": {
-     "sets": 4,
-     "reps_min": 8,
-     "reps_max": 12,
-     "weight": 100
-    },
     "sessions": 7,
     "first_seen": "2026-10-12",
     "last_seen": "2026-11-23",
@@ -4455,8 +5037,131 @@
     "e1rm_trend_pct": 0,
     "weeks_since_gain": 5,
     "stalled": true,
-    "top_of_range_streak": 0,
-    "avg_rir_2w": 1,
+    "recent": [
+     {
+      "date": "2026-10-19",
+      "weight": 100,
+      "reps": [
+       9,
+       9,
+       8,
+       8
+      ],
+      "weights": [
+       100,
+       100,
+       100,
+       100
+      ],
+      "effort": 9,
+      "pain": false,
+      "e1rm": 130,
+      "e1rm_adj": 130
+     },
+     {
+      "date": "2026-10-26",
+      "weight": 100,
+      "reps": [
+       9,
+       9,
+       8,
+       8
+      ],
+      "weights": [
+       100,
+       100,
+       100,
+       100
+      ],
+      "effort": 9,
+      "pain": false,
+      "e1rm": 130,
+      "e1rm_adj": 130
+     },
+     {
+      "date": "2026-11-02",
+      "weight": 100,
+      "reps": [
+       9,
+       9,
+       8,
+       8
+      ],
+      "weights": [
+       100,
+       100,
+       100,
+       100
+      ],
+      "effort": 9,
+      "pain": false,
+      "e1rm": 130,
+      "e1rm_adj": 130
+     },
+     {
+      "date": "2026-11-09",
+      "weight": 100,
+      "reps": [
+       9,
+       9,
+       8,
+       8
+      ],
+      "weights": [
+       100,
+       100,
+       100,
+       100
+      ],
+      "effort": 9,
+      "pain": false,
+      "e1rm": 130,
+      "e1rm_adj": 130
+     },
+     {
+      "date": "2026-11-16",
+      "weight": 100,
+      "reps": [
+       9,
+       9,
+       8,
+       8
+      ],
+      "weights": [
+       100,
+       100,
+       100,
+       100
+      ],
+      "effort": 9,
+      "pain": false,
+      "e1rm": 130,
+      "e1rm_adj": 130
+     },
+     {
+      "date": "2026-11-23",
+      "weight": 100,
+      "reps": [
+       9,
+       9,
+       8,
+       8
+      ],
+      "weights": [
+       100,
+       100,
+       100,
+       100
+      ],
+      "effort": 9,
+      "pain": false,
+      "e1rm": 130,
+      "e1rm_adj": 130
+     }
+    ],
+    "sessions_at_weight": 6,
+    "effort_last": 9,
+    "avg_effort_2w": 9,
     "pain_flags_4w": 0,
     "next_step_pct": 0.05
    },
@@ -4465,12 +5170,6 @@
     "workouts": [
      "Wed: Back + Core"
     ],
-    "planned": {
-     "sets": 4,
-     "reps_min": 6,
-     "reps_max": 10,
-     "weight": 100
-    },
     "sessions": 7,
     "first_seen": "2026-10-14",
     "last_seen": "2026-11-25",
@@ -4480,8 +5179,131 @@
     "e1rm_trend_pct": 5.4,
     "weeks_since_gain": 0,
     "stalled": false,
-    "top_of_range_streak": 0,
-    "avg_rir_2w": 2,
+    "recent": [
+     {
+      "date": "2026-10-21",
+      "weight": 90,
+      "reps": [
+       9,
+       8,
+       8,
+       8
+      ],
+      "weights": [
+       90,
+       90,
+       90,
+       90
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 117,
+      "e1rm_adj": 120
+     },
+     {
+      "date": "2026-10-28",
+      "weight": 92.5,
+      "reps": [
+       9,
+       8,
+       8,
+       8
+      ],
+      "weights": [
+       92.5,
+       92.5,
+       92.5,
+       92.5
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 120.3,
+      "e1rm_adj": 123.3
+     },
+     {
+      "date": "2026-11-04",
+      "weight": 92.5,
+      "reps": [
+       9,
+       8,
+       8,
+       8
+      ],
+      "weights": [
+       92.5,
+       92.5,
+       92.5,
+       92.5
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 120.3,
+      "e1rm_adj": 123.3
+     },
+     {
+      "date": "2026-11-11",
+      "weight": 95,
+      "reps": [
+       9,
+       8,
+       8,
+       8
+      ],
+      "weights": [
+       95,
+       95,
+       95,
+       95
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 123.5,
+      "e1rm_adj": 126.7
+     },
+     {
+      "date": "2026-11-18",
+      "weight": 95,
+      "reps": [
+       9,
+       8,
+       8,
+       8
+      ],
+      "weights": [
+       95,
+       95,
+       95,
+       95
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 123.5,
+      "e1rm_adj": 126.7
+     },
+     {
+      "date": "2026-11-25",
+      "weight": 97.5,
+      "reps": [
+       9,
+       8,
+       8,
+       8
+      ],
+      "weights": [
+       97.5,
+       97.5,
+       97.5,
+       97.5
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 126.8,
+      "e1rm_adj": 130
+     }
+    ],
+    "sessions_at_weight": 1,
+    "effort_last": 8,
+    "avg_effort_2w": 8,
     "pain_flags_4w": 0,
     "next_step_pct": 0.051
    },
@@ -4490,12 +5312,6 @@
     "workouts": [
      "Tue: Shoulders + Arms"
     ],
-    "planned": {
-     "sets": 3,
-     "reps_min": 10,
-     "reps_max": 12,
-     "weight": 25
-    },
     "sessions": 7,
     "first_seen": "2026-10-13",
     "last_seen": "2026-11-24",
@@ -4505,8 +5321,119 @@
     "e1rm_trend_pct": 22.1,
     "weeks_since_gain": 0,
     "stalled": false,
-    "top_of_range_streak": 0,
-    "avg_rir_2w": 2,
+    "recent": [
+     {
+      "date": "2026-10-20",
+      "weight": 20,
+      "reps": [
+       11,
+       10,
+       10
+      ],
+      "weights": [
+       20,
+       20,
+       20
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 27.3,
+      "e1rm_adj": 28
+     },
+     {
+      "date": "2026-10-27",
+      "weight": 22.5,
+      "reps": [
+       11,
+       10,
+       10
+      ],
+      "weights": [
+       22.5,
+       22.5,
+       22.5
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 30.8,
+      "e1rm_adj": 31.5
+     },
+     {
+      "date": "2026-11-03",
+      "weight": 22.5,
+      "reps": [
+       11,
+       10,
+       10
+      ],
+      "weights": [
+       22.5,
+       22.5,
+       22.5
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 30.8,
+      "e1rm_adj": 31.5
+     },
+     {
+      "date": "2026-11-10",
+      "weight": 25,
+      "reps": [
+       11,
+       10,
+       10
+      ],
+      "weights": [
+       25,
+       25,
+       25
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 34.2,
+      "e1rm_adj": 35
+     },
+     {
+      "date": "2026-11-17",
+      "weight": 25,
+      "reps": [
+       11,
+       10,
+       10
+      ],
+      "weights": [
+       25,
+       25,
+       25
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 34.2,
+      "e1rm_adj": 35
+     },
+     {
+      "date": "2026-11-24",
+      "weight": 27.5,
+      "reps": [
+       11,
+       10,
+       10
+      ],
+      "weights": [
+       27.5,
+       27.5,
+       27.5
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 37.6,
+      "e1rm_adj": 38.5
+     }
+    ],
+    "sessions_at_weight": 1,
+    "effort_last": 8,
+    "avg_effort_2w": 8,
     "pain_flags_4w": 0,
     "next_step_pct": 0.182
    },
@@ -4515,12 +5442,6 @@
     "workouts": [
      "Tue: Shoulders + Arms"
     ],
-    "planned": {
-     "sets": 3,
-     "reps_min": 8,
-     "reps_max": 12,
-     "weight": 35
-    },
     "sessions": 7,
     "first_seen": "2026-10-13",
     "last_seen": "2026-11-24",
@@ -4530,8 +5451,119 @@
     "e1rm_trend_pct": 15.5,
     "weeks_since_gain": 0,
     "stalled": false,
-    "top_of_range_streak": 0,
-    "avg_rir_2w": 2,
+    "recent": [
+     {
+      "date": "2026-10-20",
+      "weight": 30,
+      "reps": [
+       10,
+       9,
+       9
+      ],
+      "weights": [
+       30,
+       30,
+       30
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 40,
+      "e1rm_adj": 41
+     },
+     {
+      "date": "2026-10-27",
+      "weight": 32.5,
+      "reps": [
+       10,
+       9,
+       9
+      ],
+      "weights": [
+       32.5,
+       32.5,
+       32.5
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 43.3,
+      "e1rm_adj": 44.4
+     },
+     {
+      "date": "2026-11-03",
+      "weight": 32.5,
+      "reps": [
+       10,
+       9,
+       9
+      ],
+      "weights": [
+       32.5,
+       32.5,
+       32.5
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 43.3,
+      "e1rm_adj": 44.4
+     },
+     {
+      "date": "2026-11-10",
+      "weight": 35,
+      "reps": [
+       10,
+       9,
+       9
+      ],
+      "weights": [
+       35,
+       35,
+       35
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 46.7,
+      "e1rm_adj": 47.8
+     },
+     {
+      "date": "2026-11-17",
+      "weight": 35,
+      "reps": [
+       10,
+       9,
+       9
+      ],
+      "weights": [
+       35,
+       35,
+       35
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 46.7,
+      "e1rm_adj": 47.8
+     },
+     {
+      "date": "2026-11-24",
+      "weight": 37.5,
+      "reps": [
+       10,
+       9,
+       9
+      ],
+      "weights": [
+       37.5,
+       37.5,
+       37.5
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 50,
+      "e1rm_adj": 51.3
+     }
+    ],
+    "sessions_at_weight": 1,
+    "effort_last": 8,
+    "avg_effort_2w": 8,
     "pain_flags_4w": 0,
     "next_step_pct": 0.133
    },
@@ -4540,12 +5572,6 @@
     "workouts": [
      "Fri: Lats + Arms"
     ],
-    "planned": {
-     "sets": 3,
-     "reps_min": 10,
-     "reps_max": 12,
-     "weight": 20
-    },
     "sessions": 7,
     "first_seen": "2026-10-16",
     "last_seen": "2026-11-27",
@@ -4555,8 +5581,119 @@
     "e1rm_trend_pct": 25.3,
     "weeks_since_gain": 0,
     "stalled": false,
-    "top_of_range_streak": 0,
-    "avg_rir_2w": 2,
+    "recent": [
+     {
+      "date": "2026-10-23",
+      "weight": 17.5,
+      "reps": [
+       11,
+       10,
+       10
+      ],
+      "weights": [
+       17.5,
+       17.5,
+       17.5
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 23.9,
+      "e1rm_adj": 24.5
+     },
+     {
+      "date": "2026-10-30",
+      "weight": 20,
+      "reps": [
+       11,
+       10,
+       10
+      ],
+      "weights": [
+       20,
+       20,
+       20
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 27.3,
+      "e1rm_adj": 28
+     },
+     {
+      "date": "2026-11-06",
+      "weight": 20,
+      "reps": [
+       11,
+       10,
+       10
+      ],
+      "weights": [
+       20,
+       20,
+       20
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 27.3,
+      "e1rm_adj": 28
+     },
+     {
+      "date": "2026-11-13",
+      "weight": 22.5,
+      "reps": [
+       11,
+       10,
+       10
+      ],
+      "weights": [
+       22.5,
+       22.5,
+       22.5
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 30.8,
+      "e1rm_adj": 31.5
+     },
+     {
+      "date": "2026-11-20",
+      "weight": 22.5,
+      "reps": [
+       11,
+       10,
+       10
+      ],
+      "weights": [
+       22.5,
+       22.5,
+       22.5
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 30.8,
+      "e1rm_adj": 31.5
+     },
+     {
+      "date": "2026-11-27",
+      "weight": 25,
+      "reps": [
+       11,
+       10,
+       10
+      ],
+      "weights": [
+       25,
+       25,
+       25
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 34.2,
+      "e1rm_adj": 35
+     }
+    ],
+    "sessions_at_weight": 1,
+    "effort_last": 8,
+    "avg_effort_2w": 8,
     "pain_flags_4w": 0,
     "next_step_pct": 0.2
    },
@@ -4565,12 +5702,6 @@
     "workouts": [
      "Mon: Chest + Back"
     ],
-    "planned": {
-     "sets": 3,
-     "reps_min": 12,
-     "reps_max": 15,
-     "weight": 12.5
-    },
     "sessions": 7,
     "first_seen": "2026-10-12",
     "last_seen": "2026-11-23",
@@ -4580,8 +5711,119 @@
     "e1rm_trend_pct": 2.2,
     "weeks_since_gain": 2,
     "stalled": false,
-    "top_of_range_streak": 0,
-    "avg_rir_2w": 2,
+    "recent": [
+     {
+      "date": "2026-10-19",
+      "weight": 12.5,
+      "reps": [
+       12,
+       12,
+       12
+      ],
+      "weights": [
+       12.5,
+       12.5,
+       12.5
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 17.5,
+      "e1rm_adj": 18.3
+     },
+     {
+      "date": "2026-10-26",
+      "weight": 12.5,
+      "reps": [
+       13,
+       12,
+       12
+      ],
+      "weights": [
+       12.5,
+       12.5,
+       12.5
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 17.9,
+      "e1rm_adj": 18.3
+     },
+     {
+      "date": "2026-11-02",
+      "weight": 12.5,
+      "reps": [
+       13,
+       12,
+       12
+      ],
+      "weights": [
+       12.5,
+       12.5,
+       12.5
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 17.9,
+      "e1rm_adj": 18.3
+     },
+     {
+      "date": "2026-11-09",
+      "weight": 12.5,
+      "reps": [
+       14,
+       12,
+       12
+      ],
+      "weights": [
+       12.5,
+       12.5,
+       12.5
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 18.3,
+      "e1rm_adj": 18.3
+     },
+     {
+      "date": "2026-11-16",
+      "weight": 12.5,
+      "reps": [
+       14,
+       12,
+       12
+      ],
+      "weights": [
+       12.5,
+       12.5,
+       12.5
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 18.3,
+      "e1rm_adj": 18.3
+     },
+     {
+      "date": "2026-11-23",
+      "weight": 12.5,
+      "reps": [
+       14,
+       12,
+       12
+      ],
+      "weights": [
+       12.5,
+       12.5,
+       12.5
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 18.3,
+      "e1rm_adj": 18.3
+     }
+    ],
+    "sessions_at_weight": 7,
+    "effort_last": 8,
+    "avg_effort_2w": 8,
     "pain_flags_4w": 0,
     "next_step_pct": 0.4
    },
@@ -4590,12 +5832,6 @@
     "workouts": [
      "Thu: Chest + Shoulders"
     ],
-    "planned": {
-     "sets": 3,
-     "reps_min": 12,
-     "reps_max": 15,
-     "weight": 15
-    },
     "sessions": 7,
     "first_seen": "2026-10-15",
     "last_seen": "2026-11-26",
@@ -4605,8 +5841,119 @@
     "e1rm_trend_pct": 2.3,
     "weeks_since_gain": 2,
     "stalled": false,
-    "top_of_range_streak": 0,
-    "avg_rir_2w": 2,
+    "recent": [
+     {
+      "date": "2026-10-22",
+      "weight": 15,
+      "reps": [
+       12,
+       12,
+       12
+      ],
+      "weights": [
+       15,
+       15,
+       15
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 21,
+      "e1rm_adj": 22
+     },
+     {
+      "date": "2026-10-29",
+      "weight": 15,
+      "reps": [
+       13,
+       12,
+       12
+      ],
+      "weights": [
+       15,
+       15,
+       15
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 21.5,
+      "e1rm_adj": 22
+     },
+     {
+      "date": "2026-11-05",
+      "weight": 15,
+      "reps": [
+       13,
+       12,
+       12
+      ],
+      "weights": [
+       15,
+       15,
+       15
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 21.5,
+      "e1rm_adj": 22
+     },
+     {
+      "date": "2026-11-12",
+      "weight": 15,
+      "reps": [
+       14,
+       12,
+       12
+      ],
+      "weights": [
+       15,
+       15,
+       15
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 22,
+      "e1rm_adj": 22
+     },
+     {
+      "date": "2026-11-19",
+      "weight": 15,
+      "reps": [
+       14,
+       12,
+       12
+      ],
+      "weights": [
+       15,
+       15,
+       15
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 22,
+      "e1rm_adj": 22
+     },
+     {
+      "date": "2026-11-26",
+      "weight": 15,
+      "reps": [
+       14,
+       12,
+       12
+      ],
+      "weights": [
+       15,
+       15,
+       15
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 22,
+      "e1rm_adj": 22
+     }
+    ],
+    "sessions_at_weight": 7,
+    "effort_last": 8,
+    "avg_effort_2w": 8,
     "pain_flags_4w": 0,
     "next_step_pct": 0.333
    },
@@ -4615,12 +5962,6 @@
     "workouts": [
      "Fri: Lats + Arms"
     ],
-    "planned": {
-     "sets": 3,
-     "reps_min": 8,
-     "reps_max": 12,
-     "weight": 40
-    },
     "sessions": 7,
     "first_seen": "2026-10-16",
     "last_seen": "2026-11-27",
@@ -4630,8 +5971,119 @@
     "e1rm_trend_pct": 13.4,
     "weeks_since_gain": 0,
     "stalled": false,
-    "top_of_range_streak": 0,
-    "avg_rir_2w": 2,
+    "recent": [
+     {
+      "date": "2026-10-23",
+      "weight": 35,
+      "reps": [
+       10,
+       10,
+       9
+      ],
+      "weights": [
+       35,
+       35,
+       35
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 46.7,
+      "e1rm_adj": 47.8
+     },
+     {
+      "date": "2026-10-30",
+      "weight": 37.5,
+      "reps": [
+       10,
+       10,
+       9
+      ],
+      "weights": [
+       37.5,
+       37.5,
+       37.5
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 50,
+      "e1rm_adj": 51.3
+     },
+     {
+      "date": "2026-11-06",
+      "weight": 37.5,
+      "reps": [
+       10,
+       10,
+       9
+      ],
+      "weights": [
+       37.5,
+       37.5,
+       37.5
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 50,
+      "e1rm_adj": 51.3
+     },
+     {
+      "date": "2026-11-13",
+      "weight": 40,
+      "reps": [
+       10,
+       10,
+       9
+      ],
+      "weights": [
+       40,
+       40,
+       40
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 53.3,
+      "e1rm_adj": 54.7
+     },
+     {
+      "date": "2026-11-20",
+      "weight": 40,
+      "reps": [
+       10,
+       10,
+       9
+      ],
+      "weights": [
+       40,
+       40,
+       40
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 53.3,
+      "e1rm_adj": 54.7
+     },
+     {
+      "date": "2026-11-27",
+      "weight": 42.5,
+      "reps": [
+       10,
+       10,
+       9
+      ],
+      "weights": [
+       42.5,
+       42.5,
+       42.5
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": 56.7,
+      "e1rm_adj": 58.1
+     }
+    ],
+    "sessions_at_weight": 1,
+    "effort_last": 8,
+    "avg_effort_2w": 8,
     "pain_flags_4w": 0,
     "next_step_pct": 0.118
    },
@@ -4640,12 +6092,6 @@
     "workouts": [
      "Wed: Back + Core"
     ],
-    "planned": {
-     "sets": 3,
-     "reps_min": 12,
-     "reps_max": 15,
-     "weight": null
-    },
     "sessions": 7,
     "first_seen": "2026-10-14",
     "last_seen": "2026-11-25",
@@ -4655,46 +6101,174 @@
     "e1rm_trend_pct": null,
     "weeks_since_gain": null,
     "stalled": false,
-    "top_of_range_streak": 0,
-    "avg_rir_2w": 2,
+    "recent": [
+     {
+      "date": "2026-10-21",
+      "weight": null,
+      "reps": [
+       14,
+       13,
+       12
+      ],
+      "weights": [
+       null,
+       null,
+       null
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": null,
+      "e1rm_adj": null
+     },
+     {
+      "date": "2026-10-28",
+      "weight": null,
+      "reps": [
+       14,
+       13,
+       12
+      ],
+      "weights": [
+       null,
+       null,
+       null
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": null,
+      "e1rm_adj": null
+     },
+     {
+      "date": "2026-11-04",
+      "weight": null,
+      "reps": [
+       14,
+       13,
+       12
+      ],
+      "weights": [
+       null,
+       null,
+       null
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": null,
+      "e1rm_adj": null
+     },
+     {
+      "date": "2026-11-11",
+      "weight": null,
+      "reps": [
+       14,
+       13,
+       12
+      ],
+      "weights": [
+       null,
+       null,
+       null
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": null,
+      "e1rm_adj": null
+     },
+     {
+      "date": "2026-11-18",
+      "weight": null,
+      "reps": [
+       14,
+       13,
+       12
+      ],
+      "weights": [
+       null,
+       null,
+       null
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": null,
+      "e1rm_adj": null
+     },
+     {
+      "date": "2026-11-25",
+      "weight": null,
+      "reps": [
+       14,
+       13,
+       12
+      ],
+      "weights": [
+       null,
+       null,
+       null
+      ],
+      "effort": 8,
+      "pain": false,
+      "e1rm": null,
+      "e1rm_adj": null
+     }
+    ],
+    "sessions_at_weight": 7,
+    "effort_last": 8,
+    "avg_effort_2w": 8,
     "pain_flags_4w": 0,
     "next_step_pct": null
    }
   ],
-  "attendance_4w": 1,
-  "attendance_8w": 1,
   "workouts_done_4w": 20,
-  "workouts_planned_4w": 20,
-  "set_completion_4w": 1,
+  "days_since_last_workout": 0,
   "avg_session_minutes_4w": 40,
-  "weekly_sets": [
+  "weeks": [
+   {
+    "week_start": "2026-10-05",
+    "workouts": 0,
+    "sets": 0,
+    "avg_effort": null
+   },
    {
     "week_start": "2026-10-12",
-    "sets": 41
+    "workouts": 5,
+    "sets": 41,
+    "avg_effort": 7
    },
    {
     "week_start": "2026-10-19",
-    "sets": 41
+    "workouts": 5,
+    "sets": 41,
+    "avg_effort": 7
    },
    {
     "week_start": "2026-10-26",
-    "sets": 41
+    "workouts": 5,
+    "sets": 41,
+    "avg_effort": 7
    },
    {
     "week_start": "2026-11-02",
-    "sets": 41
+    "workouts": 5,
+    "sets": 41,
+    "avg_effort": 7
    },
    {
     "week_start": "2026-11-09",
-    "sets": 41
+    "workouts": 5,
+    "sets": 41,
+    "avg_effort": 7
    },
    {
     "week_start": "2026-11-16",
-    "sets": 41
+    "workouts": 5,
+    "sets": 41,
+    "avg_effort": 7
    },
    {
     "week_start": "2026-11-23",
-    "sets": 41
+    "workouts": 5,
+    "sets": 41,
+    "avg_effort": 7
    }
   ]
  },
@@ -4745,6 +6319,7 @@
  "bodyweight": {
   "shared": false
  },
+ "body_measurements": [],
  "decisions": [],
  "since_last": null
 }

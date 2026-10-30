@@ -2,7 +2,7 @@
 
     coach run                       # this week, dry run: writes out/report-<date>.md, saves nothing
     coach run --publish             # and saves the report to the app
-    coach run --as-of 2026-11-06 --snapshot evals/fixtures/snapshot_base.json --scripted
+    coach run --as-of 2026-11-06 --snapshot evals/fixtures/all_progressing.json --scripted
     coach history --format md       # what the agent can see, as the app renders it
     coach backtest --from 2026-11-06 --to 2027-01-29
     coach evals [--scripted]

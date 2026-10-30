@@ -10,7 +10,7 @@ from dataclasses import dataclass
 from typing import Optional
 
 from .decision import TYPE_LEVEL, Change, Option
-from .metrics import estimate_minutes
+from .metrics import estimate_minutes, exercise_signals
 from .profile import Athlete, Library, step_for
 from .snapshot import Snapshot
 
@@ -97,6 +97,14 @@ def check(option: Option, snapshot: Snapshot, athlete: Athlete, library: Library
             if up:
                 out.append(Violation("pain_progressed", f"{c.exercise} has pain flags: it can be removed, swapped or eased, not pushed.", i))
 
+        # All-out or too heavy: never more weight on a lift you rated 10, or whose reps are falling at a 9–10.
+        if c.type == "load" and current is not None and (to.get("weight") or 0) > (current.weight or 0):
+            m = snapshot.exercise(c.exercise)
+            if m is not None and (m.effort_last or 0) >= 10:
+                out.append(Violation("allout_load", f"{c.exercise} was rated 10 (nothing left) last time: hold the weight, don't add to it.", i))
+            elif m is not None and _falling_at_hard_effort(m):
+                out.append(Violation("too_heavy_load", f"{c.exercise}: reps are falling at a 9–10 effort: hold or lower the weight, don't add to it.", i))
+
         # Load: one smallest step, and no jump bigger than the limit (add reps or a set instead).
         if c.type == "load" and current is not None and "weight" in to:
             lib = library.find(c.exercise)
@@ -174,6 +182,10 @@ def check(option: Option, snapshot: Snapshot, athlete: Athlete, library: Library
             if n < rng.min and n < had and not pain_removal:
                 out.append(Violation("exercise_count", f"{title} would drop to {n} exercises (keep it {rng.min}–{rng.max})."))
     return out
+
+
+def _falling_at_hard_effort(m) -> bool:
+    return bool(exercise_signals(m)["too_heavy"])
 
 
 def pain_driven_all(changes: list[Change], pain: set[str]) -> bool:
