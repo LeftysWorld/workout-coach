@@ -3,6 +3,8 @@ name: CI
 on:
   push:
   pull_request:
+  # Actions → CI → Run workflow: the real evals with the real model, no command line needed.
+  workflow_dispatch:
 
 jobs:
   test:
@@ -20,10 +22,11 @@ jobs:
         run: coach evals --scripted
 
   evals:
-    # The real agents, only when prompts, skills, the profile or the reward change, and only when the key is set.
+    # The real agents: on a pull request that changes prompts, skills, the profile or the reward, or
+    # whenever you run it by hand (Run workflow). Only when the key is set.
     runs-on: ubuntu-latest
     needs: test
-    if: github.event_name == 'pull_request'
+    if: github.event_name == 'pull_request' || github.event_name == 'workflow_dispatch'
     env:
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
       LANGSMITH_API_KEY: ${{ secrets.LANGSMITH_API_KEY }}
@@ -38,6 +41,7 @@ jobs:
           cache: pip
       - id: changed
         run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then echo "run=true" >> "$GITHUB_OUTPUT"; exit 0; fi
           if git diff --name-only origin/${{ github.base_ref }}...HEAD | grep -qE '^(agents|skills|profile)/|^coach/(score|agents|prompts|flow|governor)\.py'; then echo "run=true" >> "$GITHUB_OUTPUT"; fi
       - if: steps.changed.outputs.run == 'true' && env.ANTHROPIC_API_KEY != ''
         run: |

@@ -42,23 +42,32 @@ fewer workouts than my usual, a cut that's too fast, and when two or more line u
 workouts (plans and their history, sets, effort, pain, notes), body weight and body measurements
 (unless turned off in the app) and past coach decisions. Nothing else in the app.
 
-## Set up
+## Set up (no command line)
 
-1. **App side** (in six-month-plan, on main): run the migrations, deploy the `workout-agent`
-   function and set its secrets. See `docs/WORKOUT_COACH.md` there.
-2. **Here:**
-   ```bash
-   python -m venv .venv && source .venv/bin/activate
-   pip install -e ".[dev]"
-   cp .env.example .env    # fill in WORKOUT_AGENT_URL, WORKOUT_AGENT_KEY, ANTHROPIC_API_KEY
-   set -a; source .env; set +a
-   coach history --format md | head -40     # check access: the same report the app shows
-   coach run                                 # dry run: writes out/report-<date>.md
-   ```
-3. **GitHub:** Settings → Secrets and variables → Actions.
-   - Secrets: `WORKOUT_AGENT_URL`, `WORKOUT_AGENT_KEY`, `ANTHROPIC_API_KEY`, optionally `LANGSMITH_API_KEY`.
-   - Variable: `COACH_PUBLISH` = `false` for the first 2–3 weeks (reports land in the run summary
-     only), then `true` to save them to the app.
+Everything is in the app: **Settings → Workout coach → Set up the weekly coach**. It walks through:
+
+1. **The app's server gets its database key, once.** Copy the `service_role` secret from Supabase →
+   Project Settings → API Keys into Vercel → the app's project → Settings → Environment Variables as
+   `SUPABASE_SERVICE_ROLE_KEY`, then Redeploy. The app then serves the coach's door itself at
+   `/api/workout-agent`. **Test the connection** checks it.
+2. **Make the coach's key** (one button). It opens your workout history and nothing else.
+3. **Paste into GitHub** (this repo → Settings → Secrets and variables → Actions), each with a Copy
+   button in the app: `WORKOUT_AGENT_URL`, `WORKOUT_AGENT_KEY`, plus `ANTHROPIC_API_KEY` and, for
+   traces, `LANGSMITH_API_KEY`. Variable `COACH_PUBLISH` = `false` for the first 2–3 weeks (reports land
+   in the run summary only), then `true` to save them to the app.
+4. **Run it:** Actions → Weekly review → Run workflow. After that it runs every Friday night.
+
+The real evals run the same way: Actions → CI → Run workflow (needs `ANTHROPIC_API_KEY`).
+
+Running it on your own computer instead (optional):
+```bash
+python -m venv .venv && source .venv/bin/activate
+pip install -e ".[dev]"
+cp .env.example .env    # fill in WORKOUT_AGENT_URL, WORKOUT_AGENT_KEY, ANTHROPIC_API_KEY
+set -a; source .env; set +a
+coach history --format md | head -40     # check access: the same report the app shows
+coach run                                 # dry run: writes out/report-<date>.md
+```
 
 ## Use it
 
