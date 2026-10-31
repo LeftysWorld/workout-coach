@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {
+    "api/run.py": {
+      "maxDuration": 300,
+      "includeFiles": "{coach,agents,skills,profile}/**"
+    }
+  },
+  "crons": [{ "path": "/api/run", "schedule": "0 4 * * 6" }]
+}

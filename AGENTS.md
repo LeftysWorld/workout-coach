@@ -30,6 +30,7 @@ a report. It never changes the plan itself. A person reads the report and decide
 |---|---|
 | `coach/flow.py` | The pipeline: NODES and ROUTES, defined once |
 | `coach/graph.py` / `coach/runner.py` | The same flow in LangGraph / walked directly (tests, evals) |
+| `coach/service.py`, `api/run.py`, `vercel.json` | One weekly run as a Vercel function, started only by Vercel's cron (CRON_SECRET) |
 | `coach/snapshot.py` | Schema 2 of the app's snapshot (pydantic): what was actually done, effort 1–10 per exercise, body measurements |
 | `coach/metrics.py` | Contract check, the signals (ready, too heavy, getting harder, lighter week due), the facts the agents read; `analyst_view` hides the plan |
 | `coach/governor.py` | Hard rules |

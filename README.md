@@ -1,6 +1,6 @@
 # workout-coach
 
-A weekly AI review of my workouts. Every Friday night it reads my workout history from the
+A weekly AI review of my workouts. Every Friday night (on Vercel) it reads my workout history from the
 [six-month-plan](https://github.com/LeftysWorld/six-month-plan) app, decides whether next week's
 workouts should change (often: no), and writes a report: what's going on, what to change or not,
 and why. It never changes my plan. I read the report and decide.
@@ -8,7 +8,7 @@ and why. It never changes my plan. I read the report and decide.
 ## How it works
 
 ```
-Friday night (GitHub Actions)
+Friday night (Vercel cron → api/run.py)
   load      the history snapshot, as of Friday, from the app's workout-agent function
   check     recompute key numbers; stop if the app's math and ours disagree
   facts     the compact view the agents read (code computes every number)
@@ -42,24 +42,31 @@ fewer workouts than my usual, a cut that's too fast, and when two or more line u
 workouts (plans and their history, sets, effort, pain, notes), body weight and body measurements
 (unless turned off in the app) and past coach decisions. Nothing else in the app.
 
-## Set up (no command line)
+## Set up on Vercel (no command line, no GitHub)
 
-Everything is in the app: **Settings → Workout coach → Set up the weekly coach**. It walks through:
+The coach runs as its own small Vercel project: one endpoint (`api/run.py`) that runs the whole
+pipeline and saves the report to the app, called by Vercel's scheduler every Friday at 11 pm
+Eastern (`vercel.json` → `crons`). The app's **Settings → Workout coach → Set up the weekly coach**
+walks through it with Copy buttons:
 
-1. **The app's server gets its database key, once.** Copy the `service_role` secret from Supabase →
-   Project Settings → API Keys into Vercel → the app's project → Settings → Environment Variables as
-   `SUPABASE_SERVICE_ROLE_KEY`, then Redeploy. The app then serves the coach's door itself at
-   `/api/workout-agent`. **Test the connection** checks it.
-2. **Make the coach's key** (one button). It opens your workout history and nothing else.
-3. **Paste into GitHub** (this repo → Settings → Secrets and variables → Actions), each with a Copy
-   button in the app: `WORKOUT_AGENT_URL`, `WORKOUT_AGENT_KEY`, plus `ANTHROPIC_API_KEY` and, for
-   traces, `LANGSMITH_API_KEY`. Variable `COACH_PUBLISH` = `false` for the first 2–3 weeks (reports land
-   in the run summary only), then `true` to save them to the app.
-4. **Run it:** Actions → Weekly review → Run workflow. After that it runs every Friday night.
+1. **The app's server key**, once, in the app's own Vercel project (`SUPABASE_SERVICE_ROLE_KEY`).
+2. **Make the coach's key** in the app (one button).
+3. **Vercel → Add New → Project → import `workout-coach`.** Before Deploy, open Environment
+   Variables and add:
+   - `WORKOUT_AGENT_URL`: the app's `/api/workout-agent` address (Copy button in the app)
+   - `WORKOUT_AGENT_KEY`: the key from step 2
+   - `CRON_SECRET`: made in the app (Copy button); only Vercel's scheduler knows it
+   - `ANTHROPIC_API_KEY`: from console.anthropic.com
+   - `LANGSMITH_API_KEY` (optional): every run traced step by step in LangSmith, project `workout-coach`
 
-The real evals run the same way: Actions → CI → Run workflow (needs `ANTHROPIC_API_KEY`).
+   Then Deploy.
+4. **Run it now:** the coach's Vercel project → Settings → Cron Jobs → **Run**. The report appears in
+   the app under Review → Workout report a minute or two later. After that it runs itself weekly.
 
-Running it on your own computer instead (optional):
+Reports are saved to the app by default; `COACH_PUBLISH=false` keeps them out (they're then only in
+the function's logs). `COACH_MODEL` picks the model (default `claude-sonnet-5-5`).
+
+Running it on your own computer instead (optional, for development):
 ```bash
 python -m venv .venv && source .venv/bin/activate
 pip install -e ".[dev]"

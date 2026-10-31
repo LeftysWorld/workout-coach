@@ -1,0 +1,5 @@
+tests/
+evals/
+out/
+.github/
+*.egg-info/

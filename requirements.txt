@@ -1,0 +1,7 @@
+# What the Vercel function needs (the same as pyproject.toml's dependencies).
+pydantic>=2.7
+pyyaml>=6.0
+jinja2>=3.1
+anthropic>=0.40
+langgraph>=0.2
+langsmith>=0.1.130
