@@ -30,7 +30,7 @@ def authorized(header: str, secret: str) -> bool:
 
 class handler(BaseHTTPRequestHandler):
     def _send(self, status: int, body: dict) -> None:
-        data = json.dumps(body, indent=1).encode()
+        data = json.dumps(body, indent=1, ensure_ascii=False).encode()
         self.send_response(status)
         self.send_header("Content-Type", "application/json; charset=utf-8")
         self.send_header("Content-Length", str(len(data)))
