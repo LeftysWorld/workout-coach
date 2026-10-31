@@ -84,3 +84,16 @@ def test_body_measurements_come_through_while_cutting(raw, athlete, library):
     assert set(names) == {"Waist", "Chest", "Right arm", "Left arm", "Shoulders"}
     assert names["Waist"]["change_4w"] == -1 and names["Right arm"]["change_4w"] == 0
     assert 0.5 < f["program_signals"]["bodyweight_loss_pct_per_week"] < 1.0
+
+
+def test_a_superset_rests_after_the_round():
+    from coach.metrics import estimate_minutes
+
+    pair = [
+        {"name": "Cable Curl", "sets": 2, "rest": "90 sec after each round", "superset": "Arm superset"},
+        {"name": "Overhead Cable Triceps Extension", "sets": 2, "rest": "90 sec after each round", "superset": "Arm superset"},
+    ]
+    # 5 min warm-up + 2 rounds × (45 s + 45 s + 90 s rest) = 11 min
+    assert estimate_minutes(pair) == 11
+    apart = [{**e, "superset": None} for e in pair]
+    assert estimate_minutes(apart) == 14

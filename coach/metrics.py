@@ -35,11 +35,20 @@ def e1rm(weight: Optional[float], reps: Optional[int]) -> Optional[float]:
 
 
 def estimate_minutes(exercises: list[dict] | list[Any]) -> int:
-    """Same rule as the app: 5 minutes to warm up, then each set about 45 s of work plus its rest."""
+    """Same rule as the app: 5 minutes to warm up, then each set about 45 s of work plus its rest.
+    In a superset (exercises sharing a `superset` label) you rest after the round, not between its moves."""
     import re
 
+    def field(ex, k):
+        return ex.get(k) if isinstance(ex, dict) else getattr(ex, k, None)
+
     seconds = 5 * 60
-    for ex in exercises:
+    items = list(exercises)
+    for i, ex in enumerate(items):
+        label = field(ex, "superset")
+        if label and i + 1 < len(items) and field(items[i + 1], "superset") == label:
+            seconds += int(field(ex, "sets") or 0) * 45
+            continue
         rest = (ex.get("rest") if isinstance(ex, dict) else getattr(ex, "rest", "")) or ""
         sets = int(ex.get("sets") if isinstance(ex, dict) else getattr(ex, "sets", 0))
         m = re.search(r"(\d+(?:\.\d+)?)(?:\s*[–-]\s*(\d+(?:\.\d+)?))?\s*(min|m\b|minutes?|s\b|sec|seconds?)?", rest, re.I)

@@ -48,7 +48,6 @@ exercises:
   - { name: Cable Triceps Pushdown, pattern: elbow_extension, muscles: [triceps], equipment: [single_cable], knee: none, cables: 1, step: cable }
   - { name: Overhead Cable Triceps Extension, pattern: elbow_extension, muscles: [triceps], equipment: [single_cable], knee: none, cables: 1, step: cable }
   - { name: Seated Overhead Triceps Extension, pattern: elbow_extension, muscles: [triceps], equipment: [dumbbells, adjustable_bench], knee: none, cables: 0, step: dumbbell }
-  - { name: "Arm Superset: Cable Curl + Overhead Cable Triceps Extension", pattern: arm_superset, muscles: [biceps, triceps], equipment: [single_cable], knee: none, cables: 1, step: cable }
 
   # ---------- Lower back and core (knee-safe only) ----------
   - { name: Hammer Strength Back Extension, pattern: hip_extension_back, muscles: [lower_back, glutes], equipment: [hammer_strength_back_extension], knee: low, cables: 0, step: machine }

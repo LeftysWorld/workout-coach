@@ -32,6 +32,8 @@ class Exercise(_Model):
     weight_note: Optional[str] = ""
     rest: Optional[str] = ""
     note: Optional[str] = ""
+    # Back-to-back exercises share a label ("Arm superset"): one set of each, then rest.
+    superset: Optional[str] = None
 
 
 class Meta(_Model):
