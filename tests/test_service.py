@@ -54,7 +54,7 @@ def _handler_module():
     return mod
 
 
-def _call(mod, headers, path="/api/run"):
+def _call(mod, headers, path="/api/run", method="GET"):
     h = mod.handler.__new__(mod.handler)
     h.headers = type("H", (), {"get": lambda self, k, d="": headers.get(k.lower(), headers.get(k, d))})()
     h.path = path
@@ -63,23 +63,23 @@ def _call(mod, headers, path="/api/run"):
     h.send_response = lambda s: sent.update(status=s)
     h.send_header = lambda *a: None
     h.end_headers = lambda: None
-    h.do_GET()
+    getattr(h, f"do_{method}")()
     return sent["status"], json.loads(h.wfile.getvalue())
 
 
 def test_only_the_scheduler_can_start_a_run(monkeypatch, raw):
     mod = _handler_module()
-    monkeypatch.delenv("CRON_SECRET", raising=False)
-    assert _call(mod, {})[0] == 500
-    monkeypatch.setenv("CRON_SECRET", "s" * 32)
-    assert _call(mod, {})[0] == 401
-    assert _call(mod, {"authorization": "Bearer wrong"})[0] == 401
     for k in ("WORKOUT_AGENT_URL", "WORKOUT_AGENT_KEY", "ANTHROPIC_API_KEY"):
         monkeypatch.delenv(k, raising=False)
     status, body = _call(mod, {"authorization": "Bearer " + "s" * 32})
     assert status == 500 and "ANTHROPIC_API_KEY" in body["error"]
     for k in ("WORKOUT_AGENT_URL", "WORKOUT_AGENT_KEY", "ANTHROPIC_API_KEY"):
         monkeypatch.setenv(k, "x")
+    monkeypatch.delenv("CRON_SECRET", raising=False)
+    assert _call(mod, {})[0] == 500
+    monkeypatch.setenv("CRON_SECRET", "s" * 32)
+    assert _call(mod, {})[0] == 401
+    assert _call(mod, {"authorization": "Bearer wrong"})[0] == 401
     assert _call(mod, {"authorization": "Bearer " + "s" * 32}, "/api/run?as_of=nope")[0] == 400
     calls = []
     monkeypatch.setattr(mod, "run_weekly", lambda as_of: calls.append(as_of) or {"recommendation": "hold"})
@@ -96,3 +96,43 @@ def test_the_vercel_config_runs_weekly_from_the_entrypoint():
     reqs = (ROOT / "requirements.txt").read_text()
     for dep in ("pydantic", "pyyaml", "jinja2", "anthropic", "langgraph", "langsmith"):
         assert dep in reqs
+
+
+def test_a_run_from_the_app_needs_the_owners_sign_in(monkeypatch):
+    mod = _handler_module()
+    monkeypatch.setenv("CRON_SECRET", "s" * 32)
+    for k in ("WORKOUT_AGENT_URL", "WORKOUT_AGENT_KEY", "ANTHROPIC_API_KEY"):
+        monkeypatch.setenv(k, "x")
+    calls = []
+    monkeypatch.setattr(mod, "run_weekly", lambda as_of: calls.append(as_of) or {"recommendation": "hold"})
+    who = {"key": "me"}
+
+    class FakeClient:
+        def __init__(self, bearer=None, **_):
+            self.bearer = bearer
+
+        def whoami(self):
+            return who.get(self.bearer, who["key"]) if self.bearer else who["key"]
+
+    monkeypatch.setattr(mod, "AppClient", FakeClient)
+    token = "t" * 40
+    who[token] = "me"
+    status, body = _call(mod, {"authorization": f"Bearer {token}"}, method="POST")
+    assert status == 200 and calls == [None]
+    who[token] = "someone-else"
+    status, body = _call(mod, {"authorization": f"Bearer {token}"}, method="POST")
+    assert status == 403 and len(calls) == 1
+    # A sign-in on a GET (the schedule's way in) is never enough.
+    who[token] = "me"
+    assert _call(mod, {"authorization": f"Bearer {token}"})[0] == 401
+
+
+def test_the_browser_check_is_answered(monkeypatch):
+    mod = _handler_module()
+    h = mod.handler.__new__(mod.handler)
+    sent, headers = {}, {}
+    h.send_response = lambda s: sent.update(status=s)
+    h.send_header = lambda k, v: headers.update({k: v})
+    h.end_headers = lambda: None
+    h.do_OPTIONS()
+    assert sent["status"] == 204 and headers["Access-Control-Allow-Origin"] == "*" and "POST" in headers["Access-Control-Allow-Methods"]
