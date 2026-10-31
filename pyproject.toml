@@ -28,5 +28,9 @@ include = ["coach*"]
 [tool.setuptools.package-data]
 coach = ["templates/*.j2"]
 
+# Vercel (Python preset): the function it runs. It serves /api/run, which its cron calls weekly.
+[tool.vercel]
+entrypoint = "api.run:handler"
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]

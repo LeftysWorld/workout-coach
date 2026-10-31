@@ -46,7 +46,7 @@ workouts (plans and their history, sets, effort, pain, notes), body weight and b
 
 The coach runs as its own small Vercel project: one endpoint (`api/run.py`) that runs the whole
 pipeline and saves the report to the app, called by Vercel's scheduler every Friday at 11 pm
-Eastern (`vercel.json` → `crons`). The app's **Settings → Workout coach → Set up the weekly coach**
+Eastern (`vercel.json` → `crons`; the function is `[tool.vercel] entrypoint` in `pyproject.toml`). The app's **Settings → Workout coach → Set up the weekly coach**
 walks through it with Copy buttons:
 
 1. **The app's server key**, once, in the app's own Vercel project (`SUPABASE_SERVICE_ROLE_KEY`).

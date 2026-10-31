@@ -87,10 +87,12 @@ def test_only_the_scheduler_can_start_a_run(monkeypatch, raw):
     assert status == 200 and calls == ["2026-11-27"] and body["recommendation"] == "hold"
 
 
-def test_the_vercel_config_runs_weekly_and_ships_the_prompts():
+def test_the_vercel_config_runs_weekly_from_the_entrypoint():
     cfg = json.loads((ROOT / "vercel.json").read_text())
     assert cfg["crons"] == [{"path": "/api/run", "schedule": "0 4 * * 6"}]
-    assert "agents" in cfg["functions"]["api/run.py"]["includeFiles"]
+    import tomllib
+
+    assert tomllib.loads((ROOT / "pyproject.toml").read_text())["tool"]["vercel"]["entrypoint"] == "api.run:handler"
     reqs = (ROOT / "requirements.txt").read_text()
     for dep in ("pydantic", "pyyaml", "jinja2", "anthropic", "langgraph", "langsmith"):
         assert dep in reqs
