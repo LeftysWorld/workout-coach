@@ -41,8 +41,13 @@ def _split(text: str) -> tuple[dict, str]:
     return meta, text[m.end() :]
 
 
-@lru_cache(maxsize=8)
-def system_prompt(agent: str) -> str:
+@lru_cache(maxsize=32)
+def system_prompt(agent: str, updates: str = "") -> str:
+    """The agent's instructions, its skills and your rules.
+
+    `updates` is YAML of the sections changed in the app's Settings (see profile.apply_app_rules);
+    they're shown after the file and replace the matching parts of it.
+    """
     meta, body = _split((AGENTS / agent / "AGENT.md").read_text())
     parts = [body.strip(), "", "# Skills"]
     for skill in meta.get("skills", []):
@@ -57,6 +62,15 @@ def system_prompt(agent: str) -> str:
         data = yaml.safe_load(profile)
         profile = yaml.safe_dump({k: data[k] for k in keys if k in data}, sort_keys=False, allow_unicode=True).strip()
     parts += ["", "# The athlete's rules (profile/athlete.yaml). These are rules, not suggestions.", "```yaml", profile, "```"]
+    if updates:
+        import yaml
+
+        changed = yaml.safe_load(updates) or {}
+        if keys:
+            changed = {k: v for k, v in changed.items() if k in keys}
+        if changed:
+            text = yaml.safe_dump(changed, sort_keys=False, allow_unicode=True).strip()
+            parts += ["", "# Updated in the app's Settings. These replace the matching sections above.", "```yaml", text, "```"]
     return "\n".join(parts)
 
 

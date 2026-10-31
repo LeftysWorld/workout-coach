@@ -99,3 +99,18 @@ def test_the_report_has_its_sections_and_a_usable_change_list(raw, athlete, libr
         assert heading in md
     block = md.split("```json")[1].split("```")[0]
     assert json.loads(block)["changes"][0]["exercise"] == "Flat DB Bench Press"
+
+
+def test_rules_from_the_apps_settings_reach_the_rules_check_and_the_prompts(raw, athlete, library):
+    snap = raw("ready_to_progress")
+    # A bigger jump allowed in the app: 50 → 60 lb on bench (20%) now passes the rules check.
+    snap["training_rules"] = {"max_jump_pct": 0.25, "steps": {"dumbbell": 10}}
+    big = {"options": [{"id": "hold", "label": "Hold", "change_level": 0, "changes": []}, {"id": "big", "label": "Big jump", "change_level": 2, "changes": [{"workout": "Mon: Chest + Back", "type": "load", "exercise": "Flat DB Bench Press", "from": {"weight": 50}, "to": {"weight": 60}, "reason": "go"}]}], "recommended_option_id": "big"}
+    critic = {**scripted.critic, "chosen_option_id": "big"} if isinstance(scripted.critic, dict) else scripted.critic
+    llm = ScriptedLLM({"analyst": [scripted.analyst], "planner": [big], "critic": [critic]})
+    ctx = Context(llm=llm, athlete=athlete, library=library, snapshot_json=snap)
+    state = run_plain(ctx)
+    assert state["planner_tries"] == 1, state.get("rejected")
+    assert ctx.athlete.increments.max_jump_pct == 0.25
+    assert "Updated in the app's Settings" in llm.calls[1]["system"]
+    assert any("Settings" in n for n in ctx.notes)

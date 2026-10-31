@@ -38,17 +38,17 @@ def allowed_library(athlete: Athlete, library: Library) -> list[dict]:
     return out
 
 
-def run_analyst(llm: LLM, facts: dict) -> Assessment:
+def run_analyst(llm: LLM, facts: dict, rules_update: str = "") -> Assessment:
     user = "\n\n".join(
         [
             "Assess this week from what was actually done. Every number you write must come from the facts below.",
             "## Facts\n" + _j(analyst_view(facts)),
         ]
     )
-    return llm.complete_json(agent="analyst", system=system_prompt("analyst"), user=user, schema=Assessment)
+    return llm.complete_json(agent="analyst", system=system_prompt("analyst", rules_update), user=user, schema=Assessment)
 
 
-def run_planner(llm: LLM, facts: dict, assessment: Assessment, athlete: Athlete, library: Library, feedback: list[str] | None = None, critic_note: str | None = None) -> Options:
+def run_planner(llm: LLM, facts: dict, assessment: Assessment, athlete: Athlete, library: Library, feedback: list[str] | None = None, critic_note: str | None = None, rules_update: str = "") -> Options:
     parts = [
         "Propose 2 or 3 options for next week. One must be id 'hold' (level 0, no changes). Use the workout titles and exercise names exactly as in the facts.",
         "## Change ladder\n" + ladder_text(),
@@ -60,10 +60,10 @@ def run_planner(llm: LLM, facts: dict, assessment: Assessment, athlete: Athlete,
         parts.insert(1, "## Your last proposal broke these rules. Fix them or drop those changes.\n- " + "\n- ".join(feedback))
     if critic_note:
         parts.insert(1, "## The critic asked for a revision\n" + critic_note)
-    return llm.complete_json(agent="planner", system=system_prompt("planner"), user="\n\n".join(parts), schema=Options)
+    return llm.complete_json(agent="planner", system=system_prompt("planner", rules_update), user="\n\n".join(parts), schema=Options)
 
 
-def run_critic(llm: LLM, facts: dict, assessment: Assessment, options: list[Option], scores: dict[str, float], can_revise: bool) -> CriticVerdict:
+def run_critic(llm: LLM, facts: dict, assessment: Assessment, options: list[Option], scores: dict[str, float], can_revise: bool, rules_update: str = "") -> CriticVerdict:
     parts = [
         "Pick the option that is worth it. The burden of proof is on change: choose 'hold' unless a change clearly earns its cost. "
         + ("You may ask for one revision." if can_revise else "No more revisions: accept or downgrade."),
@@ -73,4 +73,4 @@ def run_critic(llm: LLM, facts: dict, assessment: Assessment, options: list[Opti
         "## Assessment\n" + _j(assessment.model_dump()),
         "## Facts\n" + _j({k: v for k, v in analyst_view(facts).items() if k not in ("decisions",)}),
     ]
-    return llm.complete_json(agent="critic", system=system_prompt("critic"), user="\n\n".join(parts), schema=CriticVerdict)
+    return llm.complete_json(agent="critic", system=system_prompt("critic", rules_update), user="\n\n".join(parts), schema=CriticVerdict)

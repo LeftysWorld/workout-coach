@@ -128,3 +128,78 @@ def step_for(ex: Optional[LibraryExercise], athlete: Athlete) -> float:
     if ex.step == "cable":
         return athlete.increments.cable
     return 0.0
+
+
+def apply_app_rules(athlete: Athlete, rules: Optional[dict], units: Optional[str] = None) -> tuple[Athlete, dict]:
+    """Your rules from the app (Settings → Training) laid over athlete.yaml.
+
+    Returns the athlete the coach should use and the sections that differ from the file, in the
+    file's own shape (for the agents' prompt). Anything the app didn't send keeps the file's value.
+    Limits from the app replace the file's limits, except note-only ones (like knee_test) that the
+    app doesn't edit; a note on a limit the app also has is kept.
+    """
+    base = athlete.model_dump()
+    data = athlete.model_dump()
+    if units in ("lb", "kg"):
+        data["units"] = units
+    r = rules if isinstance(rules, dict) else {}
+
+    if isinstance(r.get("limits"), list):
+        file_limits = {x["id"]: x for x in base["injuries_and_limits"]}
+        app = []
+        for x in r["limits"]:
+            if not isinstance(x, dict) or not x.get("id"):
+                continue
+            name = str(x.get("name") or "").strip()
+            summary = str(x.get("summary") or "").strip()
+            file_summary = file_limits.get(str(x["id"]), {}).get("summary", "")
+            if summary and summary in file_summary:
+                text = file_summary  # same words as the file: keep the file's fuller version
+            elif name and summary and name.lower() not in summary.lower():
+                text = f"{name}: {summary}"
+            else:
+                text = summary or name or str(x["id"])
+            app.append(
+                {
+                    "id": str(x["id"]),
+                    "summary": text,
+                    "banned_patterns": [str(p) for p in x.get("banned_patterns") or []],
+                    "banned_exercises": [str(e) for e in x.get("banned_exercises") or []],
+                    "note": file_limits.get(str(x["id"]), {}).get("note", ""),
+                }
+            )
+        app_ids = {x["id"] for x in app}
+        notes_only = [x for x in base["injuries_and_limits"] if x["id"] not in app_ids and not x["banned_patterns"] and not x["banned_exercises"]]
+        data["injuries_and_limits"] = app + notes_only
+
+    if isinstance(r.get("equipment"), list):
+        data["equipment"] = [str(e) for e in r["equipment"]]
+    for key in ("one_cable_at_a_time", "weights_only"):
+        if isinstance(r.get(key), bool):
+            data["preferences"][key] = r[key]
+
+    steps = r.get("steps") if isinstance(r.get("steps"), dict) else {}
+    for key in ("dumbbell", "machine", "cable"):
+        v = steps.get(key)
+        if isinstance(v, (int, float)) and not isinstance(v, bool) and v > 0:
+            data["increments"][key] = float(v)
+    jump = r.get("max_jump_pct")
+    if isinstance(jump, (int, float)) and not isinstance(jump, bool) and 0 < jump <= 1:
+        data["increments"]["max_jump_pct"] = float(jump)
+
+    days = r.get("days")
+    if isinstance(days, list) and days and all(isinstance(d, int) and 1 <= d <= 7 for d in days):
+        data["schedule"]["days"] = sorted(set(days))
+        data["schedule"]["days_per_week"] = len(data["schedule"]["days"])
+    mins = r.get("session_minutes")
+    if isinstance(mins, dict) and isinstance(mins.get("min"), int) and isinstance(mins.get("max"), int) and 0 < mins["min"] <= mins["max"]:
+        data["schedule"]["session_minutes"] = {"min": mins["min"], "max": mins["max"]}
+    n = r.get("exercises_per_workout")
+    if isinstance(n, int) and not isinstance(n, bool) and n > 0:
+        old = data["schedule"]["exercises_per_workout"]
+        if old["target"] != n:
+            data["schedule"]["exercises_per_workout"] = {"target": n, "min": max(1, n - 1), "max": n + 1}
+
+    effective = Athlete.model_validate(data)
+    changed = {k: data[k] for k in data if data[k] != base[k]}
+    return effective, changed

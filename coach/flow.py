@@ -15,6 +15,8 @@ a function of the state. coach/runner.py walks this; coach/graph.py builds the s
 
 from __future__ import annotations
 
+import yaml
+
 import traceback
 from dataclasses import dataclass, field
 from typing import Any, Callable, Optional
@@ -24,7 +26,7 @@ from .agents import run_analyst, run_critic, run_planner
 from .decision import TYPE_LEVEL, Assessment, CriticVerdict, Decision, Option, Options
 from .governor import check as governor_check
 from .llm import LLM
-from .profile import Athlete, Library
+from .profile import Athlete, Library, apply_app_rules
 from .score import REWARD_VERSION, option_score
 from .snapshot import Snapshot, parse_snapshot
 
@@ -44,6 +46,7 @@ class Context:
     publish: Optional[Callable[[dict], dict]] = None  # report payload → response; None = dry run
     snapshot_json: Optional[dict] = None
     notes: list[str] = field(default_factory=list)
+    rules_update: str = ""  # YAML of the rule sections changed in the app's Settings, for the prompts
 
 
 State = dict[str, Any]
@@ -54,7 +57,14 @@ State = dict[str, Any]
 
 def load(state: State, ctx: Context) -> State:
     raw = ctx.snapshot_json if ctx.snapshot_json is not None else ctx.fetch(ctx.as_of, ctx.months)  # type: ignore[misc]
-    return {"snapshot": parse_snapshot(raw)}
+    snap = parse_snapshot(raw)
+    # Your rules from the app's Settings → Training win over athlete.yaml, for the rules check and the agents.
+    rules = raw.get("training_rules") if isinstance(raw, dict) else None
+    ctx.athlete, changed = apply_app_rules(ctx.athlete, rules, snap.meta.units)
+    if changed:
+        ctx.rules_update = yaml.safe_dump(changed, sort_keys=False, allow_unicode=True)
+        ctx.notes.append("Using your training rules from the app's Settings (" + ", ".join(k.replace("_", " ") for k in changed) + ").")
+    return {"snapshot": snap}
 
 
 def check(state: State, ctx: Context) -> State:
@@ -72,7 +82,7 @@ def gate(state: State, ctx: Context) -> State:
 
 
 def analyst(state: State, ctx: Context) -> State:
-    return {"assessment": run_analyst(ctx.llm, state["facts"])}
+    return {"assessment": run_analyst(ctx.llm, state["facts"], ctx.rules_update)}
 
 
 def planner(state: State, ctx: Context) -> State:
@@ -84,6 +94,7 @@ def planner(state: State, ctx: Context) -> State:
         ctx.library,
         feedback=state.get("violations_text"),
         critic_note=state.get("critic_note"),
+        rules_update=ctx.rules_update,
     )
     if not any(o.id == "hold" for o in opts.options):
         opts.options.append(Option(id="hold", label="Hold: no change", change_level=0, changes=[], rationale=["Added by the pipeline: a hold is always an option."]))
@@ -111,7 +122,7 @@ def score(state: State, ctx: Context) -> State:
 
 def critic(state: State, ctx: Context) -> State:
     can_revise = state.get("critic_rounds", 0) < MAX_CRITIC_REVISIONS
-    verdict = run_critic(ctx.llm, state["facts"], state["assessment"], state["passing"], state["scores"], can_revise)
+    verdict = run_critic(ctx.llm, state["facts"], state["assessment"], state["passing"], state["scores"], can_revise, ctx.rules_update)
     if verdict.verdict == "revise" and not can_revise:
         verdict = verdict.model_copy(update={"verdict": "accept"})
     if verdict.chosen_option_id not in {o.id for o in state["passing"]}:
