@@ -48,3 +48,42 @@ def test_the_analyst_sees_goals_and_limits_not_the_schedule():
     assert "days_per_week" not in analyst and "session_minutes" not in analyst
     assert "days_per_week" in system_prompt("planner")
     assert "## Fatigue and the lighter week" in analyst and "## Body weight and measurements" in analyst
+
+
+def test_each_agent_gets_the_model_its_job_needs():
+    from coach.llm import DEFAULT_MODELS, describe, models_from_env
+
+    assert DEFAULT_MODELS["analyst"] == DEFAULT_MODELS["critic"] == "claude-opus-5-5"
+    assert DEFAULT_MODELS["planner"] == "claude-sonnet-5-5"
+    assert models_from_env({}) == DEFAULT_MODELS
+    # One for everything, then one agent on its own.
+    every = models_from_env({"COACH_MODEL": "claude-sonnet-5-5"})
+    assert set(every.values()) == {"claude-sonnet-5-5"}
+    mixed = models_from_env({"COACH_MODEL": "claude-sonnet-5-5", "COACH_MODEL_ANALYST": "claude-opus-5-5"})
+    assert mixed["analyst"] == "claude-opus-5-5" and mixed["critic"] == "claude-sonnet-5-5"
+    assert describe(DEFAULT_MODELS) == "analyst=claude-opus-5-5,planner=claude-sonnet-5-5,critic=claude-opus-5-5"
+
+
+def test_the_real_client_asks_each_agent_on_its_own_model(monkeypatch):
+    import sys
+    import types
+
+    from coach.decision import CriticVerdict
+    from coach.llm import AnthropicLLM
+
+    asked = []
+
+    class Messages:
+        def create(self, *, model, **_):
+            asked.append(model)
+            text = '{"chosen_option_id": "hold", "verdict": "accept"}'
+            return types.SimpleNamespace(content=[types.SimpleNamespace(text=text)])
+
+    fake = types.ModuleType("anthropic")
+    fake.Anthropic = lambda: types.SimpleNamespace(messages=Messages())
+    monkeypatch.setitem(sys.modules, "anthropic", fake)
+    llm = AnthropicLLM(models={"analyst": "claude-opus-5-5", "planner": "claude-sonnet-5-5", "critic": "claude-opus-5-5"})
+    llm.complete_json(agent="critic", system="s", user="u", schema=CriticVerdict)
+    llm.complete_json(agent="planner", system="s", user="u", schema=CriticVerdict)
+    assert asked == ["claude-opus-5-5", "claude-sonnet-5-5"]
+    assert "analyst=claude-opus-5-5" in llm.model

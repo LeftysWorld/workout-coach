@@ -64,7 +64,12 @@ walks through it with Copy buttons:
    the app under Review → Workout report a minute or two later. After that it runs itself weekly.
 
 Reports are saved to the app by default; `COACH_PUBLISH=false` keeps them out (they're then only in
-the function's logs). `COACH_MODEL` picks the model (default `claude-sonnet-5-5`).
+the function's logs).
+
+**Models, by job:** the analyst and the critic make the judgment calls, so they run on Claude Opus 5.5;
+the planner writes options inside rules the code enforces, so it runs on Claude Sonnet 5.5
+(`coach/llm.py` → `DEFAULT_MODELS`). Change one agent with `COACH_MODEL_ANALYST`, `COACH_MODEL_PLANNER`
+or `COACH_MODEL_CRITIC`, or all of them with `COACH_MODEL`. Each report records which models made it.
 
 Running it on your own computer instead (optional, for development):
 ```bash

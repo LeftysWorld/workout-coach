@@ -50,7 +50,7 @@ pytest -q                       # unit tests and the pipeline with the scripted 
 coach evals --scripted          # every scenario, scripted rules: must stay 14/14
 ```
 
-If you changed anything under `agents/`, `skills/`, `profile/` or `coach/score.py`, also run the real
+If you changed anything under `agents/`, `skills/`, `profile/`, `coach/score.py` or the models in `coach/llm.py`, also run the real
 evals (`coach evals --repeats 3` with `ANTHROPIC_API_KEY`) and, when there's history to replay,
 `coach backtest`. A change ships only if the scenarios still pass, the levels are stable across
 repeats, and the backtest is at least as good as the simple rule.
