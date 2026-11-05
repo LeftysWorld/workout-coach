@@ -16,9 +16,16 @@ APP_DEFAULTS = {
             "summary": "No lower-body training. Anything that loads the knee is out.",
             "banned_patterns": ["squat", "lunge", "leg_press", "leg_extension", "leg_curl", "step_up", "jump", "deadlift", "kettlebell_swing"],
             "banned_exercises": ["Weighted crunch", "Seated kettlebell twist", "Hollow-body hold", "Dead bug"],
-        }
+        },
+        {
+            "id": "left_shoulder",
+            "name": "Left shoulder",
+            "summary": "Left rotator cuff: no overhead pressing, Arnold press or incline DB press until cleared. Lateral raises stop at 12 reps (more causes soreness). Flat DB press and dips are pain-free. After 2–3 pain-free weeks, a low incline (20° or less, neutral grip, 10 reps or fewer) first, overhead pressing last.",
+            "banned_patterns": ["overhead_press", "incline_press"],
+            "banned_exercises": ["Arnold press", "Seated DB Arnold Press", "Seated DB Shoulder Press", "Incline DB Press"],
+        },
     ],
-    "equipment": ["dumbbells", "adjustable_bench", "incline_bench", "sit_up_bench", "single_cable", "lat_pulldown", "seated_cable_row", "chest_press_machine", "hammer_strength_back_extension", "hammer_strength_glute_ham", "rear_delt_machine"],
+    "equipment": ["dumbbells", "adjustable_bench", "incline_bench", "sit_up_bench", "single_cable", "lat_pulldown", "seated_cable_row", "chest_press_machine", "hammer_strength_back_extension", "hammer_strength_glute_ham", "rear_delt_machine", "assist_machine"],
     "one_cable_at_a_time": True,
     "weights_only": True,
     "steps": {"dumbbell": 5, "machine": 5, "cable": 5},
@@ -41,7 +48,7 @@ def test_the_apps_defaults_match_the_file():
     assert changed == {}, changed
     # The note-only knee_test limit and the knee note survive.
     ids = [x.id for x in eff.injuries_and_limits]
-    assert ids == ["knee", "knee_test"]
+    assert ids == ["knee", "left_shoulder", "knee_test"]
     assert eff.injuries_and_limits[0].note
 
 
@@ -59,8 +66,8 @@ def test_app_changes_win():
     assert eff.schedule.days == [1, 3, 5] and eff.schedule.days_per_week == 3
     assert eff.schedule.exercises_per_workout.target == 6
     assert "plank" in eff.banned_exercises
-    assert "overhead_press" in eff.banned_patterns
-    assert eff.injuries_and_limits[1].summary == "Left shoulder: No overhead pressing"
+    assert "vertical_push" in eff.banned_patterns  # the app's overhead_press, in the library's words
+    assert eff.injuries_and_limits[2].summary == "Left shoulder: No overhead pressing"
     assert set(changed) == {"equipment", "increments", "schedule", "injuries_and_limits"}
 
 
@@ -94,3 +101,11 @@ def test_prompts_show_settings_changes_only_where_the_agent_reads_them():
     tail = analyst.split("Updated in the app's Settings")[1]
     assert "injuries_and_limits" in tail and "equipment" not in tail
     assert "Updated in the app's Settings" not in system_prompt("planner")
+
+
+def test_small_steps_and_assist_from_the_app():
+    rules = copy.deepcopy(APP_DEFAULTS)
+    rules["iso_steps"] = {"dumbbell": 1.25, "cable": 2.5}
+    rules["assist_step"] = 10
+    eff, _ = apply_app_rules(load_athlete(), rules, "lb")
+    assert eff.increments.iso_dumbbell == 1.25 and eff.increments.iso_cable == 2.5 and eff.increments.assist == 10

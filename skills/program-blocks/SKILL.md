@@ -17,7 +17,8 @@ description: Four-week blocks, when a deload helps, and the evidence that justif
   - the goal changed
 - **A calendar trigger only raises the question.** After 2–3 blocks on one program, the analyst should
   check for the reasons above. No reasons, no new program.
-- **Deload (level 5)**: see the fatigue-and-deload skill. Evidence, not the calendar.
+- **Deload (level 5)**: see the fatigue-and-deload skill. The app schedules one every 8 weeks; between
+  those, only evidence calls for one.
 - **Rotating one exercise** (before it goes stale, not on a timer): after about 6–12 weeks on it
   (`weeks_on_exercise`), if it has stalled after reps and load were tried, or the notes say it's
   boring or uncomfortable, swap it for a variation in the same pattern. Keep the main lifts

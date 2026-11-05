@@ -7,6 +7,7 @@
 
 exercises:
   # ---------- Vertical pull (lats) ----------
+  - { name: Assisted Pull-Up, pattern: vertical_pull, muscles: [lats, biceps, upper_back], equipment: [assist_machine], knee: low, cables: 0, step: machine }
   - { name: Lat Pulldown, pattern: vertical_pull, muscles: [lats, biceps, upper_back], equipment: [lat_pulldown], knee: low, cables: 1, step: machine }
   - { name: Wide-Grip Lat Pulldown, pattern: vertical_pull, muscles: [lats, upper_back], equipment: [lat_pulldown], knee: low, cables: 1, step: machine }
   - { name: Close-Grip Lat Pulldown, pattern: vertical_pull, muscles: [lats, biceps], equipment: [lat_pulldown], knee: low, cables: 1, step: machine }
@@ -16,6 +17,7 @@ exercises:
 
   # ---------- Horizontal pull (back) ----------
   - { name: Seated Cable Row, pattern: horizontal_pull, muscles: [upper_back, lats, biceps], equipment: [seated_cable_row], knee: low, cables: 1, step: machine }
+  - { name: Chest-Supported Rear-Delt Row, pattern: rear_delt, muscles: [rear_delts, upper_back], equipment: [dumbbells, incline_bench], knee: none, cables: 0, step: dumbbell }
   - { name: Chest-Supported DB Row, pattern: horizontal_pull, muscles: [upper_back, lats, rear_delts], equipment: [dumbbells, incline_bench], knee: none, cables: 0, step: dumbbell }
   - { name: Single-Arm DB Row, pattern: horizontal_pull, muscles: [lats, upper_back], equipment: [dumbbells, adjustable_bench], knee: none, cables: 0, step: dumbbell }
   - { name: Seal Row (DB, flat bench), pattern: horizontal_pull, muscles: [upper_back, lats], equipment: [dumbbells, adjustable_bench], knee: none, cables: 0, step: dumbbell }
@@ -23,6 +25,7 @@ exercises:
   # ---------- Horizontal push (chest) ----------
   - { name: Flat DB Bench Press, pattern: horizontal_push, muscles: [chest, triceps, front_delts], equipment: [dumbbells, adjustable_bench], knee: low, cables: 0, step: dumbbell }
   - { name: Incline DB Press, pattern: incline_push, muscles: [upper_chest, front_delts, triceps], equipment: [dumbbells, incline_bench], knee: low, cables: 0, step: dumbbell }
+  - { name: Assisted Dip, pattern: dip, muscles: [chest, triceps, front_delts], equipment: [assist_machine], knee: low, cables: 0, step: machine }
   - { name: Machine Chest Press, pattern: horizontal_push, muscles: [chest, triceps], equipment: [chest_press_machine], knee: low, cables: 0, step: machine }
   - { name: Low-Incline DB Fly, pattern: chest_isolation, muscles: [chest], equipment: [dumbbells, incline_bench], knee: low, cables: 0, step: dumbbell }
   - { name: Flat DB Fly, pattern: chest_isolation, muscles: [chest], equipment: [dumbbells, adjustable_bench], knee: low, cables: 0, step: dumbbell }
@@ -38,6 +41,7 @@ exercises:
   - { name: Lean-Away DB Lateral Raise, pattern: lateral_raise, muscles: [side_delts], equipment: [dumbbells], knee: none, cables: 0, step: dumbbell }
   - { name: Seated Rear-Delt Fly, pattern: rear_delt, muscles: [rear_delts, upper_back], equipment: [dumbbells, incline_bench], knee: none, cables: 0, step: dumbbell }
   - { name: Reverse Pec Deck, pattern: rear_delt, muscles: [rear_delts, upper_back], equipment: [rear_delt_machine], knee: low, cables: 0, step: machine }
+  - { name: Cable External Rotation, pattern: rotator_cuff, muscles: [rotator_cuff, rear_delts], equipment: [single_cable], knee: none, cables: 1, step: cable }
   - { name: Cable Face Pull, pattern: rear_delt, muscles: [rear_delts, upper_back], equipment: [single_cable], knee: none, cables: 1, step: cable }
 
   # ---------- Arms ----------

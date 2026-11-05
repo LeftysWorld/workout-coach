@@ -4,6 +4,7 @@ import json
 import pytest
 
 from coach import metrics
+from coach.profile import apply_app_rules
 from coach.snapshot import SnapshotError, parse_snapshot
 from tests.conftest import FIXTURES
 
@@ -35,8 +36,9 @@ def test_epley_matches_the_app():
 
 
 def test_facts_mark_big_jumps_and_the_block(raw, athlete, library):
-    s = parse_snapshot(raw("small_dumbbell"))
-    f = metrics.build_facts(s, athlete, library)
+    data = raw("small_dumbbell")
+    s = parse_snapshot(data)
+    f = metrics.build_facts(s, apply_app_rules(athlete, data["training_rules"])[0], library)
     raise_ = next(e for e in f["exercises"] if e["exercise"] == "Seated Lateral Raise")
     assert raise_["jump_too_big"] is True and raise_["step_pct"] == 0.4
     assert f["block"]["block_number"] == 2 and f["block"]["week_in_block"] == 2

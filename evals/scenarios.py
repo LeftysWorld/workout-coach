@@ -53,7 +53,7 @@ SCENARIOS: list[Scenario] = [
     Scenario("pain_note", Expect(levels={4}, must_touch={CRUNCH: {"remove", "swap"}}, forbid_types_on={CRUNCH: {"load", "reps", "sets"}}, why="A knee-test exercise hurt twice: remove it.")),
     Scenario("stall", Expect(levels={0, 1, 3, 4}, forbid_types_on={LAT: {"load"}}, why="Lat pulldown flat for weeks after a weight increase: reps, a set or a swap; not more weight.")),
     Scenario("recent_program_change", Expect(levels={0, 1, 2, 3, 4}, why="The program changed two weeks ago: no new program now.")),
-    Scenario("small_dumbbell", Expect(levels={0, 1, 2, 3}, forbid_types_on={RAISE: {"load"}}, why="12.5 → 17.5 lb is a 40% jump: progress raises with reps or a set.")),
+    Scenario("small_dumbbell", Expect(levels={0, 1, 2, 3}, forbid_types_on={RAISE: {"load"}}, why="No 2.5 lb dumbbells: 12.5 → 17.5 lb is a 40% jump, so raises progress with a set or tempo, not load.")),
     Scenario("comment_conflict", Expect(levels={0, 1, 2, 3, 4}, forbid_names=["squat", "lunge", "leg press", "deadlift"], why="A note asks for squats; the knee rule wins.")),
     Scenario("block_end_stalled", Expect(levels={3, 4, 5, 6}, why="Twelve weeks in, at a block's end, most lifts flat for weeks: a real change is due.")),
     Scenario("too_little_data", Expect(levels={0}, recommendation="none", why="One week of data: too early to recommend anything.")),

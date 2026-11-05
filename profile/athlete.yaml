@@ -27,6 +27,15 @@ injuries_and_limits:
       - Hollow-body hold
       - Dead bug
     note: Weighted crunches, seated KB twists and hollow-body holds all bothered the leg. Can't do dead bugs yet.
+  - id: left_shoulder
+    summary: "Left rotator cuff: no overhead pressing, Arnold press or incline DB press until cleared. Lateral raises stop at 12 reps (more causes soreness). Flat DB press and dips are pain-free. After 2–3 pain-free weeks, a low incline (20° or less, neutral grip, 10 reps or fewer) first, overhead pressing last."
+    banned_patterns: [vertical_push, incline_push]
+    banned_exercises:
+      - Arnold press
+      - Seated DB Arnold Press
+      - Seated DB Shoulder Press
+      - Incline DB Press
+    note: "Pain check after each workout (0–10). Up to about 3/10 during a lift that's gone by the next morning is OK. Sharper pain, or worse the next day: stop or swap the exercise."
   - id: knee_test
     summary: Exercises named "(knee test)" are on trial. Any pain flag on one means remove it, never progress it.
 
@@ -49,6 +58,7 @@ equipment:
   - hammer_strength_back_extension
   - hammer_strength_glute_ham
   - rear_delt_machine
+  - assist_machine
 
 increments:
   # The smallest jump available. A jump bigger than max_jump_pct of the current weight is not allowed:
@@ -57,6 +67,12 @@ increments:
   machine: 5
   cable: 5
   max_jump_pct: 0.10
+  # Isolation lifts use small steps; a small step bigger than iso_max_jump_pct of the weight is tempo
+  # instead (3 s down, 1 s pause). Assisted lifts: this much less assist per step.
+  iso_dumbbell: 2.5
+  iso_cable: 2.5
+  iso_max_jump_pct: 0.25
+  assist: 5
 
 changes:
   # Mid-block, a week changes a few things at most, so you can tell what worked.

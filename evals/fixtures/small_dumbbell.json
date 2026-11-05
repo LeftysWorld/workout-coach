@@ -5730,5 +5730,11 @@
  },
  "body_measurements": [],
  "decisions": [],
- "since_last": null
+ "since_last": null,
+ "training_rules": {
+  "iso_steps": {
+   "dumbbell": 5,
+   "cable": 5
+  }
+ }
 }

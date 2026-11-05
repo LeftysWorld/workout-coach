@@ -27,6 +27,8 @@ interface Opts {
   /** The whole workout's effort, 1–10, by week. */
   sessionEffort?: (week: number) => number | null;
   structuralChangeWeeksAgo?: number;
+  /** Settings → Training as the app would send them alongside the snapshot (the coach lays them over athlete.yaml). */
+  trainingRules?: Record<string, unknown>;
   reports?: HistoryInput['reports'];
 }
 
@@ -76,7 +78,7 @@ function build(o: Opts) {
     exerciseLogs,
   };
   const snap = buildSnapshot(input, { asOf: o.asOf, months: 6 });
-  writeFileSync(`${OUT}/${o.name}.json`, JSON.stringify(snap, null, 1));
+  writeFileSync(`${OUT}/${o.name}.json`, JSON.stringify(o.trainingRules ? { ...snap, training_rules: o.trainingRules } : snap, null, 1));
   return snap;
 }
 
@@ -127,8 +129,9 @@ save({ name: 'pain_note', weeks: 6, asOf: AS_OF, workouts: split({ 'Sit-Up Bench
 save({ name: 'stall', weeks: 7, asOf: AS_OF, workouts: split({ 'Lat Pulldown': (w) => (w === 0 ? { w: 95, reps: [10, 10, 9, 9], effort: 9 } : { w: 100, reps: [9, 9, 8, 8], effort: 9 }) }) });
 // 5. Program reshaped two weeks ago; some lifts flat since.
 save({ name: 'recent_program_change', weeks: 6, asOf: AS_OF, workouts: split({ 'Lat Pulldown': flat(100, [9, 9, 8, 8], 1) }), structuralChangeWeeksAgo: 2 });
-// 6. Lateral raises at the top of the range at 12.5 lb: the next dumbbell is a 40% jump.
-save({ name: 'small_dumbbell', weeks: 6, asOf: AS_OF, workouts: split({ 'Seated Lateral Raise': (w) => (w >= 4 ? { w: 12.5, reps: [15, 15, 15], effort: 7 } : { w: 12.5, reps: [13, 12, 12], effort: 7 }) }) });
+// 6. Lateral raises at the top of the range at 12.5 lb in a gym whose dumbbells go up 5 lb at a time
+//    (no 2.5 lb steps): the next dumbbell is a 40% jump, so a set or tempo, not load.
+save({ name: 'small_dumbbell', weeks: 6, asOf: AS_OF, trainingRules: { iso_steps: { dumbbell: 5, cable: 5 } }, workouts: split({ 'Seated Lateral Raise': (w) => (w >= 4 ? { w: 12.5, reps: [15, 15, 15], effort: 7 } : { w: 12.5, reps: [13, 12, 12], effort: 7 }) }) });
 // 7. A plan note asking for squats (the knee rule must win).
 save({ name: 'comment_conflict', weeks: 6, asOf: AS_OF, workouts: split(), notes: { '5:1': 'Feeling great. Add goblet squats next week, I want legs.' } });
 // 8. Twelve weeks on the program, at a block's end, most lifts flat for 4+ weeks.

@@ -1,39 +1,48 @@
 ---
 name: progression
-description: How to read strength progress from what was actually done (weight, reps, effort 1–10), and when to add weight, add reps, hold, or reduce.
+description: How each kind of lift progresses (compound, isolation, assisted, bodyweight), effort targets, stalls, and when to add reps, a set, load, or hold.
 ---
-## Progression, from what was actually done
+## Progression, by kind of lift
 
-**Effort is the key.** Each exercise is rated 1–10 by reps left on the last set: 10 = none left,
-9 = one, 8 = two, 7 = three, 6 or less = plenty. Reps alone can't tell an easy 12 from an all-out
-12; reps plus effort can. Most working sets should land at 7–9.
+These are the person's own rules. The app uses the same rules for each workout's next targets, so
+a change you suggest should be the next step these rules give, not a different idea.
 
-**Add weight** (one smallest step) when, at the same weight, the last two workouts were rated 8 or
-lower and the reps held or rose, and either the last one was 7 or lower (3+ left) or the reps have
-climbed since that weight started (`ready_to_add_weight` says this). One rated 6 or lower: the
-weight is clearly too light.
+**Every exercise has a class** (`class` in the facts):
+- **compound**: presses, rows, pulldowns (flat DB bench, machine press, seated cable row).
+- **isolation**: one joint (curls, triceps work, raises, flies, rear-delt work, straight-arm pulldown,
+  external rotation).
+- **assisted**: assisted pull-ups and dips. The logged weight is the assist: **lower is harder**.
+- **bodyweight**: back extension, glute-ham, crunches.
 
-**Add reps first** when the next weight is a big jump (`jump_too_big: true`, e.g. 12.5 → 17.5 lb is
-40%): more reps per set, then a set, then the weight. Never jump more than about 10%.
+**How each moves forward:**
+- **Compound: reps, then load.** When every set reaches the top of the rep range, one standard step
+  (5 lb dumbbells, one plate on a machine or cable) and back to the bottom of the range.
+- **Isolation: reps, then a set, then load.** Every set at the top: add a set (up to 4). All sets at
+  the top again: the small step (2.5 lb) and back to the original sets. If the small step is more
+  than 25% of the weight (`jump_too_big`), slow the tempo instead (3 seconds down, 1 second pause).
+- **Assisted: 5 lb less assist** once every set reaches the top. Never suggest more assist as
+  progress; more assist only eases off (pain, or reps falling hard).
+- **Bodyweight:** every set at the top, add a plate.
+- **More than one day:** a load increase on one day carries to the same lift on the other days.
+  Not for assisted lifts: each day keeps its own assist.
+- **Failed jump:** if the first set after a jump falls below the bottom of the range, go back to the
+  old weight and build reps again.
 
-**Hold** when reps are rising at an 8–9: progress is happening, let it continue. Hold when
-the ratings are missing: no rating, no new weight.
+**Effort targets** (effort 1–10 by reps left on the last set: 10 = none left, 9 = one, 8 = two, 7 = three):
+- compound and assisted: 8–9 (1–2 reps left).
+- isolation: 8–10 (0–2 left); the last set can go to 10.
+- Lateral raises stay at 8–12 reps, never more than 12 (the shoulder rule). Progress them by sets,
+  tempo or the small step, never by reps past 12.
+- Rated 6 or lower: the weight is too light; rated 10 with reps falling: too heavy (`too_heavy`).
+  Never add weight to a lift rated 10 with falling reps.
 
-**Reduce** (one step down, or fewer reps) when the weight is too heavy: at the same weight the reps
-fell from one workout to the next and the last was rated 9–10 (`too_heavy`). Also when a lift was
-rated 10 with reps below where they were: the weight is above what they can do with good form.
-Never add weight to a lift rated 10 last time.
+**Stall:** no more reps and no more load for 2 sessions in a row on the same lift. One stalled lift
+needs a change to that lift (a set, tempo, or a swap in the same pattern), not a deload. Several at
+once: see fatigue-and-deload.
 
-**Getting harder** (`getting_harder`): the same weight and reps rated higher than before. One lift:
-watch it. Several at once: that's fatigue, not a weak lift (see fatigue-and-deload).
+**Hold** when reps are rising at an 8–9 (progress is happening), and when ratings are missing.
 
-**Estimated max** (`e1rm`, Epley from weight × reps; `e1rm_adj` adds the reps left): a rough guide,
-noisy week to week. Trust trends over 3+ weeks. Up = progressing. Flat for 3+ weeks with 3+ workouts
-= stalled (`stalled: true`). Down 2+ weeks = regressing: look at consistency, recovery and notes first.
+**Estimated max** (`e1rm`): a rough guide, noisy week to week. Trust trends over 3+ weeks.
 
-**Beginners progress fast** at first: most lifts move every week or two. A lift flat for 3+ weeks
-despite steady training has stalled.
-
-**Losing weight changes the bar.** While body weight drops (trend below about -0.5 lb a week),
-holding strength is a good result and slow gains are normal. Don't pile on volume to force progress
-during a cut.
+**Losing weight changes the bar.** During the cut, holding strength is a good result and slow gains
+are normal. Don't pile on volume to force progress.

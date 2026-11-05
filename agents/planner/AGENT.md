@@ -41,8 +41,9 @@ The hold option has `id: "hold"`, `change_level: 0` and no changes.
 - Make the options genuinely different in size: e.g. hold · a small change · a bigger one.
 - Respect the rules in the athlete profile. The governor rejects anything that breaks them and you
   get one or two chances to fix it, so get it right the first time:
-  - one smallest weight step at most, and only when it's no more than 10% of the current weight
-    (`jump_too_big: true` means: add reps or a set instead)
+  - one weight step at most, the step for its class (`weight_step`: 5 lb for compound lifts, 2.5 lb
+    for isolation). For isolation, `jump_too_big: true` means: a set or slower tempo instead
+  - assisted lifts progress by less assist (a lower number), never more
   - never more weight on a lift rated 10 last time, or one that's `too_heavy`
   - at most one exercise added, removed or swapped per week, unless this is a block's last week
   - no new program within 4 weeks of the last one

@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import re
 from functools import lru_cache
 from pathlib import Path
 from typing import Literal, Optional
@@ -52,6 +53,13 @@ class Increments(BaseModel):
     machine: float = 5
     cable: float = 5
     max_jump_pct: float = 0.10
+    # Isolation lifts move in small steps (2.5 lb dumbbells, the smallest cable plate). A small step
+    # bigger than iso_max_jump_pct of the weight is tempo instead (10 → 12.5 lb is fine, 5 → 7.5 isn't).
+    iso_dumbbell: float = 2.5
+    iso_cable: float = 2.5
+    iso_max_jump_pct: float = 0.25
+    # Assisted lifts: this much less assist per step (lower assist is harder).
+    assist: float = 5
 
 
 class ChangeLimits(BaseModel):
@@ -119,6 +127,47 @@ def load_library(path: str | None = None) -> Library:
     return Library.model_validate(yaml.safe_load(Path(path or PROFILE_DIR / "exercise_library.yaml").read_text()))
 
 
+ExerciseClass = Literal["compound", "isolation", "assisted", "bodyweight"]
+
+# The same words as the app's exerciseClass (packages/core/src/progression.ts), so the app's next
+# targets and the coach agree on what kind of lift each exercise is.
+_ISOLATION = re.compile(r"curl|pushdown|push-down|kick-?back|triceps|tricep|extension(?!.*back)|raise|fly|flye|rear[- ]delt|straight[- ]arm|external rotation|internal rotation|face pull|shrug|pullover", re.I)
+_BODYWEIGHT = re.compile(r"crunch|sit-?up|back extension|hip extension|glute[- /]?ham|plank|hanging leg|leg raise", re.I)
+_COMPOUND = re.compile(r"press|row|pull-?down|pull-?up|chin-?up|dip|squat|deadlift|lunge", re.I)
+
+
+def exercise_class(name: str) -> ExerciseClass:
+    """Compound, isolation, assisted or bodyweight, from the name (the app's rule 1)."""
+    if re.search(r"assisted", name, re.I):
+        return "assisted"
+    if _BODYWEIGHT.search(name):
+        return "bodyweight"
+    if _ISOLATION.search(name):
+        return "isolation"
+    if _COMPOUND.search(name):
+        return "compound"
+    return "isolation"
+
+
+def load_rule(name: str, ex: Optional[LibraryExercise], athlete: Athlete) -> tuple[float, Optional[float]]:
+    """The load step for an exercise and the largest jump allowed as a share of its weight (None: no limit).
+
+    Compound and bodyweight: one standard step (5 lb dumbbells, one plate), no percentage limit; that's the
+    whole step. Isolation: the small step, at most iso_max_jump_pct (bigger means tempo, not load). Assisted:
+    the assist step (adding assist is easing off, so it's never an increase)."""
+    cls = exercise_class(name)
+    inc = athlete.increments
+    if cls == "assisted":
+        return inc.assist, None
+    if cls == "isolation":
+        if ex is not None and ex.step == "machine":
+            return inc.machine, inc.iso_max_jump_pct
+        if ex is not None and ex.step == "cable":
+            return inc.iso_cable, inc.iso_max_jump_pct
+        return inc.iso_dumbbell, inc.iso_max_jump_pct
+    return step_for(ex, athlete), None
+
+
 def step_for(ex: Optional[LibraryExercise], athlete: Athlete) -> float:
     """The smallest weight jump for an exercise (5 lb dumbbells, one plate on a machine)."""
     if ex is None or ex.step == "dumbbell":
@@ -128,6 +177,10 @@ def step_for(ex: Optional[LibraryExercise], athlete: Athlete) -> float:
     if ex.step == "cable":
         return athlete.increments.cable
     return 0.0
+
+
+# App pattern id → library pattern, where the two differ.
+APP_PATTERNS = {"overhead_press": "vertical_push", "incline_press": "incline_push"}
 
 
 def apply_app_rules(athlete: Athlete, rules: Optional[dict], units: Optional[str] = None) -> tuple[Athlete, dict]:
@@ -145,6 +198,7 @@ def apply_app_rules(athlete: Athlete, rules: Optional[dict], units: Optional[str
     r = rules if isinstance(rules, dict) else {}
 
     if isinstance(r.get("limits"), list):
+        # The app names a few movement patterns differently from the library.
         file_limits = {x["id"]: x for x in base["injuries_and_limits"]}
         app = []
         for x in r["limits"]:
@@ -163,7 +217,7 @@ def apply_app_rules(athlete: Athlete, rules: Optional[dict], units: Optional[str
                 {
                     "id": str(x["id"]),
                     "summary": text,
-                    "banned_patterns": [str(p) for p in x.get("banned_patterns") or []],
+                    "banned_patterns": list(dict.fromkeys(APP_PATTERNS.get(str(p), str(p)) for p in x.get("banned_patterns") or [])),
                     "banned_exercises": [str(e) for e in x.get("banned_exercises") or []],
                     "note": file_limits.get(str(x["id"]), {}).get("note", ""),
                 }
@@ -183,6 +237,14 @@ def apply_app_rules(athlete: Athlete, rules: Optional[dict], units: Optional[str
         v = steps.get(key)
         if isinstance(v, (int, float)) and not isinstance(v, bool) and v > 0:
             data["increments"][key] = float(v)
+    iso = r.get("iso_steps") if isinstance(r.get("iso_steps"), dict) else {}
+    for key in ("dumbbell", "cable"):
+        v = iso.get(key)
+        if isinstance(v, (int, float)) and not isinstance(v, bool) and v > 0:
+            data["increments"][f"iso_{key}"] = float(v)
+    a = r.get("assist_step")
+    if isinstance(a, (int, float)) and not isinstance(a, bool) and a > 0:
+        data["increments"]["assist"] = float(a)
     jump = r.get("max_jump_pct")
     if isinstance(jump, (int, float)) and not isinstance(jump, bool) and 0 < jump <= 1:
         data["increments"]["max_jump_pct"] = float(jump)

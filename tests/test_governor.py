@@ -102,3 +102,19 @@ def test_a_lighter_week_passes_mid_block(raw, athlete, library):
     assert not block["at_block_end"]
     lighter = [ch(w.title, e.name, "deload", {"sets": e.sets}, {"sets": e.sets - 1}) for w in s.program.workouts for e in w.exercises if e.sets > 1]
     assert check(opt(5, *lighter), s, athlete, library, block) == []
+
+
+def test_isolation_moves_in_small_steps(raw, athlete, library):
+    # 2.5 lb dumbbells: 12.5 → 15 is one small step (20%), fine for an isolation lift.
+    s, block = ctx(raw, athlete, library, "small_dumbbell")
+    v = codes(check(opt(2, ch(MON, "Seated Lateral Raise", "load", {"weight": 12.5}, {"weight": 15})), s, athlete, library, block))
+    assert not {"load_jump_pct", "load_jump_too_big"} & v
+
+
+def test_the_left_shoulder_rules_out_overhead_and_incline_pressing(raw, athlete, library):
+    s, block = ctx(raw, athlete, library)
+    v = check(opt(4, ch(MON, "Seated Lateral Raise", "swap", {"name": "Seated Lateral Raise"}, {"name": "Seated DB Shoulder Press"})), s, athlete, library, block)
+    assert {"banned_pattern", "banned_exercise"} <= codes(v)
+    assert not {"knee"} & codes(v)
+    v = codes(check(opt(4, ch(MON, "Flat DB Bench Press", "swap", {"name": "Flat DB Bench Press"}, {"name": "Incline DB Press"})), s, athlete, library, block))
+    assert "banned_pattern" in v

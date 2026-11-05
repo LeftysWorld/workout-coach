@@ -11,7 +11,7 @@ from typing import Optional
 
 from .decision import TYPE_LEVEL, Change, Option
 from .metrics import estimate_minutes, exercise_signals
-from .profile import Athlete, Library, step_for
+from .profile import Athlete, Library, exercise_class, load_rule
 from .snapshot import Snapshot
 
 STRUCTURAL = {"swap", "add", "remove"}
@@ -108,13 +108,18 @@ def check(option: Option, snapshot: Snapshot, athlete: Athlete, library: Library
         # Load: one smallest step, and no jump bigger than the limit (add reps or a set instead).
         if c.type == "load" and current is not None and "weight" in to:
             lib = library.find(c.exercise)
-            step = step_for(lib, athlete) or athlete.increments.dumbbell
+            step, max_pct = load_rule(c.exercise, lib, athlete)
+            step = step or athlete.increments.dumbbell
             old, new = current.weight, to["weight"]
-            if old and new > old:
+            if old and new > old and exercise_class(c.exercise) == "assisted":
+                out.append(Violation("assist_up", f"{c.exercise}: more assist ({old:g} → {new:g}) makes it easier. Progress is less assist; keep or lower it.", i))
+            elif old and new > old:
                 if new - old > step + 1e-9:
                     out.append(Violation("load_jump_too_big", f"{c.exercise}: {old:g} → {new:g} is more than one {step:g} {athlete.units} step.", i))
-                if (new - old) / old > athlete.increments.max_jump_pct + 1e-9:
-                    out.append(Violation("load_jump_pct", f"{c.exercise}: {old:g} → {new:g} is a {round((new - old) / old * 100)}% jump (limit {round(athlete.increments.max_jump_pct * 100)}%). Add reps or a set instead.", i))
+                if max_pct is not None and (new - old) / old > max_pct + 1e-9:
+                    out.append(Violation("load_jump_pct", f"{c.exercise}: {old:g} → {new:g} is a {round((new - old) / old * 100)}% jump (limit {round(max_pct * 100)}%). Add a set or slow the tempo instead.", i))
+            elif old and new < old and exercise_class(c.exercise) == "assisted" and old - new > step + 1e-9:
+                out.append(Violation("load_jump_too_big", f"{c.exercise}: {old:g} → {new:g} assist is more than one {step:g} {athlete.units} step.", i))
 
         if c.type in {"reps", "sets", "swap", "add", "deload"}:
             sets = to.get("sets", current.sets if current else 3)
@@ -200,8 +205,13 @@ def _allowed(name: str, athlete: Athlete, library: Library, i: int) -> list[Viol
     out: list[Violation] = []
     if _key(name) in athlete.banned_exercises:
         out.append(Violation("banned_exercise", f"{name} is on your banned list.", i))
-    if lib.pattern in athlete.banned_patterns or lib.knee == "loads":
+    if lib.knee == "loads" or any(lib.pattern in limit.banned_patterns and limit.id == "knee" for limit in athlete.injuries_and_limits):
         out.append(Violation("knee", f"{name} loads the knee ({lib.pattern}).", i))
+    else:
+        for limit in athlete.injuries_and_limits:
+            if lib.pattern in limit.banned_patterns:
+                out.append(Violation("banned_pattern", f"{name} is ruled out ({lib.pattern}): {limit.summary}", i))
+                break
     if athlete.preferences.one_cable_at_a_time and lib.cables > 1:
         out.append(Violation("two_cables", f"{name} needs {lib.cables} cable stacks; only one is free.", i))
     missing = [e for e in lib.equipment if e not in athlete.equipment]

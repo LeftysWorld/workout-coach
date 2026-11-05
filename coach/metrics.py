@@ -17,7 +17,7 @@ from collections import defaultdict
 from datetime import date, timedelta
 from typing import Any, Optional
 
-from .profile import Athlete, Library, step_for
+from .profile import Athlete, Library, exercise_class, load_rule
 from .snapshot import ExerciseMetrics, Snapshot, SnapshotError
 
 DONE = {"done", "partial", "minimum"}
@@ -251,19 +251,21 @@ def build_facts(s: Snapshot, athlete: Athlete, library: Library) -> dict:
     exercises = []
     for m in s.metrics.exercises:
         lib = library.find(m.exercise)
-        step = step_for(lib, athlete)
+        step, max_pct = load_rule(m.exercise, lib, athlete)
+        max_pct = athlete.increments.max_jump_pct if max_pct is None else max_pct
         exercises.append(
             {
                 **m.model_dump(exclude_none=True, exclude={"recent"}),
                 "recent": [r.model_dump(exclude_none=True, exclude={"weights"}) for r in m.recent[-4:]],
                 **signals[m.exercise],
+                "class": exercise_class(m.exercise),
                 "in_library": lib is not None,
                 "pattern": lib.pattern if lib else None,
                 "muscles": lib.muscles if lib else [],
                 "trial": bool(lib and lib.trial) or "(knee test)" in m.exercise.lower(),
                 "weight_step": step or None,
                 "step_pct": round(step / m.last_weight, 3) if step and m.last_weight else None,
-                "jump_too_big": bool(step and m.last_weight and step / m.last_weight > athlete.increments.max_jump_pct),
+                "jump_too_big": bool(step and m.last_weight and exercise_class(m.exercise) in ("isolation",) and step / m.last_weight > max_pct),
             }
         )
     recent = [x for x in s.sessions if d(x.date) >= as_of - timedelta(days=13)]
