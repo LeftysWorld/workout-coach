@@ -48,6 +48,8 @@ class Preferences(BaseModel):
     barbells_allowed: bool = False
     one_cable_at_a_time: bool = True
     keep_duration_steady: bool = True
+    # Most reps on any lift except bodyweight ones (the app's Settings → Training → Most reps). 0 = no cap.
+    max_reps: int = 0
 
 
 class Increments(BaseModel):
@@ -141,6 +143,8 @@ _COMPOUND = re.compile(r"press|row|pull-?down|pull-?up|chin-?up|dip|squat|deadli
 def rep_cap(name: str, athlete: "Athlete") -> Optional[int]:
     """The lowest rep cap any limit puts on this exercise, or None."""
     caps = [int(c["max"]) for limit in athlete.injuries_and_limits for c in limit.rep_caps if str(c.get("match", "")).lower() in name.lower()]
+    if athlete.preferences.max_reps > 0 and exercise_class(name) != "bodyweight":
+        caps.append(athlete.preferences.max_reps)
     return min(caps) if caps else None
 
 
@@ -240,6 +244,9 @@ def apply_app_rules(athlete: Athlete, rules: Optional[dict], units: Optional[str
     for key in ("one_cable_at_a_time", "weights_only"):
         if isinstance(r.get(key), bool):
             data["preferences"][key] = r[key]
+    mr = r.get("max_reps")
+    if isinstance(mr, (int, float)) and not isinstance(mr, bool) and mr >= 0:
+        data["preferences"]["max_reps"] = int(mr)
 
     steps = r.get("steps") if isinstance(r.get("steps"), dict) else {}
     for key in ("dumbbell", "machine", "cable"):

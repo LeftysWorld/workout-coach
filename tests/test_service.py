@@ -89,7 +89,7 @@ def test_only_the_scheduler_can_start_a_run(monkeypatch, raw):
 
 def test_the_vercel_config_runs_weekly_from_the_entrypoint():
     cfg = json.loads((ROOT / "vercel.json").read_text())
-    assert cfg["crons"] == [{"path": "/api/run", "schedule": "0 4 * * 6"}]
+    assert cfg["crons"] == [{"path": "/api/run", "schedule": "0 2 * * 1"}]
     import tomllib
 
     assert tomllib.loads((ROOT / "pyproject.toml").read_text())["tool"]["vercel"]["entrypoint"] == "api.run:handler"

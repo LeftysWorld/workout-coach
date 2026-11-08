@@ -104,7 +104,7 @@ def main(argv: list[str] | None = None) -> int:
     h.add_argument("--format", choices=["md", "json"], default="md")
     h.set_defaults(fn=cmd_history)
 
-    b = sub.add_parser("backtest", help="replay past Fridays against the simple rule")
+    b = sub.add_parser("backtest", help="replay past Sundays against the simple rule")
     b.add_argument("--from", dest="start", required=True)
     b.add_argument("--to", dest="end", required=True)
     b.add_argument("--months", type=int, default=6)

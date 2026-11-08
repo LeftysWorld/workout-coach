@@ -1,7 +1,7 @@
 """The workout coach on Vercel: /api/run runs one weekly review and saves the report to the app.
 
 Two ways to start a run, nothing else:
-- Vercel's scheduler, every Friday night (vercel.json → crons), with the CRON_SECRET it holds.
+- Vercel's scheduler, every Sunday night (vercel.json → crons: Monday 02:00 UTC, Sunday 9 pm Eastern), with the CRON_SECRET it holds.
   Settings → Cron Jobs → Run does the same, any time.
 - "Run the coach now" in the app: a POST with your sign-in. The coach asks the app whose data your
   sign-in opens and whose its own key opens, and runs only when they're the same person.

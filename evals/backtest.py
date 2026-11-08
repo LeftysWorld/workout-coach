@@ -1,9 +1,9 @@
-"""Replay past Fridays: what would the coach have said, what would the simple rule have said, and
+"""Replay past Sundays: what would the coach have said, what would the simple rule have said, and
 what actually happened next?
 
     coach backtest --from 2026-11-06 --to 2027-01-29
 
-For each Friday it asks the app for the snapshot *as of that day* (the app can rebuild any past
+For each Sunday it asks the app for the snapshot *as of that day* (the app can rebuild any past
 date), runs the pipeline in dry-run mode, and compares with the baseline: double progression, the rule
 the app already uses (top of the range on every set → one step up), applied to every exercise.
 
@@ -33,9 +33,9 @@ from coach.snapshot import Snapshot, parse_snapshot
 OUT = Path("out")
 
 
-def fridays(start: str, end: str) -> list[str]:
+def sundays(start: str, end: str) -> list[str]:
     d = date.fromisoformat(start)
-    d += timedelta(days=(4 - d.weekday()) % 7)
+    d += timedelta(days=(6 - d.weekday()) % 7)
     out = []
     while d <= date.fromisoformat(end):
         out.append(d.isoformat())
@@ -71,19 +71,19 @@ def main(start: str, end: str, scripted: bool = False, months: int = 6) -> int:
     else:
         from coach.llm import AnthropicLLM as make  # type: ignore[assignment]
     rows = []
-    for friday in fridays(start, end):
-        raw = client.history(friday, months)
+    for sunday in sundays(start, end):
+        raw = client.history(sunday, months)
         snap = parse_snapshot(raw)
         state = run_plain(Context(llm=make(), athlete=load_athlete(), library=load_library(), snapshot_json=raw))
         d = state["decision"]
         coach = {c.exercise: c.type for c in d.changes}
         base = baseline(snap)
-        later_day = (date.fromisoformat(friday) + timedelta(days=14)).isoformat()
+        later_day = (date.fromisoformat(sunday) + timedelta(days=14)).isoformat()
         later = parse_snapshot(client.history(later_day, months)) if later_day <= date.today().isoformat() else None
         pain = {m.exercise for m in snap.metrics.exercises if m.pain_flags_4w > 0}
         rows.append(
             {
-                "as_of": friday,
+                "as_of": sunday,
                 "coach": {"recommendation": d.recommendation, "level": d.change_level, "changes": coach},
                 "baseline": {k: v for k, v in base.items() if v != "hold"},
                 "agreement": round(sum(1 for k, v in base.items() if coach.get(k, "hold") == v) / len(base), 3) if base else None,
@@ -92,7 +92,7 @@ def main(start: str, end: str, scripted: bool = False, months: int = 6) -> int:
                 "score_2w_later": week_score(later)["score"] if later else None,
             }
         )
-        print(f"{friday}: coach {d.recommendation} L{d.change_level} ({len(coach)} changes) · rule {len(rows[-1]['baseline'])} · agreement {rows[-1]['agreement']} · score {rows[-1]['score_now']} → {rows[-1]['score_2w_later']}")
+        print(f"{sunday}: coach {d.recommendation} L{d.change_level} ({len(coach)} changes) · rule {len(rows[-1]['baseline'])} · agreement {rows[-1]['agreement']} · score {rows[-1]['score_now']} → {rows[-1]['score_2w_later']}")
     after_change = [r for r in rows if r["coach"]["changes"] and r["score_2w_later"] is not None]
     summary = {
         "reward": REWARD_VERSION,

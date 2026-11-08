@@ -1,6 +1,6 @@
 # workout-coach
 
-A weekly AI review of my workouts. Every Friday night (on Vercel) it reads my workout history from the
+A weekly AI review of my workouts. Every Sunday night (on Vercel) it reads my workout history from the
 [six-month-plan](https://github.com/LeftysWorld/six-month-plan) app, decides whether next week's
 workouts should change (often: no), and writes a report: what's going on, what to change or not,
 and why. It never changes my plan. I read the report and decide.
@@ -8,8 +8,8 @@ and why. It never changes my plan. I read the report and decide.
 ## How it works
 
 ```
-Friday night (Vercel cron → api/run.py)
-  load      the history snapshot, as of Friday, from the app's workout-agent function
+Sunday night (Vercel cron → api/run.py)
+  load      the history snapshot, as of Sunday, from the app's workout-agent function
   check     recompute key numbers; stop if the app's math and ours disagree
   facts     the compact view the agents read (code computes every number)
   gate      fewer than two weeks of data → "no recommendation", agents skipped
@@ -45,7 +45,7 @@ workouts (plans and their history, sets, effort, pain, notes), body weight and b
 ## Set up on Vercel (no command line, no GitHub)
 
 The coach runs as its own small Vercel project: one endpoint (`api/run.py`) that runs the whole
-pipeline and saves the report to the app, called by Vercel's scheduler every Friday at 11 pm
+pipeline and saves the report to the app, called by Vercel's scheduler every Sunday at 9 pm
 Eastern (`vercel.json` → `crons`; the function is `[tool.vercel] entrypoint` in `pyproject.toml`). The app's **Settings → Workout coach → Set up the weekly coach**
 walks through it with Copy buttons:
 
@@ -91,7 +91,7 @@ coach run                                 # dry run: writes out/report-<date>.md
 | `coach history --format md` | Print exactly what the agent can see |
 | `coach evals --scripted` | Every scenario with the scripted rules (CI runs this) |
 | `coach evals --repeats 3` | Every scenario with the real agents, three times each (stability) |
-| `coach backtest --from 2026-11-06 --to 2027-01-29` | Replay past Fridays against the simple rule |
+| `coach backtest --from 2026-11-06 --to 2027-01-29` | Replay past Sundays against the simple rule |
 
 To act on a report: open it in the app (Review → Workout report), copy it with **Copy for chat**, paste
 it into Claude and ask for the changes. Then mark the report **Applied**, **Partly** or **Declined**.

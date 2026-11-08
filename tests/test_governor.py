@@ -126,3 +126,12 @@ def test_rep_caps_from_a_limit_are_enforced(raw, athlete, library):
     assert "rep_cap" in v
     v = codes(check(opt(1, ch(MON, "Seated Lateral Raise", "reps", {"reps_max": 15}, {"reps_min": 10, "reps_max": 12})), s, athlete, library, block))
     assert "rep_cap" not in v
+
+
+def test_the_apps_rep_cap_covers_every_lift_but_bodyweight(raw, athlete, library):
+    from coach.profile import rep_cap
+
+    capped = athlete.model_copy(update={"preferences": athlete.preferences.model_copy(update={"max_reps": 12})})
+    assert rep_cap("Low-Incline DB Fly", capped) == 12 and rep_cap("Hammer Strength Back Extension", capped) is None
+    s, block = ctx(raw, capped, library)
+    assert "rep_cap" in codes(check(opt(1, ch(MON, "Flat DB Bench Press", "reps", {"reps_max": 12}, {"reps_max": 15})), s, capped, library, block))
