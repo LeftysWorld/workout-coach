@@ -75,10 +75,12 @@ def test_the_real_client_asks_each_agent_on_its_own_model(monkeypatch):
 
     class Messages:
         # Only what the current SDK takes: an extra argument such as temperature is a TypeError there.
-        def create(self, *, model, max_tokens, system, messages):
+        def create(self, *, model, max_tokens, system, messages, tools, tool_choice):
             asked.append(model)
-            text = '{"chosen_option_id": "hold", "verdict": "accept"}'
-            return types.SimpleNamespace(content=[types.SimpleNamespace(text=text)])
+            assert tool_choice == {"type": "tool", "name": tools[0]["name"]} and tools[0]["input_schema"]["type"] == "object"
+            answer = {"chosen_option_id": "hold", "verdict": "accept"} if len(messages) > 1 else {"chosen_option_id": "hold", "verdict": "maybe"}
+            block = types.SimpleNamespace(type="tool_use", id=f"t{len(asked)}", name="answer", input=answer)
+            return types.SimpleNamespace(content=[block], stop_reason="tool_use")
 
     fake = types.ModuleType("anthropic")
     fake.Anthropic = lambda: types.SimpleNamespace(messages=Messages())
@@ -86,5 +88,6 @@ def test_the_real_client_asks_each_agent_on_its_own_model(monkeypatch):
     llm = AnthropicLLM(models={"analyst": "claude-opus-5-5", "planner": "claude-sonnet-5-5", "critic": "claude-opus-5-5"})
     llm.complete_json(agent="critic", system="s", user="u", schema=CriticVerdict)
     llm.complete_json(agent="planner", system="s", user="u", schema=CriticVerdict)
-    assert asked == ["claude-opus-5-5", "claude-sonnet-5-5"]
+    # Each first answer is invalid ("maybe"), so each agent is asked once more with the error.
+    assert asked == ["claude-opus-5-5", "claude-opus-5-5", "claude-sonnet-5-5", "claude-sonnet-5-5"]
     assert "analyst=claude-opus-5-5" in llm.model
