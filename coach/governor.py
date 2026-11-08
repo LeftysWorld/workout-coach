@@ -11,7 +11,7 @@ from typing import Optional
 
 from .decision import TYPE_LEVEL, Change, Option
 from .metrics import estimate_minutes, exercise_signals
-from .profile import Athlete, Library, exercise_class, load_rule
+from .profile import Athlete, Library, exercise_class, load_rule, rep_cap
 from .snapshot import Snapshot
 
 STRUCTURAL = {"swap", "add", "remove"}
@@ -90,6 +90,11 @@ def check(option: Option, snapshot: Snapshot, athlete: Athlete, library: Library
         to = c.to.model_dump(exclude_none=True) if c.to else {}
         if c.type in {"reps", "load", "sets", "swap", "add", "deload", "rest"} and not to:
             out.append(Violation("no_target", f"A {c.type} change needs the new values in 'to'.", i))
+
+        # Rep caps from a limit (lateral raises at 12 for the shoulder): no target above the cap.
+        cap = rep_cap(str(to.get("name") or c.exercise), athlete)
+        if cap is not None and (to.get("reps_max") or 0) > cap:
+            out.append(Violation("rep_cap", f"{to.get('name') or c.exercise}: {to['reps_max']} reps is over the cap of {cap} in your limits.", i))
 
         # Pain: never push an exercise that hurt. Remove it, swap it, or make it lighter.
         if _key(c.exercise) in pain and c.type in INCREASES and current is not None:

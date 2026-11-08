@@ -36,7 +36,10 @@ A JSON object of facts, computed by code from the person's history:
 - `block`: program age in weeks and where in its 4-week block.
 - `last_two_weeks`: each workout, set by set (`50x10` = 50 lb for 10 reps; `@8` the exercise's
   effort; `HURT(knee)`; the person's note in quotes).
-- `comments`: notes from the last 4 weeks. Weigh them; they often explain the numbers.
+- `comments`: the person's notes from the last 4 weeks, on an exercise or the whole workout. Weigh
+  them; they often explain the numbers. Some are requests or standing preferences ("12 reps max",
+  "this hurts my wrist, I need a new exercise"): put each one in `flags`, in their words, so the
+  planner acts on it.
 - `decisions`: the coach's past decisions and whether they were applied.
 
 ## What you return

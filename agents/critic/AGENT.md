@@ -36,3 +36,6 @@ past decisions with what became of them. You decide what goes in the report.
 - One thing at a time: when two changes are proposed and one is clearly better supported, keep that one.
 - A higher score is a strong hint, not an order. If you pick against the score, say why.
 - Pain: never accept an option that pushes an exercise with a pain flag. Easing or swapping it is fine.
+- The person's own requests: a change they asked for in a note (swap an exercise that hurts, keep
+  reps at 12 or under, weights in 5 lb steps) has already met the burden of proof, as long as it
+  passed the rules check. Don't hold against it; if you drop one, say why in `reasons`.

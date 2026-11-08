@@ -60,8 +60,13 @@ class LLM(Protocol):
 
 
 def extract_json(text: str) -> Any:
-    """The JSON object in a reply: a ```json block, or the outermost {...}."""
-    fence = re.search(r"```(?:json)?\s*(\{.*?\})\s*```", text, re.S)
+    """The JSON object in a reply: the whole reply (structured output), a ```json block, or the
+    outermost {...}."""
+    try:
+        return json.loads(text)
+    except ValueError:
+        pass
+    fence = re.search(r"```(?:json)?\s*(\{.*\})\s*```", text, re.S)
     raw = fence.group(1) if fence else text[text.find("{") : text.rfind("}") + 1]
     if not raw:
         raise LLMError("The reply had no JSON object.")
@@ -94,57 +99,60 @@ class AnthropicLLM:
             import anthropic  # type: ignore
         except ImportError as e:  # pragma: no cover
             raise LLMError("pip install anthropic (it's in pyproject.toml)") from e
+        self._anthropic = anthropic
         self.client = anthropic.Anthropic()
         # `model` (one for every agent) is kept for scripts that pass one; otherwise per agent.
         self.models = {a: model for a in DEFAULT_MODELS} if model else (models or models_from_env())
         self.model = describe(self.models)
         self.max_tokens = max_tokens
+        # Models that turned down structured output once: plain JSON for them from then on.
+        self._plain: set[str] = set()
 
     def model_for(self, agent: str) -> str:
         return self.models.get(agent) or FALLBACK_MODEL
 
-    def _ask(self, model: str, system: str, messages: list[dict], tool: dict) -> tuple[list, dict]:
-        """One call that must answer through `tool`. Returns the reply's content blocks and the tool's input.
+    def _output_config(self, schema: type[BaseModel]) -> dict:
+        """Structured output: the API holds the reply to the schema, so it always parses."""
+        raw = schema.model_json_schema(by_alias=True)
+        transform = getattr(self._anthropic, "transform_schema", None)
+        return {"format": {"type": "json_schema", "schema": transform(raw) if transform else raw}}
 
-        A forced tool call hands back an already-parsed object, so a stray quote in one of the person's
-        notes or a missing comma can't break the reply the way free-text JSON could."""
-        reply = self.client.messages.create(
-            model=model,
-            max_tokens=self.max_tokens,
-            system=system,
-            messages=messages,
-            tools=[tool],
-            tool_choice={"type": "tool", "name": tool["name"]},
-        )
-        if getattr(reply, "stop_reason", None) == "max_tokens":
+    def _ask(self, model: str, system: str, messages: list[dict], schema: type[BaseModel]) -> str:
+        """One reply's text. Structured output when the model takes it; plain text otherwise."""
+        kwargs: dict[str, Any] = {"model": model, "max_tokens": self.max_tokens, "system": system, "messages": messages}
+        if model not in self._plain:
+            try:
+                reply = self.client.messages.create(**kwargs, output_config=self._output_config(schema))
+            except (TypeError, self._anthropic.BadRequestError):
+                # An older SDK (no output_config) or a schema/model the API won't constrain: ask for
+                # plain JSON instead, and keep doing that for this model.
+                self._plain.add(model)
+                reply = self.client.messages.create(**kwargs)
+        else:
+            reply = self.client.messages.create(**kwargs)
+        stop = getattr(reply, "stop_reason", None)
+        if stop == "max_tokens":
             raise LLMError(f"the reply ran past {self.max_tokens} tokens and was cut off")
-        for block in reply.content:
-            if getattr(block, "type", None) == "tool_use":
-                return reply.content, {"id": block.id, "input": block.input}
-        raise LLMError("the reply didn't use the answer tool")
+        if stop == "refusal":
+            raise LLMError("the model declined to answer")
+        return "".join(getattr(b, "text", "") for b in reply.content)
 
     def complete_json(self, *, agent: str, system: str, user: str, schema: type[T]) -> T:
         model = self.model_for(agent)
-        tool = {
-            "name": "answer",
-            "description": f"Give your answer as the {agent}. Every field as the schema says.",
-            "input_schema": schema.model_json_schema(by_alias=True),
-        }
 
         @_traceable(f"{agent}", model)
         def run(system: str, user: str) -> T:
-            messages: list[dict] = [{"role": "user", "content": f"{user}\n\nAnswer by calling the answer tool."}]
+            instructions = f"{user}\n\nAnswer with one JSON object only, matching this JSON Schema:\n{schema_hint(schema)}"
+            messages = [{"role": "user", "content": instructions}]
+            text = self._ask(model, system, messages, schema)
             for attempt in range(2):
-                content, call = self._ask(model, system, messages, tool)
                 try:
-                    return schema.model_validate(call["input"])
-                except ValidationError as e:
+                    return schema.model_validate(extract_json(text))
+                except (ValidationError, ValueError, LLMError) as e:
                     if attempt == 1:
                         raise LLMError(f"{agent} ({model}): the reply didn't match the schema twice: {e}") from e
-                    messages += [
-                        {"role": "assistant", "content": content},
-                        {"role": "user", "content": [{"type": "tool_result", "tool_use_id": call["id"], "is_error": True, "content": f"That didn't validate: {e}\nCall the answer tool again with the corrected answer."}]},
-                    ]
+                    messages += [{"role": "assistant", "content": text}, {"role": "user", "content": f"That didn't validate: {e}\nSend the corrected JSON object only."}]
+                    text = self._ask(model, system, messages, schema)
             raise LLMError("unreachable")
 
         return run(system, user)

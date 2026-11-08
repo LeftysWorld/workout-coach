@@ -73,21 +73,29 @@ def test_the_real_client_asks_each_agent_on_its_own_model(monkeypatch):
 
     asked = []
 
+    class BadRequestError(Exception):
+        pass
+
     class Messages:
         # Only what the current SDK takes: an extra argument such as temperature is a TypeError there.
-        def create(self, *, model, max_tokens, system, messages, tools, tool_choice):
-            asked.append(model)
-            assert tool_choice == {"type": "tool", "name": tools[0]["name"]} and tools[0]["input_schema"]["type"] == "object"
-            answer = {"chosen_option_id": "hold", "verdict": "accept"} if len(messages) > 1 else {"chosen_option_id": "hold", "verdict": "maybe"}
-            block = types.SimpleNamespace(type="tool_use", id=f"t{len(asked)}", name="answer", input=answer)
-            return types.SimpleNamespace(content=[block], stop_reason="tool_use")
+        def create(self, *, model, max_tokens, system, messages, output_config=None):
+            asked.append((model, output_config is not None))
+            if output_config is not None:
+                assert output_config["format"]["type"] == "json_schema" and output_config["format"]["schema"]["type"] == "object"
+                if model == "claude-sonnet-5-5":
+                    raise BadRequestError("output_config.format is not supported for this model")
+            # First answer invalid ("maybe"), so each agent is asked once more with the error.
+            verdict = "accept" if len(messages) > 1 else "maybe"
+            text = '{"chosen_option_id": "hold", "verdict": "%s"}' % verdict
+            return types.SimpleNamespace(content=[types.SimpleNamespace(type="text", text=text)], stop_reason="end_turn")
 
     fake = types.ModuleType("anthropic")
     fake.Anthropic = lambda: types.SimpleNamespace(messages=Messages())
+    fake.BadRequestError = BadRequestError
     monkeypatch.setitem(sys.modules, "anthropic", fake)
     llm = AnthropicLLM(models={"analyst": "claude-opus-5-5", "planner": "claude-sonnet-5-5", "critic": "claude-opus-5-5"})
-    llm.complete_json(agent="critic", system="s", user="u", schema=CriticVerdict)
-    llm.complete_json(agent="planner", system="s", user="u", schema=CriticVerdict)
-    # Each first answer is invalid ("maybe"), so each agent is asked once more with the error.
-    assert asked == ["claude-opus-5-5", "claude-opus-5-5", "claude-sonnet-5-5", "claude-sonnet-5-5"]
+    assert llm.complete_json(agent="critic", system="s", user="u", schema=CriticVerdict).verdict == "accept"
+    assert llm.complete_json(agent="planner", system="s", user="u", schema=CriticVerdict).verdict == "accept"
+    # Opus takes structured output; Sonnet turned it down once, so it gets plain JSON from then on.
+    assert asked == [("claude-opus-5-5", True), ("claude-opus-5-5", True), ("claude-sonnet-5-5", True), ("claude-sonnet-5-5", False), ("claude-sonnet-5-5", False)]
     assert "analyst=claude-opus-5-5" in llm.model

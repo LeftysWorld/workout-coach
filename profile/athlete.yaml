@@ -35,6 +35,8 @@ injuries_and_limits:
       - Seated DB Arnold Press
       - Seated DB Shoulder Press
       - Incline DB Press
+    rep_caps:
+      - { match: lateral raise, max: 12 }
     note: "Pain check after each workout (0–10). Up to about 3/10 during a lift that's gone by the next morning is OK. Sharper pain, or worse the next day: stop or swap the exercise."
   - id: knee_test
     summary: Exercises named "(knee test)" are on trial. Any pain flag on one means remove it, never progress it.

@@ -37,6 +37,8 @@ class Limit(BaseModel):
     summary: str
     banned_patterns: list[str] = []
     banned_exercises: list[str] = []
+    # Most reps allowed on exercises whose name contains `match` (e.g. lateral raises at 12).
+    rep_caps: list[dict] = []
     note: str = ""
 
 
@@ -136,6 +138,12 @@ _BODYWEIGHT = re.compile(r"crunch|sit-?up|back extension|hip extension|glute[- /
 _COMPOUND = re.compile(r"press|row|pull-?down|pull-?up|chin-?up|dip|squat|deadlift|lunge", re.I)
 
 
+def rep_cap(name: str, athlete: "Athlete") -> Optional[int]:
+    """The lowest rep cap any limit puts on this exercise, or None."""
+    caps = [int(c["max"]) for limit in athlete.injuries_and_limits for c in limit.rep_caps if str(c.get("match", "")).lower() in name.lower()]
+    return min(caps) if caps else None
+
+
 def exercise_class(name: str) -> ExerciseClass:
     """Compound, isolation, assisted or bodyweight, from the name (the app's rule 1)."""
     if re.search(r"assisted", name, re.I):
@@ -219,11 +227,12 @@ def apply_app_rules(athlete: Athlete, rules: Optional[dict], units: Optional[str
                     "summary": text,
                     "banned_patterns": list(dict.fromkeys(APP_PATTERNS.get(str(p), str(p)) for p in x.get("banned_patterns") or [])),
                     "banned_exercises": [str(e) for e in x.get("banned_exercises") or []],
+                    "rep_caps": [{"match": str(c["match"]), "max": int(c["max"])} for c in x.get("rep_caps") or [] if isinstance(c, dict) and c.get("match") and isinstance(c.get("max"), (int, float))],
                     "note": file_limits.get(str(x["id"]), {}).get("note", ""),
                 }
             )
         app_ids = {x["id"] for x in app}
-        notes_only = [x for x in base["injuries_and_limits"] if x["id"] not in app_ids and not x["banned_patterns"] and not x["banned_exercises"]]
+        notes_only = [x for x in base["injuries_and_limits"] if x["id"] not in app_ids and not x["banned_patterns"] and not x["banned_exercises"] and not x.get("rep_caps")]
         data["injuries_and_limits"] = app + notes_only
 
     if isinstance(r.get("equipment"), list):

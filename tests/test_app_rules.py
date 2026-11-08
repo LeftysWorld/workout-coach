@@ -23,6 +23,7 @@ APP_DEFAULTS = {
             "summary": "Left rotator cuff: no overhead pressing, Arnold press or incline DB press until cleared. Lateral raises stop at 12 reps (more causes soreness). Flat DB press and dips are pain-free. After 2–3 pain-free weeks, a low incline (20° or less, neutral grip, 10 reps or fewer) first, overhead pressing last.",
             "banned_patterns": ["overhead_press", "incline_press"],
             "banned_exercises": ["Arnold press", "Seated DB Arnold Press", "Seated DB Shoulder Press", "Incline DB Press"],
+            "rep_caps": [{"match": "lateral raise", "max": 12}],
         },
     ],
     "equipment": ["dumbbells", "adjustable_bench", "incline_bench", "sit_up_bench", "single_cable", "lat_pulldown", "seated_cable_row", "chest_press_machine", "hammer_strength_back_extension", "hammer_strength_glute_ham", "rear_delt_machine", "assist_machine"],

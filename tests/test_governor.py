@@ -118,3 +118,11 @@ def test_the_left_shoulder_rules_out_overhead_and_incline_pressing(raw, athlete,
     assert not {"knee"} & codes(v)
     v = codes(check(opt(4, ch(MON, "Flat DB Bench Press", "swap", {"name": "Flat DB Bench Press"}, {"name": "Incline DB Press"})), s, athlete, library, block))
     assert "banned_pattern" in v
+
+
+def test_rep_caps_from_a_limit_are_enforced(raw, athlete, library):
+    s, block = ctx(raw, athlete, library)
+    v = codes(check(opt(1, ch(MON, "Seated Lateral Raise", "reps", {"reps_max": 12}, {"reps_max": 15})), s, athlete, library, block))
+    assert "rep_cap" in v
+    v = codes(check(opt(1, ch(MON, "Seated Lateral Raise", "reps", {"reps_max": 15}, {"reps_min": 10, "reps_max": 12})), s, athlete, library, block))
+    assert "rep_cap" not in v
