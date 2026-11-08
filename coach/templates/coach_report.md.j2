@@ -20,6 +20,16 @@
 {% endfor %}
 
 {% endif %}
+## Your notes
+
+{% if your_notes %}
+{% for n in your_notes %}
+- {{ n }}
+{% endfor %}
+{% else %}
+No notes in the last 4 weeks. A note on an exercise (Note, under its sets) tells the coach what the numbers can't: a pinch, poor sleep, a machine that was taken.
+{% endif %}
+
 {% if assessment %}
 {{ assessment.consistency }} {{ assessment.recovery }} {{ assessment.program_fit }}{% if assessment.deload_due %} **A lighter week is due:** {{ assessment.deload_reason }}.{% endif %}
 

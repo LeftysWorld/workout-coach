@@ -74,7 +74,8 @@ def test_the_real_client_asks_each_agent_on_its_own_model(monkeypatch):
     asked = []
 
     class Messages:
-        def create(self, *, model, **_):
+        # Only what the current SDK takes: an extra argument such as temperature is a TypeError there.
+        def create(self, *, model, max_tokens, system, messages):
             asked.append(model)
             text = '{"chosen_option_id": "hold", "verdict": "accept"}'
             return types.SimpleNamespace(content=[types.SimpleNamespace(text=text)])

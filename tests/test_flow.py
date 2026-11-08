@@ -114,3 +114,16 @@ def test_rules_from_the_apps_settings_reach_the_rules_check_and_the_prompts(raw,
     assert ctx.athlete.increments.max_jump_pct == 0.25
     assert "Updated in the app's Settings" in llm.calls[1]["system"]
     assert any("Settings" in n for n in ctx.notes)
+
+
+def test_your_notes_are_in_the_report_even_when_the_coach_fails(raw, athlete, library):
+    def broken(_user):
+        raise LLMError("the model is down")
+
+    data = raw("comment_conflict")
+    note = next(c["text"] for c in data["comments"] if c["source"] in ("session_note", "exercise_note"))
+    state = run(data, ScriptedLLM({"analyst": [broken]}), athlete, library)
+    md = state["report_md"]
+    assert "## Your notes" in md and note.strip() in md
+    md = run(raw("ready_to_progress"), scripted.scripted_llm(), athlete, library)["report_md"]
+    assert "## Your notes" in md

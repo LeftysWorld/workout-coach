@@ -83,10 +83,13 @@ def _traceable(name: str, model: str = ""):
 
 
 class AnthropicLLM:
-    """Claude through the Anthropic API, each agent on its own model (see DEFAULT_MODELS). Low
-    temperature: the same week should get the same advice."""
+    """Claude through the Anthropic API, each agent on its own model (see DEFAULT_MODELS).
 
-    def __init__(self, models: Optional[dict[str, str]] = None, temperature: float = 0.2, max_tokens: int = 4000, model: Optional[str] = None):
+    No sampling settings (temperature and the like): the current SDK (2.x) no longer takes them and
+    refuses the call. Steady advice week to week comes from the facts, the governor and the evals'
+    repeats, not from a low temperature."""
+
+    def __init__(self, models: Optional[dict[str, str]] = None, max_tokens: int = 4000, model: Optional[str] = None):
         try:
             import anthropic  # type: ignore
         except ImportError as e:  # pragma: no cover
@@ -95,14 +98,13 @@ class AnthropicLLM:
         # `model` (one for every agent) is kept for scripts that pass one; otherwise per agent.
         self.models = {a: model for a in DEFAULT_MODELS} if model else (models or models_from_env())
         self.model = describe(self.models)
-        self.temperature = temperature
         self.max_tokens = max_tokens
 
     def model_for(self, agent: str) -> str:
         return self.models.get(agent) or FALLBACK_MODEL
 
     def _ask(self, model: str, system: str, messages: list[dict]) -> str:
-        reply = self.client.messages.create(model=model, max_tokens=self.max_tokens, temperature=self.temperature, system=system, messages=messages)
+        reply = self.client.messages.create(model=model, max_tokens=self.max_tokens, system=system, messages=messages)
         return "".join(getattr(b, "text", "") for b in reply.content)
 
     def complete_json(self, *, agent: str, system: str, user: str, schema: type[T]) -> T:

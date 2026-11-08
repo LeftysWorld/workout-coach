@@ -154,8 +154,15 @@ def render_report(state: dict, ctx: Any) -> str:
     for b in facts.get("body_measurements") or []:
         latest = b.get("latest")
         glance.append((b["name"], (f"{num(latest['value'], 2)} {b['unit']}" if latest else "–") + (f" · {signed(b.get('change_4w'))} {b['unit']} over 4 weeks" if b.get("change_4w") is not None else "")))
+    # Your own notes from the last 4 weeks, as the coach read them (newest first).
+    your_notes = []
+    for c in sorted(facts.get("comments") or [], key=lambda c: c.get("date") or "", reverse=True):
+        where = c.get("exercise") or "after the workout"
+        when = _label(c["date"][:10]) if c.get("date") else ""
+        your_notes.append(f"{when} · {c.get('workout', '')} · {where}: “{c.get('text', '').strip()}”")
     return _env.get_template("coach_report.md.j2").render(
         as_of_label=_label(as_of),
+        your_notes=your_notes,
         headline=headline,
         decision=decision,
         glance=glance,
