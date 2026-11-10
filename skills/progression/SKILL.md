@@ -28,6 +28,14 @@ a change you suggest should be the next step these rules give, not a different i
 - **Failed jump:** if the first set after a jump falls below the bottom of the range, go back to the
   old weight and build reps again.
 
+**Push-ups run their own program (Road to 100).** Saturday's max test (one set, as many perfect
+reps as possible) sets the next Monday: max under 60 → 5 sets × 60%; 60–79 → 4 × 65%; 80+ → 3 × 70%
+then 1 set to 2 short of max. A missed Monday repeats its numbers. Never suggest changing push-up
+sets, reps or load: the app sets them. A test that drops or stays flat two Saturdays running is worth
+naming (sleep, the home practice); a shoulder or wrist note on push-ups follows the pain rule. They
+are bodyweight, so the 12-rep cap doesn't apply. The machine chest press is gone (it hurt the
+shoulder): Thursday is a neutral-grip DB bench press instead.
+
 **Effort targets** (effort 1–10 by reps left on the last set: 10 = none left, 9 = one, 8 = two, 7 = three):
 - compound and assisted: 8–9 (1–2 reps left).
 - isolation: 8–10 (0–2 left); the last set can go to 10.

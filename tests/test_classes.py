@@ -22,3 +22,10 @@ def test_load_steps_by_class(athlete, library):
     assert load_rule("Seated Lateral Raise", library.find("Seated Lateral Raise"), athlete) == (2.5, 0.25)
     assert load_rule("Cable Curl", library.find("Cable Curl"), athlete) == (2.5, 0.25)
     assert load_rule("Assisted Pull-Up", library.find("Assisted Pull-Up"), athlete) == (5, None)
+
+
+def test_pushups_are_bodyweight_and_on_their_own_program():
+    from coach.profile import is_pushup_program
+
+    assert exercise_class("Push-Ups") == "bodyweight" and exercise_class("Push-Up Max Test") == "bodyweight"
+    assert is_pushup_program("Push-Up Max Test") and not is_pushup_program("Flat DB Bench Press")

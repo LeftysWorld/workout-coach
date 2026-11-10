@@ -53,6 +53,7 @@ The hold option has `id: "hold"`, `change_level: 0` and no changes.
   - one weight step at most, the step for its class (`weight_step`: 5 lb for compound lifts, 2.5 lb
     for isolation). For isolation, `jump_too_big: true` means: a set or slower tempo instead
   - assisted lifts progress by less assist (a lower number), never more
+  - never change push-up sets, reps or load: they follow the Road to 100 program
   - no rep target above a rep cap: the limits' (lateral raises: 12) and `max_reps` in the profile's
     preferences, which covers every lift except bodyweight ones
   - never more weight on a lift rated 10 last time, or one that's `too_heavy`

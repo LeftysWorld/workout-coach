@@ -135,3 +135,9 @@ def test_the_apps_rep_cap_covers_every_lift_but_bodyweight(raw, athlete, library
     assert rep_cap("Low-Incline DB Fly", capped) == 12 and rep_cap("Hammer Strength Back Extension", capped) is None
     s, block = ctx(raw, capped, library)
     assert "rep_cap" in codes(check(opt(1, ch(MON, "Flat DB Bench Press", "reps", {"reps_max": 12}, {"reps_max": 15})), s, capped, library, block))
+
+
+def test_push_ups_are_left_to_their_program(raw, athlete, library):
+    s, block = ctx(raw, athlete, library)
+    v = codes(check(opt(1, ch(MON, "Push-Ups", "reps", {"reps_max": 21}, {"reps_max": 25})), s, athlete, library, block))
+    assert "pushup_program" in v

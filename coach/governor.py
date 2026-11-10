@@ -11,7 +11,7 @@ from typing import Optional
 
 from .decision import TYPE_LEVEL, Change, Option
 from .metrics import estimate_minutes, exercise_signals
-from .profile import Athlete, Library, exercise_class, load_rule, rep_cap
+from .profile import Athlete, Library, exercise_class, is_pushup_program, load_rule, rep_cap
 from .snapshot import Snapshot
 
 STRUCTURAL = {"swap", "add", "remove"}
@@ -79,6 +79,9 @@ def check(option: Option, snapshot: Snapshot, athlete: Athlete, library: Library
     pain_driven = all(_key(changes[i].exercise) in pain for i in structural) if structural else False
 
     for i, c in enumerate(changes):
+        # Push-ups follow their own program (Road to 100): their sets and reps come from Saturday's max.
+        if c.type in ("reps", "sets", "load") and is_pushup_program(c.exercise):
+            out.append(Violation("pushup_program", f"{c.exercise}: push-ups follow the Road to 100 program; the app sets their numbers from Saturday's max test.", i))
         w = snapshot.workout(c.action_id or c.workout) or snapshot.workout(c.workout)
         if not w:
             out.append(Violation("unknown_workout", f"No workout called {c.workout!r}.", i))

@@ -136,7 +136,7 @@ ExerciseClass = Literal["compound", "isolation", "assisted", "bodyweight"]
 # The same words as the app's exerciseClass (packages/core/src/progression.ts), so the app's next
 # targets and the coach agree on what kind of lift each exercise is.
 _ISOLATION = re.compile(r"curl|pushdown|push-down|kick-?back|triceps|tricep|extension(?!.*back)|raise|fly|flye|rear[- ]delt|straight[- ]arm|external rotation|internal rotation|face pull|shrug|pullover", re.I)
-_BODYWEIGHT = re.compile(r"crunch|sit-?up|back extension|hip extension|glute[- /]?ham|plank|hanging leg|leg raise", re.I)
+_BODYWEIGHT = re.compile(r"crunch|sit-?up|back extension|hip extension|glute[- /]?ham|plank|hanging leg|leg raise|push[- ]?ups?\b", re.I)
 _COMPOUND = re.compile(r"press|row|pull-?down|pull-?up|chin-?up|dip|squat|deadlift|lunge", re.I)
 
 
@@ -146,6 +146,12 @@ def rep_cap(name: str, athlete: "Athlete") -> Optional[int]:
     if athlete.preferences.max_reps > 0 and exercise_class(name) != "bodyweight":
         caps.append(athlete.preferences.max_reps)
     return min(caps) if caps else None
+
+
+def is_pushup_program(name: str) -> bool:
+    """Push-ups on the Road to 100 program (the volume day and the max test). The app sets their numbers
+    from each Saturday's max (packages/core/src/pushups.ts), so the coach never changes them."""
+    return bool(re.search(r"push[- ]?ups?\b", name, re.I)) and not re.search(r"assisted|pike|handstand", name, re.I)
 
 
 def exercise_class(name: str) -> ExerciseClass:
