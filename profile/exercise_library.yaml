@@ -28,6 +28,11 @@ exercises:
   - { name: Assisted Dip, pattern: dip, muscles: [chest, triceps, front_delts], equipment: [assist_machine], knee: low, cables: 0, step: machine }
   - { name: Neutral-Grip DB Bench Press, pattern: horizontal_push, muscles: [chest, triceps, front_delts], equipment: [dumbbells, adjustable_bench], knee: low, cables: 0, step: dumbbell }
   - { name: Push-Ups, pattern: horizontal_push, muscles: [chest, triceps, front_delts, core], equipment: [dumbbells], knee: none, cables: 0, step: dumbbell }
+  - { name: Push-Up Max Sets, pattern: horizontal_push, muscles: [chest, triceps, front_delts, core], equipment: [dumbbells], knee: none, cables: 0, step: dumbbell }
+  - { name: Push-Up Training Sets, pattern: horizontal_push, muscles: [chest, triceps, front_delts, core], equipment: [dumbbells], knee: none, cables: 0, step: dumbbell }
+  - { name: Push-Up Density Pyramid, pattern: horizontal_push, muscles: [chest, triceps, front_delts, core], equipment: [dumbbells], knee: none, cables: 0, step: dumbbell }
+  - { name: Paused Push-Ups, pattern: horizontal_push, muscles: [chest, triceps, front_delts, core], equipment: [dumbbells], knee: none, cables: 0, step: dumbbell }
+  - { name: Close-Grip Push-Ups, pattern: horizontal_push, muscles: [chest, triceps, front_delts, core], equipment: [dumbbells], knee: none, cables: 0, step: dumbbell }
   - { name: Push-Up Max Test, pattern: horizontal_push, muscles: [chest, triceps, front_delts, core], equipment: [dumbbells], knee: none, cables: 0, step: dumbbell }
   - { name: Machine Chest Press, pattern: horizontal_push, muscles: [chest, triceps], equipment: [chest_press_machine], knee: low, cables: 0, step: machine }
   - { name: Low-Incline DB Fly, pattern: chest_isolation, muscles: [chest], equipment: [dumbbells, incline_bench], knee: low, cables: 0, step: dumbbell }
