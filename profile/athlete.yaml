@@ -7,15 +7,18 @@
 units: lb
 
 schedule:
-  days_per_week: 5          # Mon–Fri. The coach never adds or drops a training day.
+  # These four mirror the app's defaults (tests/test_app_rules.py). Your own week comes from the app:
+  # Settings → Training (six days, Mon–Sat, 30–60 min since Nov 16, 2026) is laid over this file.
+  days_per_week: 5          # The coach never adds or drops a training day.
   days: [1, 2, 3, 4, 5]
   session_minutes: { min: 35, max: 45 }   # checked against each workout's estimated time
   exercises_per_workout: { target: 5, min: 4, max: 6 }
 
 goals:
-  - 'Build muscle: lats ("big wings"), chest (more defined), shoulders, biceps, back, lower back'
+  - 'Build muscle: lats ("big wings"), chest (more defined), traps, biceps, triceps, back, lower back; also abs, forearms, grip and glutes'
+  - "Strength targets: 10 freestanding pull-ups, 100 lb dumbbells on the flat bench (each hand)"
   - "Lose body weight: about 1.5 lb a week toward 155 lb; while losing, holding strength is a win"
-  - "Stay consistent: the gym keeps me disciplined; 5 days a week is good for my spirit"
+  - "Stay consistent: six gym days a week (skipping Wednesday leads to skipping more); Wednesday is a light day"
 
 injuries_and_limits:
   - id: knee
@@ -39,7 +42,7 @@ injuries_and_limits:
       - { match: lateral raise, max: 12 }
     note: "Pain check after each workout (0–10). Up to about 3/10 during a lift that's gone by the next morning is OK. Sharper pain, or worse the next day: stop or swap the exercise."
   - id: knee_test
-    summary: Exercises named "(knee test)" are on trial. Any pain flag on one means remove it, never progress it.
+    summary: Exercises marked trial in the exercise library (and any still named "(knee test)") are on trial. Any pain flag on one means remove it, never progress it.
 
 preferences:
   weights_only: true            # no cardio finishers in lifting sessions
@@ -85,6 +88,6 @@ changes:
 program:
   block_weeks: 4                  # a month at a time: weekly check-ins, bigger changes at a block's end
   min_weeks_between_program_changes: 4
-  planned_replacement: "The current Mon–Fri upper-body plan is due to be replaced around late January 2027."
+  planned_replacement: "The 6-day upper-body plan started Nov 16, 2026. Legs come back on Wednesday once the knee is cleared."
   # Set to true (and commit) to ask the coach for a new program at the next run, whatever the data says.
   requested_program_change: false

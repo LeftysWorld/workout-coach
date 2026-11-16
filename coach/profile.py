@@ -118,7 +118,8 @@ class Library(BaseModel):
 
 
 def _norm(name: str) -> str:
-    return " ".join(name.strip().lower().split())
+    """Lower-case and single-spaced, without the old "(knee test)" tag."""
+    return " ".join(name.lower().replace("(knee test)", " ").split())
 
 
 @lru_cache(maxsize=4)
@@ -140,10 +141,28 @@ _BODYWEIGHT = re.compile(r"crunch|sit-?up|back extension|hip extension|glute[- /
 _COMPOUND = re.compile(r"press|row|pull-?down|pull-?up|chin-?up|dip|squat|deadlift|lunge", re.I)
 
 
+def is_timed_hold(name: str) -> bool:
+    """A dead hang, a dumbbell hold, a plank: the plan's reps are seconds held.
+
+    The same words as the app's isTimedHold (packages/core/src/progression.ts).
+    """
+    return bool(re.search(r"\b(holds?|hangs?|planks?)\b", name, re.I))
+
+
 def rep_cap(name: str, athlete: "Athlete") -> Optional[int]:
-    """The lowest rep cap any limit puts on this exercise, or None."""
-    caps = [int(c["max"]) for limit in athlete.injuries_and_limits for c in limit.rep_caps if str(c.get("match", "")).lower() in name.lower()]
-    if athlete.preferences.max_reps > 0 and exercise_class(name) != "bodyweight":
+    """The lowest rep cap any limit puts on this exercise, or None.
+
+    Timed holds count seconds, so the general cap skips them.
+    """
+    key = name.lower()
+    caps = [
+        int(cap["max"])
+        for limit in athlete.injuries_and_limits
+        for cap in limit.rep_caps
+        if str(cap.get("match", "")).lower() in key
+    ]
+    capped = exercise_class(name) != "bodyweight" and not is_timed_hold(name)
+    if athlete.preferences.max_reps > 0 and capped:
         caps.append(athlete.preferences.max_reps)
     return min(caps) if caps else None
 

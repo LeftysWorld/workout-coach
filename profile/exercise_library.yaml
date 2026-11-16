@@ -1,5 +1,7 @@
 # Every exercise the coach may suggest, with what it trains and what it needs. A swap or an added
 # exercise must come from this list (the governor checks), so add to it when you find one you like.
+# trial: on probation for the knee. Any pain flag means remove it, never progress it. Names no longer carry
+#   a "(knee test)" tag; logs and plans that still do are matched to the plain name.
 # pattern: a movement family. Swaps stay within a family unless a change says why.
 # equipment: must all be in profile/athlete.yaml → equipment.
 # knee: none | low (sitting or lying, feet planted, no knee bend under load) | loads (out while the knee rule stands)
@@ -63,8 +65,19 @@ exercises:
 
   # ---------- Lower back and core (knee-safe only) ----------
   - { name: Hammer Strength Back Extension, pattern: hip_extension_back, muscles: [lower_back, glutes], equipment: [hammer_strength_back_extension], knee: low, cables: 0, step: machine }
-  - { name: Hammer Strength Glute/Ham Hip Extension (knee test), pattern: hip_extension_back, muscles: [lower_back, glutes, hamstrings], equipment: [hammer_strength_glute_ham], knee: low, cables: 0, step: machine, trial: true }
-  - { name: Sit-Up Bench Crunch (knee test), pattern: core_flexion, muscles: [abs], equipment: [sit_up_bench], knee: low, cables: 0, step: none, trial: true }
+  - { name: Hammer Strength Glute/Ham Hip Extension, pattern: hip_extension_back, muscles: [lower_back, glutes, hamstrings], equipment: [hammer_strength_glute_ham], knee: low, cables: 0, step: machine, trial: true }
+  - { name: Sit-Up Bench Crunch, pattern: core_flexion, muscles: [abs], equipment: [sit_up_bench], knee: low, cables: 0, step: none, trial: true }
+  - { name: Reverse Crunch, pattern: core_flexion, muscles: [abs], equipment: [], knee: low, cables: 0, step: none, trial: true }
+  - { name: Glute Bridge, pattern: glute_bridge, muscles: [glutes, hamstrings], equipment: [], knee: low, cables: 0, step: dumbbell }
+
+  # ---------- Traps, forearms and grip ----------
+  - { name: Seated DB Shrug, pattern: shrug, muscles: [traps, forearms], equipment: [dumbbells, adjustable_bench], knee: none, cables: 0, step: dumbbell }
+  - { name: Chest-Supported DB Shrug, pattern: shrug, muscles: [traps, upper_back], equipment: [dumbbells, incline_bench], knee: none, cables: 0, step: dumbbell }
+  - { name: Seated DB Wrist Curl, pattern: wrist_flexion, muscles: [forearms], equipment: [dumbbells, adjustable_bench], knee: none, cables: 0, step: dumbbell }
+  - { name: DB Reverse Curl, pattern: elbow_flexion, muscles: [forearms, biceps], equipment: [dumbbells], knee: none, cables: 0, step: dumbbell }
+  # Timed holds: the plan's reps are seconds, so rep caps don't apply (coach/profile.py is_timed_hold).
+  - { name: Seated Dumbbell Hold, pattern: grip_hold, muscles: [forearms, traps], equipment: [dumbbells, adjustable_bench], knee: none, cables: 0, step: dumbbell }
+  - { name: Assisted Dead Hang, pattern: grip_hold, muscles: [forearms, lats], equipment: [assist_machine], knee: low, cables: 0, step: machine }
 
   # ---------- Never (listed so the governor names them when proposed) ----------
   - { name: Cable Fly (two cables), pattern: chest_isolation, muscles: [chest], equipment: [single_cable], knee: none, cables: 2, step: cable }
